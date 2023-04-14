@@ -14,11 +14,13 @@ private:
     void merge();
     void insertion();
     void selection();
-    void other();
+    void library();
 
 public:
-
-
+    void merge(std::vector<std::string> sort);
+    void insertion(std::vector<std::string> sort);
+    void selection(std::vector<std::string> sort);
+    void library(std::vector<std::string> sort);
 };
 
 #endif //DSA_DSA_H

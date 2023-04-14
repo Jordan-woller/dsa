@@ -9,7 +9,7 @@ int main(){
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
  
     std::cout << "Time taken by function: "
-         << duration.count() << " microseconds" << std::endl;
+        << duration.count() << " microseconds" << std::endl;
 
     return 0;
 }

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
+#include <string>
 
 #ifndef DSA_DSA_H
 #define DSA_DSA_H

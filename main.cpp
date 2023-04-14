@@ -20,7 +20,7 @@ int main(){
         //d. Printout songs of a certain criteria
 
 
-     //Option B: sorting two playlists together
+     //Option B: Recommend songs from playlist based on another playlist
             //what do you want to do?
             //a. Make a playlist from scratch
 

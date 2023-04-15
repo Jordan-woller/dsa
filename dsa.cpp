@@ -3,9 +3,8 @@
 #include "dsa.h"
 
 
-Sorting::Sorting() {
- 
-}
+Sorting::Sorting(){}
+Sorting::~Sorting(){}
 
 void Sorting::read_data(std::string file_name){
     std::ifstream file_stream;

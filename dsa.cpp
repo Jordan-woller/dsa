@@ -90,6 +90,15 @@ void Sorting:: r_quicksort(std::vector<int> &vec, int lo, int  hi,std::vector<in
     r_quicksort(vec, p + 1, hi,vec1);
 }
 
+bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
+    if ((*database)[cat1][index1] < (*database)[cat2][index2]) {
+        return true;
+    } else if ((*database)[cat1][index1] == (*database)[cat2][index2]) {
+        return (*database)[cat1][index1] < (*database)[cat2][index2];
+    } else {
+        return false;
+    }
+}
 
 
 
@@ -124,4 +133,4 @@ int main() {
         std::cout<<cassidy[i];
     }
 }
-
+*/

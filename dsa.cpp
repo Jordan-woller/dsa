@@ -2,7 +2,6 @@
 #include<vector>
 #include "dsa.h"
 
-
 Sorting::Sorting(){}
 Sorting::~Sorting(){}
 
@@ -25,6 +24,30 @@ void Sorting::read_data(std::string file_name){
     }
     this->merge((*database)[0]);
 }
+
+void Sorting::insertion(std::vector<std::string> sort){
+    int size = this->database[0].size();
+
+    for(int i = 1; i < size; i++){
+        int j = 1;
+        //inserts j in sorted part
+        while(j > 0 and this->database[0][j-1][0] > this->database[0][j][0]){
+            //swaps every category with each other to be in proper place
+            std::swap(this->database[0][j-1], this->database[0][j]);
+            std::swap(this->database[1][j-1], this->database[1][j]);
+            std::swap(this->database[2][j-1], this->database[2][j]);
+            std::swap(this->database[3][j-1], this->database[3][j]);
+            std::swap(this->database[4][j-1], this->database[4][j]);
+
+            j--;
+        }
+    }
+}
+
+
+
+
+
 
 int Sorting:: partition(std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1){
 
@@ -67,6 +90,15 @@ void Sorting:: r_quicksort(std::vector<int> &vec, int lo, int  hi,std::vector<in
     r_quicksort(vec, p + 1, hi,vec1);
 }
 
+bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
+    if ((*database)[cat1][index1] < (*database)[cat2][index2]) {
+        return true;
+    } else if ((*database)[cat1][index1] == (*database)[cat2][index2]) {
+        return (*database)[cat1][index1] < (*database)[cat2][index2];
+    } else {
+        return false;
+    }
+}
 
 
 
@@ -100,10 +132,5 @@ int main() {
     for(int i=0; i<3; i++){
         std::cout<<cassidy[i];
     }
-
-    std::cout<<std::endl;
-    for(int i=0; i<3; i++){
-        std::cout<<cooper[i];
-    }
-
-}*/
+}
+*/

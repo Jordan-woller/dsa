@@ -7,8 +7,11 @@
 #ifndef DSA_DSA_H
 #define DSA_DSA_H
 
+using namespace std;
+
 class Sorting{
 private:
+
     std::vector<std::vector<std::string>> database;
     
     void merge();

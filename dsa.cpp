@@ -3,9 +3,8 @@
 #include "dsa.h"
 
 
-Sorting::Sorting() {
- 
-}
+Sorting::Sorting(){}
+Sorting::~Sorting(){}
 
 void Sorting::read_data(std::string file_name){
     std::ifstream file_stream;
@@ -16,11 +15,7 @@ void Sorting::read_data(std::string file_name){
         std::istringstream ss(line);
 
         //getting each column and storing into vector
-        //song
-        //genre
-        //artist
-        //popularity
-        //release year
+        //song, genre, artist, popularity, release year
         int i = 0;
         std::string temp;
         while(ss >> temp){

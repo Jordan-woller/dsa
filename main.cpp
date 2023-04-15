@@ -59,13 +59,12 @@ int main(int argc, char*argv[]){
         //Handling for the different choices
         if (initial_choice == 1) {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
-            std::cin >> song_choice;
-            //TODO add error checking for song choice
+            std::cin >> song_choice;  //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             std::cin >> genre_choice;
-            //TODO add error checking for ggenre choice
+            //TODO add error checking for genre choice
             std::cout << "Enter the artist of this song:" << std::endl;
-            std::cin >> artist_choice;
+            std::cin >> artist_choice; //no need to error check for artist because artist can be numbers, characters, or strings
             //TODO add error checking for artist choice
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
@@ -112,6 +111,7 @@ int main(int argc, char*argv[]){
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
+
                 }
                 if (playlist_select == 2) {
                     std::cout << "Here is the Pop playlist:" << std::endl;

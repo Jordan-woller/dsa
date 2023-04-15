@@ -2,7 +2,6 @@
 #include<vector>
 #include "dsa.h"
 
-
 Sorting::Sorting(){}
 Sorting::~Sorting(){}
 
@@ -67,43 +66,12 @@ void Sorting:: r_quicksort(std::vector<int> &vec, int lo, int  hi,std::vector<in
     r_quicksort(vec, p + 1, hi,vec1);
 }
 
-
-
-
-/*
-int main() {
-    std::vector<int>cassidy;
-    std::vector<int>cooper;
-
-    for(int i=3; i>0; i--){
-        cassidy.push_back(i);
+bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
+    if ((*database)[cat1][index1] < (*database)[cat2][index2]) {
+        return true;
+    } else if ((*database)[cat1][index1] == (*database)[cat2][index2]) {
+        return (*database)[cat1][index1] < (*database)[cat2][index2];
+    } else {
+        return false;
     }
-    // for(int i=0; i<3; i++){
-    //      cooper.push_back(i);
-    //  }
-
-    for(int i=0; i<3; i++){
-        std::cout<<cassidy[i];
-    }
-    std::cout<<std::endl;
-
-    for(int i=0; i<3; i++){
-    std::cout<<cooper[i];
-      }
-
-    std::cout<<std::endl;
-
-
-    r_quicksort(cassidy, 0, 2,cooper);
-
-
-    for(int i=0; i<3; i++){
-        std::cout<<cassidy[i];
-    }
-
-    std::cout<<std::endl;
-    for(int i=0; i<3; i++){
-        std::cout<<cooper[i];
-    }
-
-}*/
+}

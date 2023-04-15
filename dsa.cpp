@@ -19,11 +19,11 @@ void Sorting::read_data(std::string file_name){
         int i = 0;
         std::string temp;
         while(ss >> temp){
-            this->database[i].push_back(temp);
+            (*database)[i].push_back(temp);
             i++;
         }
     }
-    this->merge(database[0]);
+    this->merge((*database)[0]);
 }
 
 int Sorting:: partition(std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1){

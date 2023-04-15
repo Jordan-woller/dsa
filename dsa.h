@@ -12,7 +12,7 @@ using namespace std;
 class Sorting{
 private:
 
-    std::vector<std::vector<std::string>> database;
+    std::vector<std::vector<std::string>> *database;
     
     void merge();
     void insertion();

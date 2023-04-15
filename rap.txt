@@ -1,51 +1,25 @@
-Song, Genre, Artist, Popularity, Release Year
-"7am on Bridle Path", Drake, 75, 2021
-"All Me", Drake ft. 2 Chainz & Big Sean, 77, 2013
-"Bodak Yellow", Cardi B, 78, 2017
-"Bounce Back", Big Sean, 77, 2016
-"Champion", Kanye West, 74, 2007
-"Diamonds Dancing", Drake & Future, 72, 2015
-"Dior", Pop Smoke, 84, 2019
-"Drip Too Hard", Lil Baby & Gunna, 82, 2018
-"Empire State of Mind", Jay-Z ft. Alicia Keys, 80, 2009
-"FEFE", 6ix9ine ft. Nicki Minaj & Murda Beatz, 78, 2018
-"Forever", Drake ft. Kanye West, Lil Wayne & Eminem, 81, 2009
-"God's Plan", Drake, 85, 2018
-"Gucci Gang", Lil Pump, 70, 2017
-"Hotline Bling", Drake, 83, 2015
-"I Do It", Lil Wayne ft. Big Sean & Lil Baby, 69, 2020
-"I Like It", Cardi B ft. Bad Bunny & J Balvin, 85, 2018
-"In Da Club", 50 Cent, 80, 2003
-"Jumpman", Drake & Future, 74, 2015
-"Lemonade", Internet Money ft. Gunna, Don Toliver & NAV, 84, 2020
-"Lifestyle", Rich Gang ft. Young Thug & Rich Homie Quan, 70, 2014
-"Love Sosa", Chief Keef, 71, 2012
-"Lucid Dreams", Juice WRLD, 83, 2017
-"Money In The Grave", Drake ft. Rick Ross, 78, 2019
-"Mo Bamba", Sheck Wes, 79, 2017
-"Money Longer", Lil Uzi Vert, 73, 2016
-"No Problem", Chance The Rapper ft. Lil Wayne & 2 Chainz, 78, 2016
-"Nonstop", Drake, 80, 2018
-"Nowadays", Lil Skies ft. Landon Cube, 73, 2017
-"Pop Out", Polo G ft. Lil Tjay, 81, 2019
-"Post To Be", Omarion ft. Chris Brown & Jhene Aiko, 68, 2014
-"Racks In The Middle", Nipsey Hussle ft. Roddy Ricch & Hit-Boy, 78, 2019
-"Rap God", Eminem, 84, 2013
-"Ric Flair Drip", Offset & Metro Boomin, 79, 2017
-"Rockstar", Post Malone ft. 21 Savage, 85, 2017
-"SAD!", XXXTENTACION, 82, 2018
-"Started From The Bottom", Drake, 76, 2013
-"Stir Fry", Migos, 71, 2018
-"Sunflower", Post Malone ft. Swae Lee, 83, 2018
-"The Motto", Drake ft. Lil Wayne, 76, 2011
-"Thrift Shop", Macklemore & Ryan Lewis ft. Wanz, 72, 2012
-"Trap Queen", Fetty Wap, 77, 2014
-"Trophies", Drake, 73, 2014
-"Tunnel Vision", Kodak Black, 78, 2017
-"Walk It Talk It", Migos ft. Drake, 75, 2018
-"WAP", Cardi B ft. Megan Thee Stallion, 87, 2020
-"What's Luv?", Fat Joe ft. Ashanti, 66, 2002
-"Wish Wish", DJ Khaled ft. Cardi B & 21 Savage, 70, 2019
-"XO TOUR Llif3", Lil Uzi Vert, 83, 2017
-"You Was Right", Lil Uzi Vert, 71, 2016
-"Panda", Desiigner, 70, 2016
+All I Do Is Win, Rap, DJ Khaled ft. T-Pain, Ludacris, Snoop Dogg & Rick Ross, 76, 2010
+Bickenhead, Rap, Cardi B, 59, 2018
+Crank That (Soulja Boy), Rap, Soulja Boy Tell'em, 67, 2007
+DNA., Rap, Kendrick Lamar, 76, 2017
+Ether, Rap, Nas, 60, 2001
+Forgot About Dre, Rap, Dr. Dre ft. Eminem, 73, 1999
+Gangsta's Paradise, Rap, Coolio ft. L.V., 77, 1995
+Hotline Bling, Rap, Drake, 79, 2015
+Izzo (H.O.V.A.), Rap, Jay-Z, 68, 2001
+Juicy, Rap, The Notorious B.I.G., 79, 1994
+Kick Push, Rap, Lupe Fiasco, 54, 2006
+Lose Yourself, Rap, Eminem, 83, 2002
+Money Longer, Rap, Lil Uzi Vert, 77, 2016
+No Flex Zone, Rap, Rae Sremmurd, 58, 2014
+Old Town Road, Rap, Lil Nas X ft. Billy Ray Cyrus, 82, 2019
+Power, Rap, Kanye West, 77, 2010
+Quiet Storm, Rap, Mobb Deep, 58, 1999
+Rap God, Rap, Eminem, 84, 2013
+Still D.R.E., Rap, Dr. Dre ft. Snoop Dogg, 78, 1999
+The Message, Rap, Grandmaster Flash & The Furious Five, 65, 1982
+U.N.I.T.Y., Rap, Queen Latifah, 58, 1993
+Versace, Rap, Migos ft. Drake, 63, 2013
+Wu-Tang Clan Ain't Nuthing ta F' Wit, Rap, Wu-Tang Clan, 54, 1993
+X Gon' Give It To Ya, Rap, DMX, 74, 2003
+You Can't Stop The Reign, Rap, Shaquille O'Neal ft. The Notorious B.I.G., 46, 1996

@@ -1,0 +1,51 @@
+Song, Genre, Artist, Popularity, Release Year
+18 and Life, Skid Row, 73, 1989
+Africa, Toto, 83, 1982
+Alone, Heart, 74, 1987
+Another One Bites the Dust, Queen, 87, 1980
+Any Way You Want It, Journey, 78, 1980
+Beat It, Michael Jackson, 90, 1982
+Billie Jean, Michael Jackson, 91, 1983
+Burnin' for You, Blue Öyster Cult, 71, 1981
+Crazy Train, Ozzy Osbourne, 77, 1980
+Don't Stop Believin', Journey, 81, 1981
+Every Breath You Take, The Police, 87, 1983
+Eye of the Tiger, Survivor, 84, 1982
+Faithfully, Journey, 78, 1983
+Girls Just Want to Have Fun, Cyndi Lauper, 81, 1983
+Here I Go Again, Whitesnake, 77, 1982
+Hit Me With Your Best Shot, Pat Benatar, 73, 1980
+I Love Rock 'n' Roll, Joan Jett & The Blackhearts, 80, 1981
+I Want to Know What Love Is, Foreigner, 80, 1984
+Jump, Van Halen, 79, 1984
+Livin' on a Prayer, Bon Jovi, 86, 1986
+Money for Nothing, Dire Straits, 80, 1985
+Owner of a Lonely Heart, Yes, 75, 1983
+Paradise City, Guns N' Roses, 80, 1988
+Photograph, Def Leppard, 75, 1983
+Pour Some Sugar on Me, Def Leppard, 84, 1987
+Purple Rain, Prince, 81, 1984
+Rock You Like a Hurricane, Scorpions, 77, 1984
+Separate Ways (Worlds Apart), Journey, 71, 1983
+Sharp Dressed Man, ZZ Top, 76, 1983
+Sweet Child o' Mine, Guns N' Roses, 86, 1987
+Take On Me, a-ha, 83, 1985
+The Final Countdown, Europe, 80, 1986
+The Power of Love, Huey Lewis & The News, 77, 1985
+Total Eclipse of the Heart, Bonnie Tyler, 80, 1983
+Walk This Way, Run-DMC feat. Aerosmith, 79, 1986
+We Built This City, Starship, 73, 1985
+Welcome to the Jungle, Guns N' Roses, 83, 1987
+What I Like About You, The Romantics, 73, 1980
+White Wedding, Billy Idol, 76, 1982
+Wind of Change, Scorpions, 78, 1990
+With or Without You, U2, 84, 1987
+You Give Love a Bad Name, Bon Jovi, 84, 1986
+You Shook Me All Night Long, AC/DC, 83, 1980
+Your Love, The Outfield, 75, 1985
+Heaven, Bryan Adams, 81, 1985
+Rock of Ages, Def Leppard, 75, 1983
+Every Rose Has Its Thorn, Poison, 75, 1988
+Panama, Van Halen, 75, 1984
+Sister Christian, Night Ranger, 69, 1984
+Love Shack, The B-52's, 78, 1989

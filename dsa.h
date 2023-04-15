@@ -27,12 +27,13 @@ private:
 
 
 public:
+    Sorting();
     void merge(std::vector<std::string> sort);
     void insertion(std::vector<std::string> sort);
     void selection(std::vector<std::string> sort);
     void library(std::vector<std::string> sort);
-    int partition (int *A, int lo, int hi);
-    void r_quicksort(int *A,int lo, int  hi);
+    int partition (std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1);
+    void r_quicksort(std::vector<int> &vec, int lo, int  hi,std::vector<int> &vec1);
     
 };
 

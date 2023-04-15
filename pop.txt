@@ -1,51 +1,25 @@
-Song, Genre, Artist, Popularity, Release Year
-"7 Rings", Ariana Grande, 77, 2019
-"A Thousand Miles", Vanessa Carlton, 70, 2002
-"All of Me", John Legend, 81, 2013
-"Bad Guy", Billie Eilish, 89, 2019
-"Blank Space", Taylor Swift, 74, 2014
-"Blinding Lights", The Weeknd, 91, 2019
-"Call Me Maybe", Carly Rae Jepsen, 68, 2012
-"Can't Feel My Face", The Weeknd, 75, 2015
-"Cheap Thrills", Sia, 73, 2016
-"Closer", The Chainsmokers ft. Halsey, 84, 2016
-"Dance Monkey", Tones and I, 86, 2019
-"Dark Horse", Katy Perry ft. Juicy J, 65, 2013
-"Delicate", Taylor Swift, 66, 2017
-"Despacito", Luis Fonsi ft. Daddy Yankee, 80, 2017
-"Don't Start Now", Dua Lipa, 86, 2019
-"Don't Stop the Music", Rihanna, 73, 2007
-"Dynamite", BTS, 89, 2020
-"Fancy", Iggy Azalea ft. Charli XCX, 63, 2014
-"Hallelujah", Jeff Buckley, 71, 1994
-"Havana", Camila Cabello ft. Young Thug, 75, 2017
-"Hello", Adele, 80, 2015
-"Hotline Bling", Drake, 70, 2015
-"I Kissed a Girl", Katy Perry, 61, 2008
-"I Will Always Love You", Whitney Houston, 77, 1992
-"Just Dance", Lady Gaga ft. Colby O'Donis, 68, 2008
-"Love Story", Taylor Swift, 73, 2008
-"Lover", Taylor Swift, 73, 2019
-"Maneater", Nelly Furtado, 64, 2006
-"Old Town Road (Remix)", Lil Nas X ft. Billy Ray Cyrus, 85, 2019
-"Only Girl (In the World)", Rihanna, 73, 2010
-"Party in the U.S.A.", Miley Cyrus, 68, 2009
-"Poker Face", Lady Gaga, 71, 2008
-"Rolling in the Deep", Adele, 82, 2010
-"S&M", Rihanna, 65, 2010
-"Shape of You", Ed Sheeran, 85, 2017
-"Shut Up and Dance", Walk the Moon, 77, 2014
-"Stay", Rihanna ft. Mikky Ekko, 68, 2012
-"Stitches", Shawn Mendes, 73, 2015
-"Stronger", Kelly Clarkson, 70, 2004
-"Sugar", Maroon 5, 77, 2015
-"The Middle", Zedd ft. Maren Morris & Grey, 79, 2018
-"Thinking Out Loud", Ed Sheeran, 81, 2014
-"This Love", Maroon 5, 74, 2002
-"Thrift Shop", Macklemore & Ryan Lewis ft. Wanz, 69, 2012
-"Tik Tok", Kesha, 67, 2009
-"Uptown Funk", Mark Ronson ft. Bruno Mars, 88, 2014
-"Viva la Vida", Coldplay, 78, 2008
-"We Found Love", Rihanna ft. Calvin Harris, 74, 2011
-"Without Me", Halsey, 87, 2018
-"You Belong With Me", Taylor Swift, 73, 2008
+All About That Bass, Pop, Meghan Trainor, 72, 2014
+Break My Heart, Pop, Dua Lipa, 85, 2020
+Call Me Maybe, Pop, Carly Rae Jepsen, 72, 2012
+Dancing On My Own, Pop, Robyn, 72, 2010
+Everytime We Touch, Pop, Cascada, 62, 2005
+Firework, Pop, Katy Perry, 70, 2010
+Good 4 U, Pop, Olivia Rodrigo, 96, 2021
+Hot N Cold, Pop, Katy Perry, 65, 2008
+I Gotta Feeling, Pop, The Black Eyed Peas, 69, 2009
+Just Dance, Pop, Lady Gaga, 71, 2008
+Kiss Me More, Pop, Doja Cat ft. SZA, 89, 2021
+Love Story, Pop, Taylor Swift, 71, 2008
+Moves Like Jagger, Pop, Maroon 5 ft. Christina Aguilera, 68, 2011
+New Rules, Pop, Dua Lipa, 80, 2017
+Only Girl (In The World), Pop, Rihanna, 68, 2010
+Poker Face, Pop, Lady Gaga, 73, 2008
+Royals, Pop, Lorde, 72, 2013
+Shape of You, Pop, Ed Sheeran, 81, 2017
+Thank U, Next, Pop, Ariana Grande, 78, 2018
+Umbrella, Pop, Rihanna ft. Jay-Z, 72, 2007
+Viva La Vida, Pop, Coldplay, 76, 2008
+Wannabe, Pop, Spice Girls, 63, 1996
+X, Pop, Jonas Brothers ft. Karol G, 73, 2021
+You Belong With Me, Pop, Taylor Swift, 68, 2008
+7 Rings, Pop, Ariana Grande, 82, 2019

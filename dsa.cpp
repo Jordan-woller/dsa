@@ -22,7 +22,7 @@ void Sorting::read_data(std::string file_name){
             i++;
         }
     }
-    this->merge((*database)[0]);
+    //this->merge((*database)[0]);
 }
 
 void Sorting::insertion(std::vector<std::string> sort){
@@ -38,7 +38,6 @@ void Sorting::insertion(std::vector<std::string> sort){
             std::swap(this->database[2][j-1], this->database[2][j]);
             std::swap(this->database[3][j-1], this->database[3][j]);
             std::swap(this->database[4][j-1], this->database[4][j]);
-
             j--;
         }
     }

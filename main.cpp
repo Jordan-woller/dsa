@@ -5,21 +5,6 @@
 #include <sstream>
 #include <fstream>
 
-void read_data(std::string file_name){
-    std::ifstream file_stream;
-    file_stream.open(file_name);
-    std::string line;
-    //looping through list to store values in each column
-    while(std::getline(file_stream, line)){
-        std::istringstream ss(line);
-
-        //getting each column and storing into vector
-       
-    
-    }
-}
-
-
 int main(int argc, char*argv[]){
     int initial_choice;
     std::string song_choice;
@@ -42,12 +27,14 @@ int main(int argc, char*argv[]){
     std::vector<std::string>song_choice_vec;
     int song_select;
 
+    Sorting playlist;
+
     //passing files into the read_data function to get columns
-    read_data(argv[1]);
-    read_data(argv[2]);
-    read_data(argv[3]);
-    read_data(argv[4]);
-    read_data(argv[5]);
+    playlist.read_data(argv[1]);
+    playlist.read_data(argv[2]);
+    playlist.read_data(argv[3]);
+    playlist.read_data(argv[4]);
+    playlist.read_data(argv[5]);
 
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here

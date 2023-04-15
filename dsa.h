@@ -12,12 +12,8 @@
 
 class Sorting{
 private:
-    std::vector<int> year;
-    std::vector<std::string> artist;
-    std::vector<std::string> genre;
-    std::vector<int> popularity;
-    std::vector<std::string> title;
-
+    std::vector<std::vector<std::string>> database;
+    
     void merge();
     void insertion();
     void selection();

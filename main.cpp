@@ -5,18 +5,19 @@
 #include <sstream>
 #include <fstream>
 
-/*void read_data(std::string file_name, std::vector<std::string>song_vec, std::vector<std::string>genre_vec,std::vector<std::string>artist_vec,std::vector<int>popularity_vec, std::vector<int>year_vec){
+void read_data(std::string file_name){
     std::ifstream file_stream;
     file_stream.open(file_name);
     std::string line;
     //looping through list to store values in each column
     while(std::getline(file_stream, line)){
-        std::istringstream string_stream(line);
+        std::istringstream ss(line);
 
         //getting each column and storing into vector
-        std::getline(string_stream, song_vec[])
+       
+    
     }
-}*/
+}
 
 
 int main(int argc, char*argv[]){
@@ -41,24 +42,18 @@ int main(int argc, char*argv[]){
     std::vector<std::string>song_choice_vec;
     int song_select;
 
-    //listing names of files
-    std::string country_file (argv[1]);
-    std::string indie_file (argv[2]);
-    std::string pop_file (argv[3]);
-    std::string rap_file (argv[4]);
-
     //passing files into the read_data function to get columns
-    //read_data(country_file);
-
-
+    read_data(argv[1]);
+    read_data(argv[2]);
+    read_data(argv[3]);
+    read_data(argv[4]);
+    read_data(argv[5]);
 
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here
     // auto stop = std::chrono::high_resolution_clock::now();
     // auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    // std::cout << duration << std::endl;
-
-
+    // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
     while(initial_choice != 5) { //5 is the quit option
         std::cout << "What would you like to do?" << std::endl;
@@ -345,14 +340,6 @@ int main(int argc, char*argv[]){
     //asks for what genre
     //b print out if a specific song the user enters exists
     //c. prints songs that are above a certain popularity
-
-
-
-
-
-
-    std::cout << "Time taken by function: "
-        << duration.count() << " microseconds" << std::endl;
 
 
     return 0;

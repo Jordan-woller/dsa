@@ -1,0 +1,51 @@
+Song, Genre, Artist, Popularity, Release Year
+1901, Phoenix, 77, 2009
+Anna Sun, Walk the Moon, 74, 2010
+Australian Crawl, Hockey Dad, 60, 2016
+Bitter Sweet Symphony, The Verve, 83, 1997
+Can't Do Without You, Caribou, 66, 2014
+Coffee and TV, Blur, 73, 1999
+Crystalised, The xx, 76, 2009
+Debaser, Pixies, 70, 1989
+Do I Wanna Know?, Arctic Monkeys, 89, 2013
+Electric Feel, MGMT, 81, 2008
+Elephant, Tame Impala, 73, 2012
+Fake Plastic Trees, Radiohead, 79, 1995
+Fell in Love with a Girl, The White Stripes, 71, 2001
+Float On, Modest Mouse, 79, 2004
+Gold Lion, Yeah Yeah Yeahs, 70, 2006
+Hey, Soul Sister, Train, 77, 2009
+Home, Edward Sharpe & The Magnetic Zeros, 77, 2010
+Hoops, The Rubens, 57, 2015
+I Will Wait, Mumford & Sons, 78, 2012
+Kids, MGMT, 80, 2008
+Last Nite, The Strokes, 79, 2001
+Little Talks, Of Monsters and Men, 80, 2011
+Lonely Boy, The Black Keys, 77, 2011
+Love Will Tear Us Apart, Joy Division, 76, 1980
+Maps, Yeah Yeah Yeahs, 75, 2003
+My Body, Young the Giant, 74, 2010
+No Cars Go, Arcade Fire, 70, 2007
+Obstacle 1, Interpol, 72, 2002
+Pumped Up Kicks, Foster the People, 81, 2010
+Riptide, Vance Joy, 81, 2013
+Ruby, Kaiser Chiefs, 71, 2007
+Safe and Sound, Capital Cities, 79, 2011
+Satellite, Guster, 62, 2006
+Seven Nation Army, The White Stripes, 88, 2003
+Sex on Fire, Kings of Leon, 79, 2008
+Someday, The Strokes, 77, 2001
+Somewhere Only We Know, Keane, 78, 2004
+Stressed Out, Twenty One Pilots, 84, 2015
+Take Me Out, Franz Ferdinand, 79, 2004
+The District Sleeps Alone Tonight, The Postal Service, 72, 2003
+The Funeral, Band of Horses, 73, 2006
+The Middle, Jimmy Eat World, 77, 2001
+The Suburbs, Arcade Fire, 76, 2010
+This Charming Man, The Smiths, 74, 1983
+Time to Pretend, MGMT, 74, 2008
+Tongue Tied, Grouplove, 79, 2011
+Two Weeks, Grizzly Bear, 75, 2009
+Undercover Martyn, Two Door Cinema Club, 72, 2010
+When You Were Young, The Killers, 77, 2006
+Young Folks, Peter Bjorn and John, 77, 2006

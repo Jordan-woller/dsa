@@ -1,0 +1,51 @@
+Song, Genre, Artist, Popularity, Release Year
+"Achy Breaky Heart", Billy Ray Cyrus, 59, 1992
+"All My Ex's Live in Texas", George Strait, 45, 1987
+"Amazed", Lonestar, 41, 1999
+"Before He Cheats", Carrie Underwood, 67, 2006
+"Bless the Broken Road", Rascal Flatts, 72, 2004
+"Blue Ain't Your Color", Keith Urban, 71, 2016
+"Boot Scootin' Boogie", Brooks & Dunn, 39, 1991
+"Burning House", Cam, 47, 2015
+"Chicken Fried", Zac Brown Band, 51, 2003
+"Copperhead Road", Steve Earle, 60, 1988
+"Cruise", Florida Georgia Line, 78, 2012
+"Die a Happy Man", Thomas Rhett, 79, 2015
+"Don't Stop Believin'", Journey, 50, 1981
+"Drinkin' Problem", Midland, 74, 2017
+"Drunk on a Plane", Dierks Bentley, 81, 2014
+"Fancy", Reba McEntire, 54, 1990
+"Forever and Ever, Amen", Randy Travis, 37, 1987
+"Friends Don't", Maddie & Tae, 36, 2018
+"Friends In Low Places", Garth Brooks, 38, 1990
+"God's Country", Blake Shelton, 69, 2019
+"Girl Crush", Little Big Town, 70, 2014
+"Highway Don't Care", Tim McGraw ft. Taylor Swift, 68, 2013
+"H.O.L.Y.", Florida Georgia Line, 76, 2016
+"I Hope", Gabby Barrett, 52, 2019
+"I Will Always Love You", Dolly Parton, 57, 1974
+"Independence Day", Martina McBride, 53, 1994
+"It's Five O'Clock Somewhere", Alan Jackson and Jimmy Buffett, 46, 2003
+"Jolene", Dolly Parton, 56, 1973
+"Mama's Broken Heart", Miranda Lambert, 77, 2013
+"Man! I Feel Like a Woman!", Shania Twain, 40, 1997
+"Meant to Be", Bebe Rexha ft. Florida Georgia Line, 82, 2017
+"My Church", Maren Morris, 65, 2016
+"Need You Now", Lady Antebellum, 44, 2009
+"Old Town Road", Lil Nas X ft. Billy Ray Cyrus, 49, 2018
+"On the Road Again", Willie Nelson, 55, 1980
+"Rainbow", Kacey Musgraves, 66, 2018
+"Stuck Like Glue", Sugarland, 63, 2010
+"Take Your Time", Sam Hunt, 62, 2014
+"The Dance", Garth Brooks, 43, 1989
+"The House That Built Me", Miranda Lambert, 75, 2009
+"The Night the Lights Went Out in Georgia", Reba McEntire, 48, 1991
+"Tennessee Whiskey", Chris Stapleton, 73, 2015
+"Tequila", Dan + Shay, 80, 2018
+"There's Your Trouble", Dixie Chicks, 58, 1998
+"This Kiss", Faith Hill, 61, 1998
+"Tin Man", Miranda Lambert, 50, 2016
+"Wagon Wheel", Darius Rucker, 64, 2013
+"What Hurts the Most", Rascal Flatts, 70, 2006
+"When You Say Nothing at All", Alison Krauss, 42, 1995
+"You Belong with Me", Taylor Swift, 55, 2008

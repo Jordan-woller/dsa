@@ -22,7 +22,7 @@ void Sorting::read_data(std::string file_name){
             i++;
         }
     }
-    this->merge((*database)[0]);
+    // this->merge((*database)[0]);
 }
 
 void Sorting::insertion(std::vector<std::string> sort){

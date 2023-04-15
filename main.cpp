@@ -15,11 +15,14 @@ int main(){
     int criteria;
     int single_criteria;
     std::string use_criteria;
-
-
-
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
+    int shuffle_criteria;
+    int lookup;
+    int genre_lookup;
+    int song_lookup;
+    int pop_lookup;
+
 
 
 
@@ -36,7 +39,7 @@ int main(){
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
         std::cout << "2. Get a personalized series of song recommendations based on music you like." << std::endl;
         std::cout << "3. Re-shuffle the playlist by criteria of your choosing." << std::endl;
-        std::cout << "4. Printout songs of a certain critera" << std::endl;
+        std::cout << "4. Printout songs of a certain criteria" << std::endl;
         std::cin >> initial_choice;
         while(initial_choice != 1 and initial_choice != 2 and initial_choice != 3 and initial_choice != 4){
             std::cout << "Invalid entry, please enter one of the listed options." << std::endl;
@@ -173,11 +176,64 @@ int main(){
         }
 
     }
-    if(initial_choice == 3){
+    if(initial_choice == 3){ //reshuffle playlist by criteria of users choosing
+        std::cout << "How do you want to shuffle the playlist?" << std::endl;
+        std::cout << "(enter an option 1-5)" << std::endl;
+        std::cout << "1. Shuffle based on song title" << std::endl;
+        std::cout << "2. Shuffle based on genre" << std::endl;
+        std::cout << "3. Shuffle based on artist" << std::endl;
+        std::cout << "4. Shuffle based on popularity" << std::endl;
+        std::cout << "5. Shuffle based on release year" << std::endl;
 
+        std::cin >> shuffle_criteria;
+        //error checking for shuffling criteria
+        while (shuffle_criteria != 1 and shuffle_criteria != 2 and shuffle_criteria != 3 and shuffle_criteria != 4 and shuffle_criteria != 5){
+            std::cout << "Invalid option, try again." << std::endl;
+            std::cin >> shuffle_criteria;
+        }
+        //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
+        //TODO calls method goes into quicksort method for shuffling
     }
     if(initial_choice == 4){
-
+        std::cout << "What would you like to see?" << std::endl;
+        std::cout << "1. Print songs of a certain genre " << std::endl;
+        std::cout << "2. See if a specific song exists in the playlist " << std::endl;
+        std::cout << "3. Print songs that are above a certain popularity " << std::endl;
+        std::cin >> lookup;
+        //error checking for lookup options
+        while (lookup != 1 and lookup != 2 and lookup != 3){
+            std::cout << "Invalid option, try again." << std::endl;
+            std::cin >> lookup;
+        }
+        //choices
+        if(lookup == 1){
+            std::cout << "Which genre would you like to see songs of?" << std::endl;
+            std::cout << "1. Country" << std::endl;
+            std::cout << "2. Pop" << std::endl;
+            std::cout << "3. Rap" << std::endl;
+            std::cout << "4. 80s Rock" << std::endl;
+            std::cout << "5. Indie Rock" << std::endl;
+            std::cin >> genre_lookup;
+            //error checking for genre lookup
+            while (genre_lookup != 1 and genre_lookup != 2 and genre_lookup != 3 and genre_lookup != 4 and
+                    genre_lookup != 5) {
+                std::cout << "Invalid, please enter an option 1-5";
+                std::cin >> genre_lookup;
+            }
+            //TODO add method and method call to only print songs of selected genre
+        }
+        if(lookup == 2){
+            std::cout << "Enter a song:" << std::endl;
+            std::cin >> song_lookup;
+            //TODO add some sort of method that converts song to proper capitalization ex if all is lower case
+            //TODO add method to see if song exists
+        }
+        if(lookup == 3){
+            std::cout << "Enter a popularity to see songs only above that level of popularity:" << std::endl;
+            std::cin >> pop_lookup;
+            //TODO add error checking for popularity to ensure it is an integer between 1-100
+            //TODO add method to display songs above that level of popularity
+        }
     }
 
 

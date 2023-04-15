@@ -23,6 +23,7 @@ void Sorting::read_data(std::string file_name){
             i++;
         }
     }
+    this->merge(database[0]);
 }
 
 int Sorting:: partition(std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1){

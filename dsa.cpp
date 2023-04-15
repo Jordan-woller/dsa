@@ -4,7 +4,30 @@
 
 
 Sorting::Sorting() {
-//idk
+ 
+}
+
+void Sorting::read_data(std::string file_name){
+    std::ifstream file_stream;
+    file_stream.open(file_name);
+    std::string line;
+    //looping through list to store values in each column
+    while(std::getline(file_stream, line)){
+        std::istringstream ss(line);
+
+        //getting each column and storing into vector
+        //song
+        //genre
+        //artist
+        //popularity
+        //release year
+        int i = 0;
+        std::string temp;
+        while(ss >> temp){
+            this->database[i].push_back(temp);
+            i++;
+        }
+    }
 }
 
 int Sorting:: partition(std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1){

@@ -1,14 +1,11 @@
-//
-// Created by Addie Murphy on 4/13/23.
-//
 #include <iostream>
 #include <vector>
 #include <cstring>
+#include <sstream>
+#include <fstream>
 
 #ifndef DSA_DSA_H
 #define DSA_DSA_H
-
-// test comment for jake
 
 class Sorting{
 private:
@@ -20,10 +17,12 @@ private:
     void library();
     int partition();
     void r_quicksort();
-
+   
 
 public:
     Sorting();
+    ~Sorting();
+    void read_data(std::string file_name);
     void merge(std::vector<std::string> sort);
     void insertion(std::vector<std::string> sort);
     void selection(std::vector<std::string> sort);

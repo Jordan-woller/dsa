@@ -15,8 +15,7 @@ private:
     std::vector<std::vector<std::string>> *database;
     
     bool compareBy(int cat1, int cat2, int index1, int index2);
-    int partition (std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1);
-
+    int partition(int lo, int hi, int criteria);
 public:
     Sorting();
     ~Sorting();
@@ -25,7 +24,7 @@ public:
     void insertion(std::vector<std::string> sort);
     void selection(std::vector<std::string> sort);
     void library(std::vector<std::string> sort);
-    void r_quicksort(std::vector<int> &vec, int lo, int  hi,std::vector<int> &vec1);
+    void r_quicksort(std::vector<std::vector<std::string>> &database, int lo, int  hi,int criteria);
     
 };
 

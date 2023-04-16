@@ -22,7 +22,7 @@ void Sorting::read_data(std::string file_name){
             i++;
         }
     }
-    this->merge((*database)[0]);
+    // this->merge((*database)[0]);
 }
 
 void Sorting::insertion(std::vector<std::string> sort){
@@ -38,18 +38,27 @@ void Sorting::insertion(std::vector<std::string> sort){
             std::swap(this->database[2][j-1], this->database[2][j]);
             std::swap(this->database[3][j-1], this->database[3][j]);
             std::swap(this->database[4][j-1], this->database[4][j]);
-
             j--;
         }
     }
 }
 
 
+int Sorting:: partition(int lo, int hi, int criteria){
+    std::vector<std::string> vec;
 
-
-
-
-int Sorting:: partition(std::vector<int> &vec, int lo, int hi,std::vector<int> &vec1){
+    //song, genre, artist, popularity, and release year
+    if(criteria==1){
+        vec = this->database[0];
+    } else if(criteria == 2){
+        vec = this->database[1];
+    }else if(criteria == 3){
+        vec = this->database[2];
+    }else if(criteria == 4){
+        vec = this->database[3];
+    }else if(criteria == 5){
+        vec = this->database[4];
+    }
 
     int i = lo;
     int j = hi + 1;
@@ -69,25 +78,35 @@ int Sorting:: partition(std::vector<int> &vec, int lo, int hi,std::vector<int> &
 
         // swap A[i] and A[j]
         std::swap(vec[i], vec[j]);
-        std::swap(vec1[i], vec1[j]);
+        std::swap(database[0][i], database[0][j]);
+        std::swap(database[1][i], database[1][j]);
+        std::swap(database[2][i], database[2][j]);
+        std::swap(database[3][i], database[3][j]);
+        std::swap(database[4][i], database[4][j]);
+
+
     }
-    // swap the pivot with A[j]
     std::swap(vec[lo], vec[j]);
-    std::swap(vec1[lo], vec1[j]);
+    std::swap(database[0][lo], database[0][j]);
+    std::swap(database[1][lo], database[1][j]);
+    std::swap(database[2][lo], database[2][j]);
+    std::swap(database[3][lo], database[3][j]);
+    std::swap(database[4][lo], database[4][j]);
+
 
     //return pivot's position
     return j;
 }
 
-void Sorting:: r_quicksort(std::vector<int> &vec, int lo, int  hi,std::vector<int> &vec1)
+void Sorting:: r_quicksort(std::vector<std::vector<std::string>> &database, int lo, int  hi,int criteria)
 {
     if (hi <= lo) return;
 
-    int p = partition(vec, lo, hi,vec1);
+    int p = partition(database, lo, hi,criteria);
 
-    r_quicksort(vec, lo, p - 1,vec1);
+    r_quicksort(database, lo, p - 1,criteria);
 
-    r_quicksort(vec, p + 1, hi,vec1);
+    r_quicksort(database, p + 1, hi,criteria);
 }
 
 bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){

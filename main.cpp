@@ -2,30 +2,16 @@
 #include <vector>
 #include <chrono>
 #include "dsa.h"
-#include <sstream>
-#include <fstream>
 
 int main(int argc, char*argv[]){
-    int initial_choice;
-    std::string song_choice;
-    std::string genre_choice;
-    std::string artist_choice;
-    int release_year;
-    int popularity;
-    int playlist_select;
-    int dif_playlist;
-    int criteria;
-    int single_criteria;
-    std::string use_criteria;
+    int initial_choice = 0;
+    std::string song_choice, genre_choice, artist_choice, use_criteria;
+    int release_year, popularity, playlist_select, criteria, single_criteria;
+    int shuffle_criteria, lookup, genre_lookup, song_lookup, pop_lookup, song_select;
+
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
-    int shuffle_criteria;
-    int lookup;
-    int genre_lookup;
-    int song_lookup;
-    int pop_lookup;
     std::vector<std::string>song_choice_vec;
-    int song_select;
 
     Sorting playlist;
 
@@ -107,7 +93,7 @@ int main(int argc, char*argv[]){
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 and song_select > 25) {
+                    while (song_select < 1 || song_select > 25) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
@@ -120,7 +106,7 @@ int main(int argc, char*argv[]){
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 and song_select > 25) {
+                    while (song_select < 1 || song_select > 25) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
@@ -132,7 +118,7 @@ int main(int argc, char*argv[]){
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 and song_select > 25) {
+                    while (song_select < 1 || song_select > 25) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
@@ -144,7 +130,7 @@ int main(int argc, char*argv[]){
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 and song_select > 25) {
+                    while (song_select < 1 || song_select > 25) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
@@ -156,7 +142,7 @@ int main(int argc, char*argv[]){
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 and song_select > 25) {
+                    while (song_select < 1 || song_select > 25) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
@@ -280,10 +266,8 @@ int main(int argc, char*argv[]){
         //resetting necessary variables
         initial_choice = 0;
     }
-    if(initial_choice == 5){
-        exit(0);
-    }
 
+    exit(0);
 
         //main options menu
     //Ask the user what they want to do
@@ -327,9 +311,6 @@ int main(int argc, char*argv[]){
     //asks for what genre
     //b print out if a specific song the user enters exists
     //c. prints songs that are above a certain popularity
-
-
     return 0;
-
 }
 

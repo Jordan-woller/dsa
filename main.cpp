@@ -231,8 +231,10 @@ int main(int argc, char*argv[]){
                 std::cin >> shuffle_criteria;
             }
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
-            //TODO calls method goes into quicksort method for shuffling
+            r_quicksort(std::vector<std::vector<std::string>> &database, int lo, int  hi,int criteria);
         }
+
+
         if (initial_choice == 4) {
             std::cout << "What would you like to see?" << std::endl;
             std::cout << "1. Print songs of a certain genre " << std::endl;

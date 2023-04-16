@@ -15,7 +15,7 @@ private:
     std::vector<std::vector<std::string>> *database;
     
     bool compareBy(int cat1, int cat2, int index1, int index2);
-    int partition(std::vector<std::vector<std::string>> &database, int lo, int hi, int criteria);
+    int partition(int lo, int hi, int criteria);
 public:
     Sorting();
     ~Sorting();

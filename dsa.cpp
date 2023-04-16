@@ -44,20 +44,20 @@ void Sorting::insertion(std::vector<std::string> sort){
 }
 
 
-int Sorting:: partition(std::vector<std::vector<std::string>> &database, int lo, int hi, int criteria){
+int Sorting:: partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
 
     //song, genre, artist, popularity, and release year
     if(criteria==1){
-        vec = database[0];
+        vec = this->database[0];
     } else if(criteria == 2){
-        vec=database[1];
+        vec = this->database[1];
     }else if(criteria == 3){
-        vec=database[2];
+        vec = this->database[2];
     }else if(criteria == 4){
-        vec=database[3];
+        vec = this->database[3];
     }else if(criteria == 5){
-        vec=database[4];
+        vec = this->database[4];
     }
 
     int i = lo;

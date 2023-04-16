@@ -2,6 +2,7 @@
 #include<vector>
 #include "dsa.h"
 
+
 Sorting::Sorting(){}
 Sorting::~Sorting(){}
 
@@ -43,21 +44,20 @@ void Sorting::insertion(std::vector<std::string> sort){
     }
 }
 
-
-int Sorting:: partition(int lo, int hi, int criteria){
+int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
 
     //song, genre, artist, popularity, and release year
     if(criteria==1){
-        vec = this->database[0];
+        vec = (*database)[0];
     } else if(criteria == 2){
-        vec = this->database[1];
+        vec = (*database)[1];
     }else if(criteria == 3){
-        vec = this->database[2];
+        vec = (*database)[2];
     }else if(criteria == 4){
-        vec = this->database[3];
+        vec = (*database)[3];
     }else if(criteria == 5){
-        vec = this->database[4];
+        vec = (*database)[4];
     }
 
     int i = lo;
@@ -83,9 +83,8 @@ int Sorting:: partition(int lo, int hi, int criteria){
         std::swap(database[2][i], database[2][j]);
         std::swap(database[3][i], database[3][j]);
         std::swap(database[4][i], database[4][j]);
-
-
     }
+
     std::swap(vec[lo], vec[j]);
     std::swap(database[0][lo], database[0][j]);
     std::swap(database[1][lo], database[1][j]);
@@ -98,15 +97,15 @@ int Sorting:: partition(int lo, int hi, int criteria){
     return j;
 }
 
-void Sorting:: r_quicksort(std::vector<std::vector<std::string>> &database, int lo, int  hi,int criteria)
+void Sorting::r_quicksort(int lo, int hi, int criteria)
 {
     if (hi <= lo) return;
 
-    int p = partition(database, lo, hi,criteria);
+    int p = partition(lo, hi, criteria);
 
-    r_quicksort(database, lo, p - 1,criteria);
+    r_quicksort(lo, p - 1, criteria);
 
-    r_quicksort(database, p + 1, hi,criteria);
+    r_quicksort(p + 1, hi, criteria);
 }
 
 bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
@@ -119,6 +118,61 @@ bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
     }
 }
 
+//compares two strings
+int Sorting::comparestr(std::string str1, std::string str2){
+    if (str1[0] < str2[0]) {
+        return -1;
+    } else if (str1[0] > str2[0]) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+//public function to make aux vector and call r_merge
+void Sorting::m_sort(std::vector<std::string> *vec){
+    auto aux = vec;
+    r_merge(vec, aux, 0, (*aux).size() - 1);
+    delete aux;
+}
+
+//private function to sort each half of vector
+void Sorting::r_merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int hi) {
+
+    //basecase(single element or empty list)
+    if (hi <= lo) return;
+
+    //divide
+    int mid = lo + (hi - lo) / 2;
+
+    //recursively sort halves
+    r_merge(vec, aux, lo, mid);
+    r_merge(vec, aux, mid + 1, hi);
+
+    //merge
+    merge(vec, aux, lo, mid, hi);
+}
+
+//private function to merge each vector together
+void Sorting::merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int mid,int hi) {
+
+    // copy array
+    std::memcpy(aux + lo, vec + lo, (hi - lo + 1 * (*vec).size()));
+
+    // merge
+    int i = lo, j = mid + 1;
+
+    for (int k = lo; k <= hi; k++) {
+
+        if (i > mid) vec[k]=aux[j++];
+
+        else if (j > hi) vec[k] = aux[i++];
+
+        else if(aux[j] < aux[i]) vec[k] = aux[j++];
+
+        else vec[k] = aux[i++];
+    }
+}
 
 
 /*

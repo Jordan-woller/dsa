@@ -231,7 +231,7 @@ int main(int argc, char*argv[]){
                 std::cin >> shuffle_criteria;
             }
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
-            r_quicksort(std::vector<std::vector<std::string>> &database, int lo, int  hi,int criteria);
+//            r_quicksort(int lo, int  hi, int shuffle_criteria);
         }
 
 
@@ -283,8 +283,6 @@ int main(int argc, char*argv[]){
     if(initial_choice == 5){
         exit(0);
     }
-
-
 
 
         //main options menu

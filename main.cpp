@@ -2,6 +2,7 @@
 #include <vector>
 #include <chrono>
 #include "dsa.h"
+#include <cctype>
 
 int main(int argc, char*argv[]){
     int initial_choice = 0;
@@ -48,21 +49,42 @@ int main(int argc, char*argv[]){
             std::cin >> song_choice;  //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             std::cin >> genre_choice;
-            //TODO add error checking for genre choice
+            //error checking for genre_choice loops through each character in the variable to ensure it is not a number
+            bool genre_check = true;
+            for(int i = 0; i < genre_choice.length()-1; i++) {
+                if(std::isdigit(genre_choice[i]) and genre_check == true) {
+                    genre_check = false;
+                }
+                while(genre_check == false){
+                    std::cout << "Please enter a valid genre:" << std::endl;
+                    std::cin >> genre_check;
+                    genre_check = true;
+                }
+            }
             std::cout << "Enter the artist of this song:" << std::endl;
             std::cin >> artist_choice; //no need to error check for artist because artist can be numbers, characters, or strings
-            //TODO add error checking for artist choice
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
-            //TODO add error checking for release year choice
+            //error checking for release year
+            while(!std::isdigit(release_year) and release_year <= 2023){
+                std::cout << "Invalid year, please enter a valid year:" << std::endl;
+                std::cin >> release_year;
+            }
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
-            //TODO add error checking for popularity choice
+            //error checking for popularity
+            while(!std::isdigit(popularity) and popularity >= 0 and popularity <= 100){
+                std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
+                std::cin >> popularity;
+            }
             //displays the song the user chose
             std::cout << "You chose the following song: " << song_choice << ", " << genre_choice << ", "
                       << artist_choice << ", " << release_year << ", " << popularity << std::endl;
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
             //TODO add function call to insertion method that sorts the added song into playlist database
+            //calls insertion method to sort added song into playlist database
+
+
         }
         if (initial_choice == 2) {
             //by choosing a playlist, it will display the songs in that playlist.

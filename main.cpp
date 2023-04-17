@@ -30,6 +30,7 @@ int main(int argc, char*argv[]){
     // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
     while(initial_choice != 5) { //5 is the quit option
+        std::cout << "hello";
         std::cout << "What would you like to do?" << std::endl;
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
         std::cout << "2. Get a personalized series of song recommendations based on songs you like." << std::endl;

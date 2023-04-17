@@ -3,7 +3,9 @@
 #include "dsa.h"
 
 
-Sorting::Sorting(){}
+Sorting::Sorting(){
+    this->database = new std::vector<std::vector<std::string>>;
+}
 Sorting::~Sorting(){}
 
 void Sorting::read_data(std::string file_name){
@@ -11,7 +13,8 @@ void Sorting::read_data(std::string file_name){
     file_stream.open(file_name);
     std::string line;
     //looping through list to store values in each column
-    while(std::getline(file_stream, line)){
+
+   while(std::getline(file_stream, line)){
         std::istringstream ss(line);
 
         //getting each column and storing into vector
@@ -19,11 +22,12 @@ void Sorting::read_data(std::string file_name){
         int i = 0;
         std::string temp;
         std::vector<std::string> temp_vec;
-        while(ss >> temp){
+        while(std::getline(ss, temp, ',')){
             temp_vec.push_back(temp);
             i++;
         }
-        database[i].push_back(temp_vec);
+        database->push_back(temp_vec);
+        temp_vec.clear();
     }
 //     this->m_sort((*database)[0]);
 }

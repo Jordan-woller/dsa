@@ -1,5 +1,5 @@
 #include <iostream>
-#include<vector>
+#include <vector>
 #include "dsa.h"
 
 
@@ -18,12 +18,14 @@ void Sorting::read_data(std::string file_name){
         //song, genre, artist, popularity, release year
         int i = 0;
         std::string temp;
+        std::vector<std::string> temp_vec;
         while(ss >> temp){
-            (*database)[i].push_back(temp);
+            temp_vec.push_back(temp);
             i++;
         }
+        database[i].push_back(temp_vec);
     }
-    // this->merge((*database)[0]);
+//     this->m_sort((*database)[0]);
 }
 
 void Sorting::insertion(std::vector<std::string> sort){
@@ -120,13 +122,17 @@ bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
 
 //compares two strings
 int Sorting::comparestr(std::string str1, std::string str2){
-    if (str1[0] < str2[0]) {
-        return -1;
-    } else if (str1[0] > str2[0]) {
-        return 1;
-    } else {
-        return 0;
+    unsigned int length = (str1.length() > str2.length()) ? str1.length() : str2.length();
+
+    for (int i = 0 ; i < length ; i++){
+        if (str1[i] < str2[i]) {
+            return -1;
+        } else if (str1[i] > str2[i]) {
+            return 1;
+        }
     }
+
+    return 0;
 }
 
 //public function to make aux vector and call r_merge
@@ -136,7 +142,7 @@ void Sorting::m_sort(std::vector<std::string> *vec){
     delete aux;
 }
 
-//private function to sort each half of vector
+//private function to recursively separate vector
 void Sorting::r_merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int hi) {
 
     //basecase(single element or empty list)
@@ -156,54 +162,25 @@ void Sorting::r_merge(std::vector<std::string> *vec, std::vector<std::string> *a
 //private function to merge each vector together
 void Sorting::merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int mid,int hi) {
 
-    // copy array
+    // copy array - ask about this in office hours
     std::memcpy(aux + lo, vec + lo, (hi - lo + 1 * (*vec).size()));
 
     // merge
     int i = lo, j = mid + 1;
 
     for (int k = lo; k <= hi; k++) {
-
-        if (i > mid) vec[k]=aux[j++];
-
-        else if (j > hi) vec[k] = aux[i++];
-
-        else if(aux[j] < aux[i]) vec[k] = aux[j++];
-
-        else vec[k] = aux[i++];
+        if (i > mid){
+            (*vec)[k] = (*aux)[j++];
+        }
+        else if (j > hi){
+            (*vec)[k] = (*aux)[i++];
+        }
+        else if (comparestr((*aux)[j], (*aux)[i]) == -1){
+            (*vec)[k] = (*aux)[j++];
+        }
+        else{
+            (*vec)[k] = (*aux)[i++];
+        }
     }
 }
 
-
-/*
-int main() {
-    std::vector<int>cassidy;
-    std::vector<int>cooper;
-
-    for(int i=3; i>0; i--){
-        cassidy.push_back(i);
-    }
-    // for(int i=0; i<3; i++){
-    //      cooper.push_back(i);
-    //  }
-
-    for(int i=0; i<3; i++){
-        std::cout<<cassidy[i];
-    }
-    std::cout<<std::endl;
-
-    for(int i=0; i<3; i++){
-    std::cout<<cooper[i];
-      }
-
-    std::cout<<std::endl;
-
-
-    r_quicksort(cassidy, 0, 2,cooper);
-
-
-    for(int i=0; i<3; i++){
-        std::cout<<cassidy[i];
-    }
-}
-*/

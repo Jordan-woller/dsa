@@ -52,10 +52,10 @@ int main(int argc, char*argv[]){
             //error checking for genre_choice loops through each character in the variable to ensure it is not a number
             bool genre_check = true;
             for(int i = 0; i < genre_choice.length()-1; i++) {
-                if(std::isdigit(genre_choice[i]) and genre_check == true) {
+                if(std::isdigit(genre_choice[i]) and genre_check) {
                     genre_check = false;
                 }
-                while(genre_check == false){
+                while(!genre_check){
                     std::cout << "Please enter a valid genre:" << std::endl;
                     std::cin >> genre_check;
                     genre_check = true;
@@ -92,7 +92,6 @@ int main(int argc, char*argv[]){
             while (song_choice_vec.size() < 5) { //while the song vector of users choices is not filled with 5 songs
                 std::cout << "Choose 5 songs you like from the different genre playlists below." << std::endl;
                 std::cout << "Chose an option 1-5 to display one of the playlists." << std::endl;
-
                 std::cout << "1. Country" << std::endl;
                 std::cout << "2. Pop" << std::endl;
                 std::cout << "3. Rap" << std::endl;
@@ -213,15 +212,16 @@ int main(int argc, char*argv[]){
                     std::cout << std::endl;
                     //if they want to use criteria, corresponding truth table sets to true at that value
                     if (use_criteria == "y") {
-                        criteria_truth[i] = 1;
+                        criteria_truth[i] = true;
                     } else {
-                        criteria_truth[i] = 0;
+                        criteria_truth[i] = false;
                     }
                 }
                 //TODO now that criteria is known, use library sort method to be created to sort
             }
 
         }
+        //TODO add another choice to shuffle just a genre
         if (initial_choice == 3) { //reshuffle playlist by criteria of users choosing
             std::cout << "How do you want to shuffle the playlist?" << std::endl;
             std::cout << "(enter an option 1-5)" << std::endl;

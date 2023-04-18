@@ -221,3 +221,12 @@ bool Sorting::song_search(std::string song_lookup){
     std::cout<<"Not Found";
     return false;
 }
+void Sorting::popularity_print(int pop_lookup){
+    for(int i=0; i<(*database)[3].size(); i++ ){
+        int x= std::stoi((*database)[3][i]);
+        if(x > pop_lookup ){
+            std::cout<<(*database)[3][i];
+        }
+    }
+
+}

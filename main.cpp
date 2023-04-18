@@ -200,7 +200,7 @@ int main(int argc, char*argv[]){
                     std::cout << "Invalid option, try again." << std::endl;
                     std::cin >> single_criteria;
                 }
-                //TODO pass single_criteria and song_choice_vec into method vector for merge sort
+                playlist.merge_sort(single_criteria);
             }
                 //if the criteria is greater than 1, library sort is used to recommend songs based on the multiple criteria.
             else if (criteria == 2 or criteria == 3 or criteria == 4 or criteria == 5) {

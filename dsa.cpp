@@ -124,30 +124,34 @@ bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
     }
 }
 
-//compares two strings
-int Sorting::comparestr(std::string str1, std::string str2){
+////function to track indexes before merge/library sort???
+//int Sorting::track_indexes(std::vector<std::string> &vec, std::string element){
+//    //pass in vector and element and find original index of element
+//    //pass in sorted vector and find new index of element
+//    //swap w insertion/quicksort
+//}
+//compares two strings based on ascii values
+bool Sorting::comparestr(std::string str1, std::string str2){
     unsigned int length = (str1.length() > str2.length()) ? str1.length() : str2.length();
 
     for (int i = 0 ; i < length ; i++){
         if (str1[i] < str2[i]) {
-            return -1;
+            return true;
         } else if (str1[i] > str2[i]) {
-            return 1;
+            return false;
         }
     }
-
-    return 0;
+    return true;
 }
 
 //public function to make aux vector and call r_merge
-void Sorting::m_sort(std::vector<std::string> *vec){
-    auto aux = vec;
-    r_merge(vec, aux, 0, (*aux).size() - 1);
-    delete aux;
+void Sorting::merge_sort(int criteria){
+    auto aux = (*database)[criteria];
+    r_merge(0, aux.size() - 1, criteria);
 }
 
 //private function to recursively separate vector
-void Sorting::r_merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int hi) {
+void Sorting::r_merge(int lo, int hi, int criteria) {
 
     //basecase(single element or empty list)
     if (hi <= lo) return;
@@ -156,35 +160,63 @@ void Sorting::r_merge(std::vector<std::string> *vec, std::vector<std::string> *a
     int mid = lo + (hi - lo) / 2;
 
     //recursively sort halves
-    r_merge(vec, aux, lo, mid);
-    r_merge(vec, aux, mid + 1, hi);
+    r_merge(lo, mid, criteria);
+    r_merge(mid + 1, hi, criteria);
 
     //merge
-    merge(vec, aux, lo, mid, hi);
+    merge(lo, mid, hi, criteria);
 }
 
 //private function to merge each vector together
-void Sorting::merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int mid,int hi) {
+void Sorting::merge(int lo, int mid, int hi, int criteria) {
+    std::vector<std::vector<std::string>> temp = *database;
+    int i = lo, j = mid + 1, k = 0;
 
-    // copy array - ask about this in office hours
-    std::memcpy(aux + lo, vec + lo, (hi - lo + 1 * (*vec).size()));
+    while (i <= mid && j <= hi){
+        if (comparestr((*database)[criteria][i], (*database)[criteria][i])){
+            temp[0][k] = (*database)[0][i];
+            temp[1][k] = (*database)[1][i];
+            temp[2][k] = (*database)[2][i];
+            temp[3][k] = (*database)[3][i];
+            temp[4][k] = (*database)[4][i];
+            i++;
+        } else {
+            temp[0][k] = (*database)[0][j];
+            temp[1][k] = (*database)[1][j];
+            temp[2][k] = (*database)[2][j];
+            temp[3][k] = (*database)[3][j];
+            temp[4][k] = (*database)[4][j];
+            j++;
+        }
+        k++;
+    }
 
-    // merge
-    int i = lo, j = mid + 1;
+    while (i <= mid){
+        temp[0][k] = (*database)[0][i];
+        temp[1][k] = (*database)[1][i];
+        temp[2][k] = (*database)[2][i];
+        temp[3][k] = (*database)[3][i];
+        temp[4][k] = (*database)[4][i];
+        i++;
+        k++;
+    }
 
-    for (int k = lo; k <= hi; k++) {
-        if (i > mid){
-            (*vec)[k] = (*aux)[j++];
-        }
-        else if (j > hi){
-            (*vec)[k] = (*aux)[i++];
-        }
-        else if (comparestr((*aux)[j], (*aux)[i]) == -1){
-            (*vec)[k] = (*aux)[j++];
-        }
-        else{
-            (*vec)[k] = (*aux)[i++];
-        }
+    while (j <= hi){
+        temp[0][k] = (*database)[0][j];
+        temp[1][k] = (*database)[1][j];
+        temp[2][k] = (*database)[2][j];
+        temp[3][k] = (*database)[3][j];
+        temp[4][k] = (*database)[4][j];
+        j++;
+        k++;
+    }
+
+    for (int x = lo ; x < hi ; x++){
+        (*database)[0][i] = temp[0][i];
+        (*database)[1][i] = temp[1][i];
+        (*database)[2][i] = temp[2][i];
+        (*database)[3][i] = temp[3][i];
+        (*database)[4][i] = temp[4][i];
     }
 }
 //song, genre, artist, popularity, release year

@@ -11,19 +11,19 @@ class Sorting{
 private:
 
     std::vector<std::vector<std::string>> *database;
-    void r_merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int hi);
-    void merge(std::vector<std::string> *vec, std::vector<std::string> *aux, int lo, int mid, int hi);
+    void r_merge(int lo, int hi, int criteria);
+    void merge(int lo, int mid, int hi, int criteria);
     bool compareBy(int cat1, int cat2, int index1, int index2);
     int partition (int lo, int hi, int criteria);
-    int comparestr(std::string str1, std::string str2);
+    bool comparestr(std::string str1, std::string str2);
+    int track_indexes(std::vector<std::string> &vec, std::string element);
 
 public:
     Sorting();
     ~Sorting();
     void read_data(std::string file_name);
-    void m_sort(std::vector<std::string> *vec);
+    void merge_sort(int criteria);
     void insertion(std::vector<std::string> sort);
-    void selection(std::vector<std::string> sort);
     void library(std::vector<std::string> sort);
     void r_quicksort(int lo, int hi, int criteria);
     void genre_print(int genre_lookup);

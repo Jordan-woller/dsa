@@ -27,6 +27,7 @@ public:
     void library(std::vector<std::string> sort);
     void r_quicksort(int lo, int hi, int criteria);
     void genre_print(int genre_lookup);
+    bool song_search(std::string song_lookup);
     
 };
 

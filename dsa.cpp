@@ -198,7 +198,7 @@ void Sorting::genre_print(int genre_lookup){
         if(genre_lookup==1 and (*database)[1][i]=="Country" ){
             std::cout<<(*database)[1][i];
         }else if(genre_lookup==2 and (*database)[1][i]=="Pop" ){
-            std::cout<<(*database[1][i];
+            std::cout<<(*database)[1][i];
         }else if(genre_lookup==3 and (*database)[1][i]=="Rap" ){
             std::cout<<(*database)[1][i];
         }else if(genre_lookup==4 and (*database)[1][i]=="80s Rock" ){
@@ -209,4 +209,15 @@ void Sorting::genre_print(int genre_lookup){
 
     }
 
+}
+
+bool Sorting::song_search(std::string song_lookup){
+    for(int i=0; i<(*database)[0].size(); i++ ){
+      if((*database)[0][i] ==song_lookup ){
+          std::cout<<"Found";
+          return true;
+      }
+}
+    std::cout<<"Not Found";
+    return false;
 }

@@ -26,6 +26,7 @@ public:
     void selection(std::vector<std::string> sort);
     void library(std::vector<std::string> sort);
     void r_quicksort(int lo, int hi, int criteria);
+    void genre_print(int genre_lookup);
     
 };
 

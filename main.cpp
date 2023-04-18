@@ -271,6 +271,8 @@ int main(int argc, char*argv[]){
                     std::cin >> genre_lookup;
                 }
                 //TODO add method and method call to only print songs of selected genre
+                //IDK WHY THIS IS ERRORING!!!
+                genre_print(genre_lookup);
             }
             if (lookup == 2) {
                 std::cout << "Enter a song:" << std::endl;

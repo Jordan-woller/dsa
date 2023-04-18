@@ -187,4 +187,26 @@ void Sorting::merge(std::vector<std::string> *vec, std::vector<std::string> *aux
         }
     }
 }
+//song, genre, artist, popularity, release year
+//Country
+// Pop
+//Rap
+//80s Rock
+//Indie Rock
+void Sorting::genre_print(int genre_lookup){
+    for(int i=0; i<(*database)[1].size(); i++ ){
+        if(genre_lookup==1 and (*database)[1][i]=="Country" ){
+            std::cout<<(*database)[1][i];
+        }else if(genre_lookup==2 and (*database)[1][i]=="Pop" ){
+            std::cout<<(*database[1][i];
+        }else if(genre_lookup==3 and (*database)[1][i]=="Rap" ){
+            std::cout<<(*database)[1][i];
+        }else if(genre_lookup==4 and (*database)[1][i]=="80s Rock" ){
+            std::cout<<(*database)[1][i];
+        }else if(genre_lookup==5 and (*database)[1][i]=="Indie Rock" ){
+            std::cout<<(*database)[1][i];
+        }
 
+    }
+
+}

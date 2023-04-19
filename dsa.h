@@ -16,11 +16,11 @@ private:
     bool compareBy(int cat1, int cat2, int index1, int index2);
     int partition (int lo, int hi, int criteria);
     bool comparestr(std::string str1, std::string str2);
-    int track_indexes(std::vector<std::string> &vec, std::string element);
 
 public:
     Sorting();
     ~Sorting();
+    void print_database();
     void read_data(std::string file_name);
     void merge_sort(int criteria);
     void insertion(std::vector<std::string> sort);

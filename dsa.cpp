@@ -29,7 +29,15 @@ void Sorting::read_data(std::string file_name){
         database->push_back(temp_vec);
         temp_vec.clear();
     }
-//     this->m_sort((*database)[0]);
+}
+
+void Sorting::print_database() {
+    for (int i = 0 ; i < (*database).size() ; i++){
+        for (int j = 0 ; j < (*database)[0].size() ; j++){
+            std::cout << (*database)[i][j] << ", ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 void Sorting::insertion(std::vector<std::string> sort){
@@ -124,12 +132,6 @@ bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
     }
 }
 
-////function to track indexes before merge/library sort???
-//int Sorting::track_indexes(std::vector<std::string> &vec, std::string element){
-//    //pass in vector and element and find original index of element
-//    //pass in sorted vector and find new index of element
-//    //swap w insertion/quicksort
-//}
 //compares two strings based on ascii values
 bool Sorting::comparestr(std::string str1, std::string str2){
     unsigned int length = (str1.length() > str2.length()) ? str1.length() : str2.length();
@@ -146,7 +148,7 @@ bool Sorting::comparestr(std::string str1, std::string str2){
 
 //public function to make aux vector and call r_merge
 void Sorting::merge_sort(int criteria){
-    auto aux = (*database)[criteria];
+    auto aux = (*database)[criteria-1];
     r_merge(0, aux.size() - 1, criteria);
 }
 
@@ -173,7 +175,7 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
     int i = lo, j = mid + 1, k = 0;
 
     while (i <= mid && j <= hi){
-        if (comparestr((*database)[criteria][i], (*database)[criteria][i])){
+        if (comparestr((*database)[criteria-1][i], (*database)[criteria-1][i])){
             temp[0][k] = (*database)[0][i];
             temp[1][k] = (*database)[1][i];
             temp[2][k] = (*database)[2][i];
@@ -240,7 +242,6 @@ void Sorting::genre_print(int genre_lookup){
         }
 
     }
-
 }
 
 bool Sorting::song_search(std::string song_lookup){
@@ -249,10 +250,11 @@ bool Sorting::song_search(std::string song_lookup){
           std::cout<<"Found";
           return true;
       }
-}
+    }
     std::cout<<"Not Found";
     return false;
 }
+
 void Sorting::popularity_print(int pop_lookup){
     for(int i=0; i<(*database)[3].size(); i++ ){
         int x= std::stoi((*database)[3][i]);
@@ -260,5 +262,4 @@ void Sorting::popularity_print(int pop_lookup){
             std::cout<<(*database)[3][i];
         }
     }
-
 }

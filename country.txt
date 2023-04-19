@@ -1,0 +1,25 @@
+Amarillo By Morning,Country,George Strait,59,1983
+Blue,Country,LeAnn Rimes,49,1996
+Chattahoochee,Country,Alan Jackson,58,1992
+Don't It Make My Brown Eyes Blue,Country,Crystal Gayle,48,1977
+Elvira,Country,The Oak Ridge Boys,46,1981
+Friends In Low Places,Country,Garth Brooks,70,1990
+Galveston,Country,Glen Campbell,49,1969
+Harper Valley P.T.A.,Country,Jeannie C. Riley,47,1968
+I Walk The Line,Country,Johnny Cash,65,1956
+Jolene,Country,Dolly Parton,63,1973
+King of the Road,Country,Roger Miller,54,1965
+The Devil Went Down To Georgia,Country,Charlie Daniels Band,67,1979
+Mama Tried,Country,Merle Haggard,47,1968
+Neon Moon,Country,Brooks & Dunn,58,1992
+On the Road Again,Country,Willie Nelson,59,1980
+Picture,Country,Kid Rock ft. Sheryl Crow,57,2002
+Rhinestone Cowboy,Country,Glen Campbell,53,1975
+Stand By Your Man,Country,Tammy Wynette,49,1968
+Take Me Home,Country Roads,Country,John Denver,70,1971
+The Dance,Country,Garth Brooks,60,1990
+The Gambler,Country,Kenny Rogers,58,1978
+Wichita Lineman,Country,Glen Campbell,51,1968
+You're Still The One,Country,Shania Twain,64,1998
+Your Cheatin' Heart,Country,Hank Williams,46,1953
+You've Got a Friend,Country,James Taylor,57,1971

@@ -98,7 +98,7 @@ int main(int argc, char*argv[]){
 
             //TODO add function call to insertion method that sorts the added song into playlist database
             //calls insertion method to sort added song into playlist database
-            this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
+            //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
 
 
 

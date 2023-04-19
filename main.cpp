@@ -6,9 +6,9 @@
 
 int main(int argc, char*argv[]){
     int initial_choice = 0;
-    std::string song_choice, genre_choice, artist_choice, use_criteria;
+    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup;
     int release_year, popularity, playlist_select, criteria, single_criteria, insertion_option;
-    int shuffle_criteria, lookup, genre_lookup, song_lookup, pop_lookup, song_select;
+    int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
@@ -23,6 +23,9 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[4]);
     playlist.read_data(argv[5]);
 
+    playlist.merge_sort(1);
+    playlist.print_database();
+
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here
     // auto stop = std::chrono::high_resolution_clock::now();
@@ -30,7 +33,6 @@ int main(int argc, char*argv[]){
     // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
     while(initial_choice != 5) { //5 is the quit option
-        std::cout << "hello";
         std::cout << "What would you like to do?" << std::endl;
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
         std::cout << "2. Get a personalized series of song recommendations based on songs you like." << std::endl;
@@ -126,7 +128,7 @@ int main(int argc, char*argv[]){
                 //user can either confirm their selection or go back and choose another playlist
                 if (playlist_select == 1) {
                     std::cout << "Here is the Country playlist:" << std::endl;
-                    //TODO cout the playlist
+                    playlist.genre_print(1);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -139,7 +141,7 @@ int main(int argc, char*argv[]){
                 }
                 if (playlist_select == 2) {
                     std::cout << "Here is the Pop playlist:" << std::endl;
-                    //TODO cout the playlist
+                    playlist.genre_print(2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -151,7 +153,7 @@ int main(int argc, char*argv[]){
                 }
                 if (playlist_select == 3) {
                     std::cout << "Here is the Rap playlist:" << std::endl;
-                    //TODO cout the playlist
+                    playlist.genre_print(3);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -163,7 +165,7 @@ int main(int argc, char*argv[]){
                 }
                 if (playlist_select == 4) {
                     std::cout << "Here is the 80s Rock playlist:" << std::endl;
-                    //TODO cout the playlist
+                    playlist.genre_print(4);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -175,7 +177,7 @@ int main(int argc, char*argv[]){
                 }
                 if (playlist_select == 5) {
                     std::cout << "Here is the Indie Rock playlist:" << std::endl;
-                    //TODO cout the playlist
+                    playlist.genre_print(5);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -286,7 +288,6 @@ int main(int argc, char*argv[]){
                     std::cout << "Invalid, please enter an option 1-5";
                     std::cin >> genre_lookup;
                 }
-                //TODO add method and method call to only print songs of selected genre
                 //IDK WHY THIS IS ERRORING!!!
                  playlist.genre_print(genre_lookup);
             }
@@ -294,7 +295,7 @@ int main(int argc, char*argv[]){
                 std::cout << "Enter a song:" << std::endl;
                 std::cin >> song_lookup;
                 //TODO add some sort of method that converts song to proper capitalization ex if all is lower case
-                //TODO add method to see if song exists
+                playlist.song_search(song_lookup);
             }
             if (lookup == 3) {
                 std::cout << "Enter a popularity to see songs only above that level of popularity:" << std::endl;

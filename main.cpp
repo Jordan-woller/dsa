@@ -7,7 +7,7 @@
 int main(int argc, char*argv[]){
     int initial_choice = 0;
     std::string song_choice, genre_choice, artist_choice, use_criteria;
-    int release_year, popularity, playlist_select, criteria, single_criteria;
+    int release_year, popularity, playlist_select, criteria, single_criteria, insertion_option;
     int shuffle_criteria, lookup, genre_lookup, song_lookup, pop_lookup, song_select;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
@@ -81,9 +81,25 @@ int main(int argc, char*argv[]){
             //displays the song the user chose
             std::cout << "You chose the following song: " << song_choice << ", " << genre_choice << ", "
                       << artist_choice << ", " << release_year << ", " << popularity << std::endl;
+            std::cout << "How would you like the playlist to be sorted by? Choose an option 1-5." << std::endl;
+            std::cout << "1. Song Title" << std::endl;
+            std::cout << "2. Genre" << std::endl;
+            std::cout << "3. Artist" << std::endl;
+            std::cout << "4. Popularity" << std::endl;
+            std::cout << "5. Release Year" << std::endl;
+            std::cin >> insertion_option;
+            while (insertion_option != 1 and insertion_option != 2 and insertion_option != 3 and
+                   insertion_option != 4 and insertion_option != 5) {
+                std::cout << "Invalid entry, try again." << std::endl;
+                std::cin >> insertion_option;
+            }
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
+            //TODO calls merge sort to sort the playlist by whatever criteria the user wants
+
             //TODO add function call to insertion method that sorts the added song into playlist database
             //calls insertion method to sort added song into playlist database
+            this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
+
 
 
         }

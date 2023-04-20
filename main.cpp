@@ -258,7 +258,8 @@ int main(int argc, char*argv[]){
                 std::cin >> shuffle_criteria;
             }
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
-//            r_quicksort(int lo, int  hi, int shuffle_criteria);
+            playlist.shuffle(shuffle_criteria);
+
         }
 
 

@@ -122,6 +122,13 @@ void Sorting::r_quicksort(int lo, int hi, int criteria)
     r_quicksort(p + 1, hi, criteria);
 }
 
+void Sorting::shuffle(int criteria)
+{
+   int hi = (*database)[0].size()-1;
+    r_quicksort(0, hi, criteria);
+    print_database();
+}
+
 bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
     if ((*database)[cat1][index1] < (*database)[cat2][index2]) {
         return true;

@@ -16,6 +16,7 @@ private:
     bool compareBy(int cat1, int cat2, int index1, int index2);
     int partition (int lo, int hi, int criteria);
     bool comparestr(std::string str1, std::string str2);
+    void r_quicksort(int lo, int hi, int criteria);
 
 public:
     Sorting();
@@ -25,7 +26,7 @@ public:
     void merge_sort(int criteria);
     void insertion(std::vector<std::string> sort);
     void library(std::vector<std::string> sort);
-    void r_quicksort(int lo, int hi, int criteria);
+    void shuffle(int criteria);
     void genre_print(int genre_lookup);
     bool song_search(std::string song_lookup);
     void popularity_print(int pop_lookup);

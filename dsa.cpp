@@ -184,7 +184,7 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
     //merge
     merge(lo, mid, hi, criteria, temp);
 
-    for (int x = lo ; x < hi ; x++){
+    for (int x = lo ; x < hi-1 ; x++){
         (*database)[0][x] = temp[0][x];
         (*database)[1][x] = temp[1][x];
         (*database)[2][x] = temp[2][x];
@@ -255,7 +255,6 @@ void Sorting::genre_print(int genre_lookup){
         }else if(genre_lookup==5 and (*database)[1][i]=="Indie Rock" ){
             std::cout<<(*database)[1][i];
         }
-
     }
 }
 

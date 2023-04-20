@@ -30,7 +30,7 @@ public:
     void genre_print(int genre_lookup);
     bool song_search(std::string song_lookup);
     void popularity_print(int pop_lookup);
-    
+    void try_quicksort(int criteria);
 };
 
 //class Song{

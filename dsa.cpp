@@ -88,6 +88,8 @@ int Sorting::partition(int lo, int hi, int criteria){
 
     //song, genre, artist, popularity, and release year
 
+
+
     if(criteria==1){
         vec = (*database)[0];
     } else if(criteria == 2){
@@ -117,49 +119,32 @@ int Sorting::partition(int lo, int hi, int criteria){
         if(i >= j) break;
 
         // swap A[i] and A[j]
+
+
         std::swap(vec[i], vec[j]);
-        std::swap(database[0][i], database[0][j]);
-        std::swap(database[1][i], database[1][j]);
-        std::swap(database[2][i], database[2][j]);
-        std::swap(database[3][i], database[3][j]);
-        std::swap(database[4][i], database[4][j]);
+       std::swap((*database)[0][i], (*database)[0][j]);
+        std::swap((*database)[1][i], (*database)[1][j]);
+       std::swap((*database)[2][i], (*database)[2][j]);
+       std::swap((*database)[3][i], (*database)[3][j]);
+       std::swap((*database)[4][i], (*database)[4][j]);
     }
 
     std::swap(vec[lo], vec[j]);
-    std::swap(database[0][lo], database[0][j]);
-    std::swap(database[1][lo], database[1][j]);
-    std::swap(database[2][lo], database[2][j]);
-    std::swap(database[3][lo], database[3][j]);
-    std::swap(database[4][lo], database[4][j]);
+    std::swap((*database)[0][lo], (*database)[0][j]);
+    std::swap((*database)[1][lo], (*database)[1][j]);
+    std::swap((*database)[2][lo], (*database)[2][j]);
+    std::swap((*database)[3][lo], (*database)[3][j]);
+    std::swap((*database)[4][lo], (*database)[4][j]);
 
 
     //return pivot's position
     return j;
 }
 
-void Sorting::try_quicksort(int criteria)
-{
-    std::vector<std::string> vec;
-    if(criteria==1){
-        vec = (*database)[0];
-    } else if(criteria == 2){
-        vec = (*database)[1];
-    }else if(criteria == 3){
-        vec = (*database)[2];
-    }else if(criteria == 4){
-        vec = (*database)[3];
-    }else if(criteria == 5){
-        vec = (*database)[4];
-    }
-
-    for(int i=0; i<vec.size(); i++){
-        std::cout<<vec[i];
-    }
-
-}
 
 void Sorting::r_quicksort(int lo, int hi, int criteria)
 {
+
     if (hi <= lo) return;
 
     int p = partition(lo, hi, criteria);
@@ -171,11 +156,13 @@ void Sorting::r_quicksort(int lo, int hi, int criteria)
 
 void Sorting::shuffle(int criteria)
 {
-    print_database();
+    std::cout<<(*database)[0].size()-1;
     //high=124 *confirmed*
   int hi = (*database)[0].size()-1;
- //try_quicksort(criteria);
- //print_database();
+
+  //print_database();
+r_quicksort(0, hi, criteria);
+print_database();
 
 }
 

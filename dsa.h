@@ -24,7 +24,7 @@ public:
     void print_database();
     void read_data(std::string file_name);
     void merge_sort(int criteria);
-    void insertion(std::vector<std::string> sort);
+    void insertion(int insertion_option, std::string song_choice, std::string genre_choice, std::string artist_choice, std::string release_year, std::string popularity);
     void library(std::vector<std::string> sort);
     void shuffle(int criteria);
     void genre_print(int genre_lookup);

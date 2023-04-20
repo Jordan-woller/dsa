@@ -56,20 +56,28 @@ void Sorting::print_database() {
    std::cout << std::endl;
 }
 
-void Sorting::insertion(std::vector<std::string> sort){
+void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
+                        std::string artist_choice, std::string release_year, std::string popularity){
+    //pushing back user entered criteria into the end of the vector
+    (*database)[0].push_back(song_choice);
+    (*database)[1].push_back(genre_choice);
+    (*database)[2].push_back(artist_choice);
+    (*database)[3].push_back(release_year);
+    (*database)[4].push_back(popularity);
+
     int size = this->database[0].size();
 
-    for(int i = 1; i < size; i++){
-        int j = 1;
+    for(int i = size; i >= 0; i--){
+        int j = size;
         //inserts j in sorted part
-        while(j > 0 and this->database[0][j-1][0] > this->database[0][j][0]){
+        while(j < size and this->database[insertion_option][j-1][0] < this->database[insertion_option][j][0]){
             //swaps every category with each other to be in proper place
             std::swap(this->database[0][j-1], this->database[0][j]);
             std::swap(this->database[1][j-1], this->database[1][j]);
             std::swap(this->database[2][j-1], this->database[2][j]);
             std::swap(this->database[3][j-1], this->database[3][j]);
             std::swap(this->database[4][j-1], this->database[4][j]);
-            j--;
+            j++;
         }
     }
 }

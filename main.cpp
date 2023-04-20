@@ -24,7 +24,7 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[5]);
 
     playlist.merge_sort(1);
-    playlist.print_database();
+   // playlist.print_database();
 
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here
@@ -258,7 +258,8 @@ int main(int argc, char*argv[]){
                 std::cin >> shuffle_criteria;
             }
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
-            playlist.shuffle(shuffle_criteria);
+           // playlist.shuffle(shuffle_criteria);
+           playlist.print_database();
 
         }
 

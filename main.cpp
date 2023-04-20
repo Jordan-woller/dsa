@@ -6,8 +6,8 @@
 
 int main(int argc, char*argv[]){
     int initial_choice = 0;
-    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, popularity, release_year;
-    int playlist_select, criteria, single_criteria, insertion_option;
+    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup;
+    int release_year, popularity, playlist_select, criteria, single_criteria, insertion_option;
     int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
@@ -23,9 +23,9 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[4]);
     playlist.read_data(argv[5]);
 
+//    //playlist.merge_sort(1);
+    playlist.print_database();
 
-//    playlist.merge_sort(1);
-   //playlist.print_database();
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here
     // auto stop = std::chrono::high_resolution_clock::now();
@@ -69,14 +69,14 @@ int main(int argc, char*argv[]){
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
             //error checking for release year
-            while(!std::isdigit(std::stoi(release_year)) and std::stoi(release_year) <= 2023){
+            while(!std::isdigit(release_year) and release_year <= 2023){
                 std::cout << "Invalid year, please enter a valid year:" << std::endl;
                 std::cin >> release_year;
             }
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
             //error checking for popularity
-            while(!std::isdigit(std::stoi(popularity)) and std::stoi(popularity) >= 0 and std::stoi(popularity) <= 100){
+            while(!std::isdigit(popularity) and popularity >= 0 and popularity <= 100){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }
@@ -97,12 +97,13 @@ int main(int argc, char*argv[]){
             }
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
             //TODO calls merge sort to sort the playlist by whatever criteria the user wants
-            //playlist.print_database();
-            //playlist.mergesort();
+
             //TODO add function call to insertion method that sorts the added song into playlist database
             //calls insertion method to sort added song into playlist database
-            playlist.insertion(insertion_option-1, song_choice, genre_choice, artist_choice, popularity, release_year);  //-1 because the indexing starts from 0-4
             //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
+
+
+
         }
         if (initial_choice == 2) {
             //by choosing a playlist, it will display the songs in that playlist.

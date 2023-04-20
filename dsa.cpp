@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include "dsa.h"
 
-
+//what if we had another sorted vector to store into
 Sorting::Sorting(){
     this->database = new std::vector<std::vector<std::string>> (5, std::vector<std::string>());
 }
@@ -16,7 +17,7 @@ void Sorting::read_data(std::string file_name){
     std::vector<std::string> temp_vec;
     //looping through list to store values in each column
     int rows = 0;
-   while(std::getline(file_stream, line)){
+    while(std::getline(file_stream, line)){
         std::istringstream ss(line);
 
         //getting each column and storing into vector
@@ -224,13 +225,14 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
     //merge
     merge(lo, mid, hi, criteria, temp);
 
-    for (int x = lo ; x < hi-1 ; x++){
+    for (int x = lo ; x <= hi ; x++){
         (*database)[0][x] = temp[0][x];
         (*database)[1][x] = temp[1][x];
         (*database)[2][x] = temp[2][x];
         (*database)[3][x] = temp[3][x];
         (*database)[4][x] = temp[4][x];
     }
+
 }
 
 //private function to merge each vector together
@@ -275,6 +277,8 @@ void Sorting::merge(int lo, int mid, int hi, int criteria, std::vector<std::vect
         j++;
         k++;
     }
+
+//    std::copy((*database)[lo + k], (*database)[lo + k + 1], temp[k]);
 }
 //song, genre, artist, popularity, release year
 //Country
@@ -285,15 +289,15 @@ void Sorting::merge(int lo, int mid, int hi, int criteria, std::vector<std::vect
 void Sorting::genre_print(int genre_lookup){
     for(int i=0; i<(*database)[1].size(); i++ ){
         if(genre_lookup==1 and (*database)[1][i]=="Country" ){
-            std::cout<<(*database)[1][i];
+            std::cout << i << ' ' << (*database)[1][i];
         }else if(genre_lookup==2 and (*database)[1][i]=="Pop" ){
-            std::cout<<(*database)[1][i];
+            std::cout << i << ' ' << (*database)[1][i];
         }else if(genre_lookup==3 and (*database)[1][i]=="Rap" ){
-            std::cout<<(*database)[1][i];
+            std::cout<< i << ' ' << (*database)[1][i];
         }else if(genre_lookup==4 and (*database)[1][i]=="80s Rock" ){
-            std::cout<<(*database)[1][i];
+            std::cout<<i << ' ' << (*database)[1][i];
         }else if(genre_lookup==5 and (*database)[1][i]=="Indie Rock" ){
-            std::cout<<(*database)[1][i];
+            std::cout<<i << ' ' << (*database)[1][i];
         }
     }
 }

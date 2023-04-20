@@ -4,7 +4,7 @@
 
 
 Sorting::Sorting(){
-    this->database = new std::vector<std::vector<std::string>>;
+    this->database = new std::vector<std::vector<std::string>> (5, std::vector<std::string>());
 }
 Sorting::~Sorting(){}
 
@@ -12,6 +12,7 @@ void Sorting::read_data(std::string file_name){
     std::ifstream file_stream;
     file_stream.open(file_name);
     std::string line;
+    std::vector<std::string> temp_vec;
     //looping through list to store values in each column
     int rows = 0;
    while(std::getline(file_stream, line)){
@@ -22,31 +23,17 @@ void Sorting::read_data(std::string file_name){
         int i = 0;
 
         std::string temp;
-        std::vector<std::string> song_vec;
-       std::vector<std::string> genre_vec;
-       std::vector<std::string> artist_vec;
-       std::vector<std::string> popularity_vec;
-       std::vector<std::string> year_vec;
         while(std::getline(ss, temp, ',')){
-            song_vec.push_back(temp);
-            genre_vec.push_back(temp);
-            artist_vec.push_back(temp);
-            popularity_vec.push_back(temp);
-            year_vec.push_back(temp);
-
+            temp_vec.push_back(temp);
         }
-        database->push_back(song_vec);
-       database->push_back(genre_vec);
-       database->push_back(artist_vec);
-       database->push_back(popularity_vec);
-       database->push_back(year_vec);
 
-       song_vec.clear();
-       genre_vec.clear();
-       artist_vec.clear();
-       popularity_vec.clear();
-       year_vec.clear();
+        (*database)[0].push_back(temp_vec[0]);
+        (*database)[1].push_back(temp_vec[1]);
+        (*database)[2].push_back(temp_vec[2]);
+        (*database)[3].push_back(temp_vec[3]);
+        (*database)[4].push_back(temp_vec[4]);
 
+        temp_vec.clear();
     }
 
 }
@@ -183,7 +170,7 @@ void Sorting::merge_sort(int criteria){
 
 //private function to recursively separate vector
 void Sorting::r_merge(int lo, int hi, int criteria) {
-
+    std::vector<std::vector<std::string>> temp = *database;
     //basecase(single element or empty list)
     if (hi <= lo) return;
 
@@ -195,16 +182,23 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
     r_merge(mid + 1, hi, criteria);
 
     //merge
-    merge(lo, mid, hi, criteria);
+    merge(lo, mid, hi, criteria, temp);
+
+    for (int x = lo ; x < hi ; x++){
+        (*database)[0][x] = temp[0][x];
+        (*database)[1][x] = temp[1][x];
+        (*database)[2][x] = temp[2][x];
+        (*database)[3][x] = temp[3][x];
+        (*database)[4][x] = temp[4][x];
+    }
 }
 
 //private function to merge each vector together
-void Sorting::merge(int lo, int mid, int hi, int criteria) {
-    std::vector<std::vector<std::string>> temp = *database;
-    int i = lo, j = mid + 1, k = 0;
+void Sorting::merge(int lo, int mid, int hi, int criteria, std::vector<std::vector<std::string>> &temp) {
+    int i = 0, j = mid + 1, k = 0;
 
     while (i <= mid && j <= hi){
-        if (comparestr((*database)[criteria-1][i], (*database)[criteria-1][i])){
+        if (comparestr((*database)[criteria-1][i], (*database)[criteria-1][j])){
             temp[0][k] = (*database)[0][i];
             temp[1][k] = (*database)[1][i];
             temp[2][k] = (*database)[2][i];
@@ -240,14 +234,6 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
         temp[4][k] = (*database)[4][j];
         j++;
         k++;
-    }
-
-    for (int x = lo ; x < hi ; x++){
-        (*database)[0][i] = temp[0][i];
-        (*database)[1][i] = temp[1][i];
-        (*database)[2][i] = temp[2][i];
-        (*database)[3][i] = temp[3][i];
-        (*database)[4][i] = temp[4][i];
     }
 }
 //song, genre, artist, popularity, release year

@@ -1,2 +1,1 @@
-
-year, artist, genre, popularity, title
+year,artist,genre,popularity,title

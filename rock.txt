@@ -1,25 +1,25 @@
-Alone, 80s Rock, Heart, 69, 1987
-Billie Jean, 80s Rock, Michael Jackson, 81, 1982
-Crazy Train, 80s Rock, Ozzy Osbourne, 74, 1980
-Don't Stop Believin', 80s Rock, Journey, 87, 1981
-Every Breath You Take, 80s Rock, The Police, 83, 1983
-Faithfully, 80s Rock, Journey, 69, 1983
-Girls Just Want to Have Fun, 80s Rock, Cyndi Lauper, 74, 1983
-Here I Go Again, 80s Rock, Whitesnake, 73, 1982
-I Love Rock 'n' Roll, 80s Rock, Joan Jett & The Blackhearts, 73, 1981
-Jessie's Girl, 80s Rock, Rick Springfield, 75, 1981
-Kiss, 80s Rock, Prince, 77, 1986
-Livin' on a Prayer, 80s Rock, Bon Jovi, 82, 1986
-Money for Nothing, 80s Rock, Dire Straits, 77, 1985
-Nothing's Gonna Stop Us Now, 80s Rock, Starship, 68, 1987
-Owner of a Lonely Heart, 80s Rock, Yes, 68, 1983
-Pour Some Sugar on Me, 80s Rock, Def Leppard, 80, 1987
-Queen of the Broken Hearts, 80s Rock, Loverboy, 41, 1983
-Runaway, 80s Rock, Bon Jovi, 66, 1984
-Sweet Child o' Mine, 80s Rock, Guns N' Roses, 88, 1987
-Take On Me, 80s Rock, A-ha, 80, 1985
-Under Pressure, 80s Rock, Queen & David Bowie, 77, 1981
-Video Killed the Radio Star, 80s Rock, The Buggles, 70, 1979
-Wanted Dead or Alive, 80s Rock, Bon Jovi, 69, 1986
-Xanadu, 80s Rock, Olivia Newton-John & Electric Light Orchestra, 49, 1980
-You Give Love a Bad Name, 80s Rock, Bon Jovi, 80, 1986
+Alone,80s Rock,Heart,69,1987
+Billie Jean,80s Rock,Michael Jackson,81,1982
+Crazy Train,80s Rock,Ozzy Osbourne,74,1980
+Don't Stop Believin',80s Rock,Journey,87,1981
+Every Breath You Take,80s Rock,The Police,83,1983
+Faithfully,80s Rock,Journey,69,1983
+Girls Just Want to Have Fun,80s Rock,Cyndi Lauper,74,1983
+Here I Go Again,80s Rock,Whitesnake,73,1982
+I Love Rock 'n' Roll,80s Rock,Joan Jett & The Blackhearts,73,1981
+Jessie's Girl,80s Rock,Rick Springfield,75,1981
+Kiss,80s Rock,Prince,77,1986
+Livin' on a Prayer,80s Rock,Bon Jovi,82,1986
+Money for Nothing,80s Rock,Dire Straits,77,1985
+Nothing's Gonna Stop Us Now,80s Rock,Starship,68,1987
+Owner of a Lonely Heart,80s Rock,Yes,68,1983
+Pour Some Sugar on Me,80s Rock,Def Leppard,80,1987
+Queen of the Broken Hearts,80s Rock,Loverboy,41,1983
+Runaway,80s Rock,Bon Jovi,66,1984
+Sweet Child o' Mine,80s Rock,Guns N' Roses,88,1987
+Take On Me,80s Rock,A-ha,80,1985
+Under Pressure,80s Rock,Queen & David Bowie,77,1981
+Video Killed the Radio Star,80s Rock,The Buggles,70,1979
+Wanted Dead or Alive,80s Rock,Bon Jovi,69,1986
+Xanadu,80s Rock,Olivia Newton-John & Electric Light Orchestra,49,1980
+You Give Love a Bad Name,80s Rock,Bon Jovi,80,1986

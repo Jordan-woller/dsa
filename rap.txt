@@ -1,25 +1,25 @@
-All I Do Is Win, Rap, DJ Khaled ft. T-Pain, Ludacris, Snoop Dogg & Rick Ross, 76, 2010
-Bickenhead, Rap, Cardi B, 59, 2018
-Crank That (Soulja Boy), Rap, Soulja Boy Tell'em, 67, 2007
-DNA., Rap, Kendrick Lamar, 76, 2017
-Ether, Rap, Nas, 60, 2001
-Forgot About Dre, Rap, Dr. Dre ft. Eminem, 73, 1999
-Gangsta's Paradise, Rap, Coolio ft. L.V., 77, 1995
-Hotline Bling, Rap, Drake, 79, 2015
-Izzo (H.O.V.A.), Rap, Jay-Z, 68, 2001
-Juicy, Rap, The Notorious B.I.G., 79, 1994
-Kick Push, Rap, Lupe Fiasco, 54, 2006
-Lose Yourself, Rap, Eminem, 83, 2002
-Money Longer, Rap, Lil Uzi Vert, 77, 2016
-No Flex Zone, Rap, Rae Sremmurd, 58, 2014
-Old Town Road, Rap, Lil Nas X ft. Billy Ray Cyrus, 82, 2019
-Power, Rap, Kanye West, 77, 2010
-Quiet Storm, Rap, Mobb Deep, 58, 1999
-Rap God, Rap, Eminem, 84, 2013
-Still D.R.E., Rap, Dr. Dre ft. Snoop Dogg, 78, 1999
-The Message, Rap, Grandmaster Flash & The Furious Five, 65, 1982
-U.N.I.T.Y., Rap, Queen Latifah, 58, 1993
-Versace, Rap, Migos ft. Drake, 63, 2013
-Wu-Tang Clan Ain't Nuthing ta F' Wit, Rap, Wu-Tang Clan, 54, 1993
-X Gon' Give It To Ya, Rap, DMX, 74, 2003
-You Can't Stop The Reign, Rap, Shaquille O'Neal ft. The Notorious B.I.G., 46, 1996
+All I Do Is Win,Rap,DJ Khaled ft. T-Pain Ludacris Snoop Dogg & Rick Ross,76,2010
+Bickenhead,Rap,Cardi B,59,2018
+Crank That (Soulja Boy),Rap,Soulja Boy Tell'em,67,2007
+DNA.,Rap,Kendrick Lamar,76,2017
+Ether,Rap,Nas,60,2001
+Forgot About Dre,Rap,Dr. Dre ft. Eminem,73,1999
+Gangsta's Paradise,Rap,Coolio ft. L.V.,77,1995
+Hotline Bling,Rap,Drake,79,2015
+Izzo (H.O.V.A.),Rap,Jay-Z,68,2001
+Juicy,Rap,The Notorious B.I.G.,79,1994
+Kick Push,Rap,Lupe Fiasco,54,2006
+Lose Yourself,Rap,Eminem,83,2002
+Money Longer,Rap,Lil Uzi Vert,77,2016
+No Flex Zone,Rap,Rae Sremmurd,58,2014
+Old Town Road,Rap,Lil Nas X ft. Billy Ray Cyrus,82,2019
+Power,Rap,Kanye West,77,2010
+Quiet Storm,Rap,Mobb Deep,58,1999
+Rap God,Rap,Eminem,84,2013
+Still D.R.E.,Rap,Dr. Dre ft. Snoop Dogg,78,1999
+The Message,Rap,Grandmaster Flash & The Furious Five,65,1982
+U.N.I.T.Y.,Rap,Queen Latifah,58,1993
+Versace,Rap,Migos ft. Drake,63,2013
+Wu-Tang Clan Ain't Nuthing ta F' Wit,Rap,Wu-Tang Clan,54,1993
+X Gon' Give It To Ya,Rap,DMX,74,2003
+You Can't Stop The Reign,Rap,Shaquille O'Neal ft. The Notorious B.I.G.,46,1996

@@ -23,7 +23,7 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[4]);
     playlist.read_data(argv[5]);
 
-//    playlist.merge_sort(1);
+    playlist.merge_sort(1);
     playlist.print_database();
 
     // auto start = std::chrono::high_resolution_clock::now();
@@ -49,13 +49,13 @@ int main(int argc, char*argv[]){
         //Handling for the different choices
         if (initial_choice == 1) {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
-            std::cin >> song_choice;  //no need to error check for song choice because songs can be numbers, characters, or strings
+            std::getline(std::cin, song_choice);  //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             std::cin >> genre_choice;
             //error checking for genre_choice loops through each character in the variable to ensure it is not a number
             bool genre_check = true;
             for(int i = 0; i < genre_choice.length()-1; i++) {
-                if(std::isdigit(genre_choice[i]) and genre_check) {
+                if(std::isdigit(genre_choice[i])) {
                     genre_check = false;
                 }
                 while(!genre_check){
@@ -65,18 +65,18 @@ int main(int argc, char*argv[]){
                 }
             }
             std::cout << "Enter the artist of this song:" << std::endl;
-            std::cin >> artist_choice; //no need to error check for artist because artist can be numbers, characters, or strings
+            std::getline(std::cin, artist_choice);; //no need to error check for artist because artist can be numbers, characters, or strings
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
             //error checking for release year
-            while(!std::isdigit(release_year) and release_year <= 2023){
+            while(!std::isdigit(release_year) or release_year > 2023){
                 std::cout << "Invalid year, please enter a valid year:" << std::endl;
                 std::cin >> release_year;
             }
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
             //error checking for popularity
-            while(!std::isdigit(popularity) and popularity >= 0 and popularity <= 100){
+            while(!std::isdigit(popularity) or popularity < 0 or popularity > 100){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }

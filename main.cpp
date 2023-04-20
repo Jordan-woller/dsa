@@ -6,8 +6,8 @@
 
 int main(int argc, char*argv[]){
     int initial_choice = 0;
-    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup;
-    int release_year, popularity, playlist_select, criteria, single_criteria, insertion_option;
+    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
+    int playlist_select, criteria, single_criteria, insertion_option;
     int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
@@ -69,14 +69,14 @@ int main(int argc, char*argv[]){
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
             //error checking for release year
-            while(!std::isdigit(release_year) and release_year <= 2023){
+            while(!std::isdigit(release_year[0]) and std::stoi(release_year) <= 2023){
                 std::cout << "Invalid year, please enter a valid year:" << std::endl;
                 std::cin >> release_year;
             }
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
             //error checking for popularity
-            while(!std::isdigit(popularity) and popularity >= 0 and popularity <= 100){
+            while(!std::isdigit(popularity[0]) and std::stoi(popularity) >= 0 and std::stoi(popularity) <= 100){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }

@@ -7,8 +7,9 @@
 Sorting::Sorting(){
     this->database = new std::vector<std::vector<std::string>> (5, std::vector<std::string>());
 }
-Sorting::~Sorting(){}
+Sorting::~Sorting(){
 
+}
 void Sorting::read_data(std::string file_name){
     std::ifstream file_stream;
     file_stream.open(file_name);
@@ -42,12 +43,18 @@ void Sorting::read_data(std::string file_name){
 }
 
 void Sorting::print_database() {
-    for (int i = 0 ; i < (*database).size() ; i++){
-        for (int j = 0 ; j < (*database)[0].size() ; j++){
-            std::cout << (*database)[i][j] << ", ";
-        }
-        std::cout << std::endl;
-    }
+
+     for (int i = 0 ; i < (*database)[0].size() ; i++){
+         for (int j = 0 ; j < 5 ; j++){
+             if(j == 4){
+                 std::cout << (*database)[j][i];
+             }else{
+                 std::cout << (*database)[j][i] << ", ";
+             }
+         }
+         std::cout << std::endl;
+     }
+   std::cout << std::endl;
 }
 
 void Sorting::insertion(std::vector<std::string> sort){

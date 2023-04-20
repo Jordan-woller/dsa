@@ -17,7 +17,7 @@ void Sorting::read_data(std::string file_name){
     std::vector<std::string> temp_vec;
     //looping through list to store values in each column
     int rows = 0;
-   while(std::getline(file_stream, line)){
+    while(std::getline(file_stream, line)){
         std::istringstream ss(line);
 
         //getting each column and storing into vector

@@ -13,22 +13,42 @@ void Sorting::read_data(std::string file_name){
     file_stream.open(file_name);
     std::string line;
     //looping through list to store values in each column
-
+    int rows = 0;
    while(std::getline(file_stream, line)){
         std::istringstream ss(line);
 
         //getting each column and storing into vector
         //song, genre, artist, popularity, release year
         int i = 0;
+
         std::string temp;
-        std::vector<std::string> temp_vec;
+        std::vector<std::string> song_vec;
+       std::vector<std::string> genre_vec;
+       std::vector<std::string> artist_vec;
+       std::vector<std::string> popularity_vec;
+       std::vector<std::string> year_vec;
         while(std::getline(ss, temp, ',')){
-            temp_vec.push_back(temp);
-            i++;
+            song_vec.push_back(temp);
+            genre_vec.push_back(temp);
+            artist_vec.push_back(temp);
+            popularity_vec.push_back(temp);
+            year_vec.push_back(temp);
+
         }
-        database->push_back(temp_vec);
-        temp_vec.clear();
+        database->push_back(song_vec);
+       database->push_back(genre_vec);
+       database->push_back(artist_vec);
+       database->push_back(popularity_vec);
+       database->push_back(year_vec);
+
+       song_vec.clear();
+       genre_vec.clear();
+       artist_vec.clear();
+       popularity_vec.clear();
+       year_vec.clear();
+
     }
+
 }
 
 void Sorting::print_database() {
@@ -124,9 +144,11 @@ void Sorting::r_quicksort(int lo, int hi, int criteria)
 
 void Sorting::shuffle(int criteria)
 {
-   int hi = (*database)[0].size()-1;
-    r_quicksort(0, hi, criteria);
     print_database();
+    //int hi = (*database)[0][0].size()-1;
+   /// std::cout<<hi;
+ // r_quicksort(0, hi, criteria);
+  //print_database();
 }
 
 bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){

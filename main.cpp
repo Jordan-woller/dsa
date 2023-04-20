@@ -23,7 +23,6 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[4]);
     playlist.read_data(argv[5]);
 
-//    playlist.print_database();
 //    playlist.merge_sort(1);
     playlist.print_database();
 

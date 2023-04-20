@@ -16,7 +16,7 @@ Only Girl (In The World),Pop,Rihanna,68,2010
 Poker Face,Pop,Lady Gaga,73,2008
 Royals,Pop,Lorde,72,2013
 Shape of You,Pop,Ed Sheeran,81,2017
-Thank U,Next,Pop,Ariana Grande,78,2018
+Thank U Next,Pop,Ariana Grande,78,2018
 Umbrella,Pop,Rihanna ft. Jay-Z,72,2007
 Viva La Vida,Pop,Coldplay,76,2008
 Wannabe,Pop,Spice Girls,63,1996

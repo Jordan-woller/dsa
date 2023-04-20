@@ -1,6 +1,6 @@
 # Sorting Algorithms - Playlist Recommender
 
-##Compilation Instructions
+## Compilation Instructions
 There are two options to run the program: 
 
 **Option 1** 
@@ -34,4 +34,4 @@ When setting up the program on CLion, ensure all .txt files are inside of the cm
 When you pull from the Github pleasure ensure to refactor these .txt files into this folder if not 
 done so already.  
 
-**IMPORTANT: If these files are not in the cmake-build-debug folder, the program will NOT run **
+**IMPORTANT: If these files are not in the cmake-build-debug folder, the program will NOT run**

@@ -30,7 +30,7 @@ int main(int argc, char*argv[]){
     // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
     while(initial_choice != 5) { //5 is the quit option
-        std::cout << "hello";
+        std::cout << "Hello!\n";
         std::cout << "What would you like to do?" << std::endl;
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
         std::cout << "2. Get a personalized series of song recommendations based on songs you like." << std::endl;
@@ -38,7 +38,7 @@ int main(int argc, char*argv[]){
         std::cout << "4. Printout songs of a certain criteria" << std::endl;
         std::cout << "5. Quit" << std::endl;
         std::cin >> initial_choice;
-        while (initial_choice != 1 and initial_choice != 2 and initial_choice != 3 and initial_choice != 4) {
+        while ( initial_choice != 1 || initial_choice != 2 || initial_choice != 3 || initial_choice != 4 || initial_choice != 5 ) {
             std::cout << "Invalid entry, please enter one of the listed options." << std::endl;
             std::cin >> initial_choice;
         }
@@ -286,6 +286,10 @@ int main(int argc, char*argv[]){
                 //TODO add error checking for popularity to ensure it is an integer between 1-100
                 //TODO add method to display songs above that level of popularity
             }
+        }
+
+        if (initial_choice == 5) {
+            break;
         }
 
         //resetting necessary variables

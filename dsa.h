@@ -17,7 +17,7 @@ private:
     int partition (int lo, int hi, int criteria);
     bool comparestr(std::string str1, std::string str2);
     void r_quicksort(int lo, int hi, int criteria);
-
+    std::string upper(std::string word);
 public:
     Sorting();
     ~Sorting();
@@ -25,7 +25,6 @@ public:
     void read_data(std::string file_name);
     void merge_sort(int criteria);
     void insertion(int insertion_option, std::string song_choice, std::string genre_choice, std::string artist_choice, std::string release_year, std::string popularity);
-    void library(std::vector<std::string> sort);
     void shuffle(int criteria);
     void genre_print(int genre_lookup, int mode);
     bool checkSong(int index, std::string genre);

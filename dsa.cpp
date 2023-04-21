@@ -19,7 +19,6 @@ void Sorting::read_data(std::string file_name){
     int rows = 0;
     while(std::getline(file_stream, line)){
         std::istringstream ss(line);
-
         //getting each column and storing into vector
         //song, genre, artist, popularity, release year
         int i = 0;
@@ -56,8 +55,22 @@ void Sorting::print_database() {
      }
    std::cout << std::endl;
 }
+//if the first character in the string is an actual character and not a digit, it transforms it to an uppercase
+std::string Sorting::upper(std::string word){
+    if(!std::isdigit(word[0])){
+        word[0] = std::toupper(word[0]);
+    }
+    std::cout << word;
+    return word;
+}
+void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
+                        std::string artist_choice, std::string release_year, std::string popularity){
 
-void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice, std::string artist_choice, std::string release_year, std::string popularity){
+    //calls upper function for song, genre, and artist to ensure they are properly capitalized
+    song_choice = upper(song_choice);
+    genre_choice = upper(genre_choice);
+    artist_choice = upper(artist_choice);
+
     //pushing back user entered criteria into the end of the vector
     database[0].push_back(song_choice);
     database[1].push_back(genre_choice);
@@ -65,18 +78,22 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     database[3].push_back(release_year);
     database[4].push_back(popularity);
 
-    int size = this->database[0].size();
+    int size = database[0].size()-1;
 
     for(int i = size; i >= 0; i--){
-        int j = size;
+        int j = i;
         //inserts j in sorted part
-        while(j < size and this->database[insertion_option][j-1][0] < this->database[insertion_option][j][0]){
+        // std::cout << database[insertion_option][0][j][0] << std::endl;
+        // std::cout << database[insertion_option][0][j-1][0] << std::endl;
+        //compares the first character
+        while(j < size and comparestr(database[insertion_option][j],
+                                      database[insertion_option][j-1])){
             //swaps every category with each other to be in proper place
-            std::swap(this->database[0][j-1], this->database[0][j]);
-            std::swap(this->database[1][j-1], this->database[1][j]);
-            std::swap(this->database[2][j-1], this->database[2][j]);
-            std::swap(this->database[3][j-1], this->database[3][j]);
-            std::swap(this->database[4][j-1], this->database[4][j]);
+            std::swap(database[0][j-1], database[0][j]);
+            std::swap(database[1][j-1], database[1][j]);
+            std::swap(database[2][j-1], database[2][j]);
+            std::swap(database[3][j-1], database[3][j]);
+            std::swap(database[4][j-1], database[4][j]);
             j++;
         }
     }
@@ -84,7 +101,6 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
 
 int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
-
     //song, genre, artist, popularity, and release year
     if(criteria==1){
         vec = database[0];
@@ -97,11 +113,9 @@ int Sorting::partition(int lo, int hi, int criteria){
     }else if(criteria == 5){
         vec = database[4];
     }
-
     int i = lo;
     int j = hi + 1;
     while (1) {
-
         // while A[i] < pivot, increase i
         while (vec[++i] < vec[lo])
             if (i == hi) break;
@@ -311,7 +325,7 @@ bool Sorting::checkSong(int index, std::string genre){
 std::string Sorting::getTitle(int index){
     return database[0][index-1];
 }
-
+ 
 bool Sorting::song_search(std::string song_lookup){
     for(int i=0; i<database[0].size(); i++ ){
       if(database[0][i] ==song_lookup ){
@@ -324,10 +338,12 @@ bool Sorting::song_search(std::string song_lookup){
 }
 
 void Sorting::popularity_print(int pop_lookup){
+    int y = 1;
     for(int i=0; i<database[3].size(); i++ ){
         int x= std::stoi(database[3][i]);
         if(x > pop_lookup ){
-            std::cout<<database[3][i];
+            std::cout << y << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            y++;
         }
     }
 }

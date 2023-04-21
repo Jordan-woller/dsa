@@ -123,82 +123,88 @@ int main(int argc, char*argv[]){
                 std::cout << "5. Indie Rock" << std::endl;
                 std::cin >> playlist_select;
                 //error checking for playlist option
-                while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and
-                       playlist_select != 4 and
-                       playlist_select != 5) {
+                while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
                     std::cout << "Invalid, please enter an option 1-5";
                     std::cin >> playlist_select;
                 }
                 //for playlist options 1-5, it will display the playlist.
                 //user can either confirm their selection or go back and choose another playlist
                 if (playlist_select == 1) {
+                    std::string playlistGenre = "Country";
                     std::cout << "Here is the Country playlist:" << std::endl;
                     playlist.genre_print(1);
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
-                              << std::endl;
+                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 || song_select > 25) {
+                    while (playlist.checkSong(song_select, playlistGenre)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
 
                 }
                 if (playlist_select == 2) {
+                    std::string playlistGenre = "Pop";
                     std::cout << "Here is the Pop playlist:" << std::endl;
                     playlist.genre_print(2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 || song_select > 25) {
+                    while (playlist.checkSong(song_select, playlistGenre)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                 }
                 if (playlist_select == 3) {
+                    std::string playlistGenre = "Rap";
                     std::cout << "Here is the Rap playlist:" << std::endl;
                     playlist.genre_print(3);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 || song_select > 25) {
+                    while (playlist.checkSong(song_select, playlistGenre)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                 }
                 if (playlist_select == 4) {
+                    std::string playlistGenre = "80s Rock";
                     std::cout << "Here is the 80s Rock playlist:" << std::endl;
                     playlist.genre_print(4);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 || song_select > 25) {
+                    while (playlist.checkSong(song_select, playlistGenre)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                 }
                 if (playlist_select == 5) {
+                    std::string playlistGenre = "Indie Rock";
                     std::cout << "Here is the Indie Rock playlist:" << std::endl;
                     playlist.genre_print(5);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (song_select < 1 || song_select > 25) {
+                    while (playlist.checkSong(song_select, playlistGenre)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                 }
+                song_choice_vec.push_back(playlist.getTitle(song_select));
             }
+
+            std::cout << "\n\n\ngot here\n\n\n";
+            for(int i = 0; i < song_choice_vec.size();i++){
+                std::cout << song_choice_vec[i] << std::endl;
+            }
+
             //once user playlist has been filled with 5 songs
-            std::cout << std::endl
-                      << "How many criteria would you like to sort your personalized song recommendations by?"
-                      << std::endl;
-            std::cout << "Enter a number 1-5 (the criteria are song, genre, artist, popularity, and release year"
-                      << std::endl;
+            std::cout << std::endl << "How many criteria would you like to sort your personalized song recommendations by?" << std::endl;
+            std::cout << "Enter a number 1-5 (the criteria are song, genre, artist, popularity, and release year)" << std::endl;
             std::cin >> criteria;
             //error check to make sure criteria is valid
             while (criteria != 1 and criteria != 2 and criteria != 3 and criteria != 4 and criteria != 5) {

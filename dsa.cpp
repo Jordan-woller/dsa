@@ -122,11 +122,11 @@ int Sorting::partition(int lo, int hi, int criteria){
 
 
         std::swap(vec[i], vec[j]);
-       std::swap((*database)[0][i], (*database)[0][j]);
+        std::swap((*database)[0][i], (*database)[0][j]);
         std::swap((*database)[1][i], (*database)[1][j]);
-       std::swap((*database)[2][i], (*database)[2][j]);
-       std::swap((*database)[3][i], (*database)[3][j]);
-       std::swap((*database)[4][i], (*database)[4][j]);
+        std::swap((*database)[2][i], (*database)[2][j]);
+        std::swap((*database)[3][i], (*database)[3][j]);
+        std::swap((*database)[4][i], (*database)[4][j]);
     }
 
     std::swap(vec[lo], vec[j]);
@@ -286,6 +286,17 @@ void Sorting::genre_print(int genre_lookup){
         }
         x++;
     }
+}
+
+bool Sorting::checkSong(int index, std::string genre){
+    if( (*database)[1][index-1] == genre ){
+        return false;
+    }
+    return true;
+}
+
+std::string Sorting::getTitle(int index){
+    return (*database)[0][index-1];
 }
 
 bool Sorting::song_search(std::string song_lookup){

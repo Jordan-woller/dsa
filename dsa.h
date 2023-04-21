@@ -28,9 +28,11 @@ public:
     void library(std::vector<std::string> sort);
     void shuffle(int criteria);
     void genre_print(int genre_lookup);
+    bool checkSong(int index, std::string genre);
     bool song_search(std::string song_lookup);
     void popularity_print(int pop_lookup);
     void try_quicksort(int criteria);
+    std::string getTitle(int index);
 };
 
 //class Song{

@@ -55,8 +55,22 @@ void Sorting::print_database() {
      }
    std::cout << std::endl;
 }
+//if the first character in the string is an actual character and not a digit, it transforms it to an uppercase
+std::string Sorting::upper(std::string word){
+    if(!std::isdigit(word[0])){
+        word[0] = std::toupper(word[0]);
+    }
+    std::cout << word;
+    return word;
+}
+void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
+                        std::string artist_choice, std::string release_year, std::string popularity){
 
-void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice, std::string artist_choice, std::string release_year, std::string popularity){
+    //calls upper function for song, genre, and artist to ensure they are properly capitalized
+    song_choice = upper(song_choice);
+    genre_choice = upper(genre_choice);
+    artist_choice = upper(artist_choice);
+
     //pushing back user entered criteria into the end of the vector
     database[0].push_back(song_choice);
     database[1].push_back(genre_choice);
@@ -64,18 +78,22 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     database[3].push_back(release_year);
     database[4].push_back(popularity);
 
-    int size = this->database[0].size();
+    int size = database[0].size()-1;
 
     for(int i = size; i >= 0; i--){
-        int j = size;
+        int j = i;
         //inserts j in sorted part
-        while(j < size and this->database[insertion_option][j-1][0] < this->database[insertion_option][j][0]){
+        std::cout << database[insertion_option][0][j][0] << std::endl;
+        std::cout << database[insertion_option][0][j-1][0] << std::endl;
+        //compares the first character
+        while(j < size and comparestr(database[insertion_option][j],
+                                      database[insertion_option][j-1])){
             //swaps every category with each other to be in proper place
-            std::swap(this->database[0][j-1], this->database[0][j]);
-            std::swap(this->database[1][j-1], this->database[1][j]);
-            std::swap(this->database[2][j-1], this->database[2][j]);
-            std::swap(this->database[3][j-1], this->database[3][j]);
-            std::swap(this->database[4][j-1], this->database[4][j]);
+            std::swap(database[0][j-1], database[0][j]);
+            std::swap(database[1][j-1], database[1][j]);
+            std::swap(database[2][j-1], database[2][j]);
+            std::swap(database[3][j-1], database[3][j]);
+            std::swap(database[4][j-1], database[4][j]);
             j++;
         }
     }

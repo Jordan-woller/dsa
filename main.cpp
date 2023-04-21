@@ -103,9 +103,10 @@ int main(int argc, char*argv[]){
                 std::cin >> insertion_option;
             }
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
-            //TODO calls merge sort to sort the playlist by whatever criteria the user wants
-
+            //TODO calls quick sort shuffle to sort the playlist by whatever criteria the user wants
+            playlist.shuffle(insertion_option);
             //TODO add function call to insertion method that sorts the added song into playlist database
+            playlist.insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
             //calls insertion method to sort added song into playlist database
             //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
 

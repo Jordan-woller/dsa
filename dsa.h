@@ -17,7 +17,7 @@ private:
     int partition (int lo, int hi, int criteria);
     bool comparestr(std::string str1, std::string str2);
     void r_quicksort(int lo, int hi, int criteria);
-
+    std::string upper(std::string word);
 public:
     Sorting();
     ~Sorting();

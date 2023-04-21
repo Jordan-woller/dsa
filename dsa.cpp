@@ -83,8 +83,8 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     for(int i = size; i >= 0; i--){
         int j = i;
         //inserts j in sorted part
-        std::cout << database[insertion_option][0][j][0] << std::endl;
-        std::cout << database[insertion_option][0][j-1][0] << std::endl;
+        // std::cout << database[insertion_option][0][j][0] << std::endl;
+        // std::cout << database[insertion_option][0][j-1][0] << std::endl;
         //compares the first character
         while(j < size and comparestr(database[insertion_option][j],
                                       database[insertion_option][j-1])){

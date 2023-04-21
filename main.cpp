@@ -24,10 +24,10 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[5]);
 
     playlist.print_database();
-//    playlist.merge_sort(1);
+    playlist.merge_sort(1);
 //    playlist.print_database();
-    playlist.shuffle(5);
-    std::cout << std::endl;
+//    playlist.shuffle(5);
+//    std::cout << std::endl;
 
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here

@@ -10,7 +10,7 @@
 class Sorting{
 private:
 
-    std::vector<std::vector<std::string>> *database;
+    std::vector<std::vector<std::string>> database;
     void r_merge(int lo, int hi, int criteria);
     void merge(int lo, int mid, int hi, int criteria);
     bool compareBy(int cat1, int cat2, int index1, int index2);

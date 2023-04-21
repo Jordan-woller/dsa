@@ -26,7 +26,7 @@ int main(int argc, char*argv[]){
 //    playlist.print_database();
 //    playlist.merge_sort(1);
     playlist.print_database();
-    playlist.shuffle(2);
+    playlist.shuffle(5);
     std::cout << std::endl;
 
     // auto start = std::chrono::high_resolution_clock::now();

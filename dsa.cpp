@@ -101,7 +101,6 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
 
 int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
-
     //song, genre, artist, popularity, and release year
     if(criteria==1){
         vec = database[0];
@@ -114,11 +113,9 @@ int Sorting::partition(int lo, int hi, int criteria){
     }else if(criteria == 5){
         vec = database[4];
     }
-
     int i = lo;
     int j = hi + 1;
     while (1) {
-
         // while A[i] < pivot, increase i
         while (vec[++i] < vec[lo])
             if (i == hi) break;

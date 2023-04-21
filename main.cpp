@@ -201,21 +201,25 @@ int main(int argc, char*argv[]){
             }
 
             //once user playlist has been filled with 5 songs
+            std::string ranking;
             std::vector<std::string> topics = {"Genre", "Release Year", "Popularity"};
             std::vector<std::string> order;
-            std::cout << std::endl << "Please rank the following criteria one at a time:(enter the corresponding number)" << std::endl;
-            for(int i = 1; i <= topics.size(); i++){
-                for(int i = 1; i <= topics.size(); i++){
-                    std::cout << i << ": " << topics[i-1] << " ";
-                }
-                std::cout << "\n";
-                std::cin >> criteria;
+            std::cout << std::endl << "Please rank the following criteria" << std::endl;
+            std::cout << std::endl << "For Genre enter 1" << std::endl;
+            std::cout << std::endl << "For Release Year enter 2" << std::endl;
+            std::cout << std::endl << "For Popularity enter 3" << std::endl;
+            std::cout << std::endl << "For ex: Release Year, Popularity, Genre: enter 231" << std::endl;
+            std::cin >> ranking;
+
+
                 //error check to make sure criteria is valid
-                while (criteria != 1 and criteria != 2 and criteria != 3) {
+                while (ranking != "231" and ranking != "123" and ranking != "132" and ranking != "321" and ranking != "312" and ranking != "213") {
                     std::cout << "Invalid criteria, try again." << std::endl;
                     std::cin >> criteria;
                 }
-                order.push_back(topics[criteria-1]);
+
+
+              /*  order.push_back(topics[criteria-1]);
                 topics.erase(topics.begin() + criteria-1);
             }
             order.push_back(topics[criteria-1]);
@@ -224,7 +228,7 @@ int main(int argc, char*argv[]){
                 std::cout << order[i] << " ";
             }
             
-            
+            */
             
 
             // //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria

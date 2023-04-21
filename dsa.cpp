@@ -260,27 +260,56 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
 //Rap
 //80s Rock
 //Indie Rock
-void Sorting::genre_print(int genre_lookup){
+void Sorting::genre_print(int genre_lookup, int mode){
     int x = 1;
-    for(int i=0; i<database[1].size(); i++ ){
-        if(genre_lookup==1 and database[1][i]=="Country" ){
-            std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
-            x++;
-        }else if(genre_lookup==2 and database[1][i]=="Pop" ){
-            std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
-            x++;
-        }else if(genre_lookup==3 and database[1][i]=="Rap" ){
-            std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
-            x++;
-        }else if(genre_lookup==4 and database[1][i]=="80s Rock" ){
-            std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
-            x++;
-        }else if(genre_lookup==5 and database[1][i]=="Indie Rock" ){
-            std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+    if(mode == 1){
+        for(int i=0; i<database[1].size(); i++ ){
+            if(genre_lookup==1 and database[1][i]=="Country" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+                x++;
+            }else if(genre_lookup==2 and database[1][i]=="Pop" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+                x++;
+            }else if(genre_lookup==3 and database[1][i]=="Rap" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+                x++;
+            }else if(genre_lookup==4 and database[1][i]=="80s Rock" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+                x++;
+            }else if(genre_lookup==5 and database[1][i]=="Indie Rock" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+                x++;
+            }
+        }
+    }
+    if(mode == 2){
+        for(int i=0; i<database[1].size(); i++ ){
+            if(genre_lookup==1 and database[1][i]=="Country" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            }else if(genre_lookup==2 and database[1][i]=="Pop" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            }else if(genre_lookup==3 and database[1][i]=="Rap" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            }else if(genre_lookup==4 and database[1][i]=="80s Rock" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            }else if(genre_lookup==5 and database[1][i]=="Indie Rock" ){
+                std::cout << x << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            }
             x++;
         }
 
     }
+}
+
+bool Sorting::checkSong(int index, std::string genre){
+    if( database[1][index-1] == genre ){
+        return false;
+    }
+    return true;
+}
+
+std::string Sorting::getTitle(int index){
+    return database[0][index-1];
 }
 
 bool Sorting::song_search(std::string song_lookup){

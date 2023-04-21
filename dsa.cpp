@@ -156,8 +156,6 @@ void Sorting::r_quicksort(int lo, int hi, int criteria)
 
 void Sorting::shuffle(int criteria)
 {
-    std::cout<<(*database)[0].size()-1;
-    //high=124 *confirmed*
   int hi = (*database)[0].size()-1;
 
   //print_database();

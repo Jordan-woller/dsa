@@ -214,8 +214,7 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
 //private function to merge each vector together
 void Sorting::merge(int lo, int mid, int hi, int criteria) {
     int i = 0, j = mid + 1, k = 0;
-    std::vector<std::vector<std::string>> temp;
-    //(5, std::vector<std::string> (hi - lo + 1))
+    std::vector<std::vector<std::string>> temp (5, std::vector<std::string> (hi - lo + 1, " "));
 
     while (i <= mid && j <= hi){
         if (comparestr((*database)[criteria-1][i], (*database)[criteria-1][j])){
@@ -272,18 +271,20 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
 //80s Rock
 //Indie Rock
 void Sorting::genre_print(int genre_lookup){
+    int x = 1;
     for(int i=0; i<(*database)[1].size(); i++ ){
         if(genre_lookup==1 and (*database)[1][i]=="Country" ){
-            std::cout << i << ' ' << (*database)[1][i];
+            std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
         }else if(genre_lookup==2 and (*database)[1][i]=="Pop" ){
-            std::cout << i << ' ' << (*database)[1][i];
+            std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
         }else if(genre_lookup==3 and (*database)[1][i]=="Rap" ){
-            std::cout<< i << ' ' << (*database)[1][i];
+            std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
         }else if(genre_lookup==4 and (*database)[1][i]=="80s Rock" ){
-            std::cout<<i << ' ' << (*database)[1][i];
+            std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
         }else if(genre_lookup==5 and (*database)[1][i]=="Indie Rock" ){
-            std::cout<<i << ' ' << (*database)[1][i];
+            std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
         }
+        x++;
     }
 }
 

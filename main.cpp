@@ -26,7 +26,7 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[5]);
 
     playlist.print_database();
-    playlist.merge_sort(1);
+//    playlist.merge_sort(1);
 //    playlist.print_database();
 //    playlist.shuffle(5);
 //    std::cout << std::endl;
@@ -200,52 +200,55 @@ int main(int argc, char*argv[]){
             }
 
             //once user playlist has been filled with 5 songs
-            std::cout << std::endl << "How many criteria would you like to sort your personalized song recommendations by?" << std::endl;
-            std::cout << "Enter a number 1-5 (the criteria are song, genre, artist, popularity, and release year)" << std::endl;
+            std::cout << std::endl << "Which of the below criteria is most important:" << std::endl;
+            std::cout << "1. Genre 2. Release Year 3. Popularity" << std::endl;
             std::cin >> criteria;
             //error check to make sure criteria is valid
-            while (criteria != 1 and criteria != 2 and criteria != 3 and criteria != 4 and criteria != 5) {
+            while (criteria != 1 and criteria != 2 and criteria != 3) {
                 std::cout << "Invalid criteria, try again." << std::endl;
                 std::cin >> criteria;
             }
 
-            //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria
-            if (criteria == 1) {
-                std::cout << "Choose from one of the criteria to get your song recommendations based off: "
-                          << std::endl;
-                std::cout << "1. Song" << std::endl;
-                std::cout << "2. Genre" << std::endl;
-                std::cout << "3. Artist" << std::endl;
-                std::cout << "4. Popularity" << std::endl;
-                std::cout << "5. Release Year" << std::endl;
-                std::cout << "Enter your choice as a number 1-5:" << std::endl;
-                std::cin >> single_criteria;
-                //error checking for single criteria choice
-                while (single_criteria != 1 and single_criteria != 2 and single_criteria != 3 and
-                       single_criteria != 4 and single_criteria != 5) {
-                    std::cout << "Invalid option, try again." << std::endl;
-                    std::cin >> single_criteria;
-                }
-                playlist.merge_sort(single_criteria);
-            }
-                //if the criteria is greater than 1, library sort is used to recommend songs based on the multiple criteria.
-            else if (criteria == 2 or criteria == 3 or criteria == 4 or criteria == 5) {
-                std::cout << "Enter y for yes or n for no if you would like to use the prompted criteria" << std::endl;
-                //goes through all given criteria and asks user if they want to sort by each (vector with given criteria defined at top)
-                for (int i = 0; i < criteria_vec.size(); i++) {
-                    std::cout << "Would you like " << criteria_vec[i] << "to be used as a criteria?" << std::endl
-                              << "Enter y or n" << std::endl;
-                    std::cin >> use_criteria;
-                    std::cout << std::endl;
-                    //if they want to use criteria, corresponding truth table sets to true at that value
-                    if (use_criteria == "y") {
-                        criteria_truth[i] = true;
-                    } else {
-                        criteria_truth[i] = false;
-                    }
-                }
-                //TODO now that criteria is known, use library sort method to be created to sort
-            }
+            // //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria
+            // if (criteria == 1) {
+            //     std::cout << "Choose from one of the criteria to get your song recommendations based off: "
+            //               << std::endl;
+            //     std::cout << "1. Song" << std::endl;
+            //     std::cout << "2. Genre" << std::endl;
+            //     std::cout << "3. Artist" << std::endl;
+            //     std::cout << "4. Popularity" << std::endl;
+            //     std::cout << "5. Release Year" << std::endl;
+            //     std::cout << "Enter your choice as a number 1-5:" << std::endl;
+            //     std::cin >> single_criteria;
+            //     //error checking for single criteria choice
+            //     while (single_criteria != 1 and single_criteria != 2 and single_criteria != 3 and
+            //            single_criteria != 4 and single_criteria != 5) {
+            //         std::cout << "Invalid option, try again." << std::endl;
+            //         std::cin >> single_criteria;
+            //     }
+                
+
+
+            // }
+
+            //     //if the criteria is greater than 1, library sort is used to recommend songs based on the multiple criteria.
+            // else if (criteria == 2 or criteria == 3 or criteria == 4 or criteria == 5) {
+            //     std::cout << "Enter y for yes or n for no if you would like to use the prompted criteria" << std::endl;
+            //     //goes through all given criteria and asks user if they want to sort by each (vector with given criteria defined at top)
+            //     for (int i = 0; i < criteria_vec.size(); i++) {
+            //         std::cout << "Would you like " << criteria_vec[i] << "to be used as a criteria?" << std::endl
+            //                   << "Enter y or n" << std::endl;
+            //         std::cin >> use_criteria;
+            //         std::cout << std::endl;
+            //         //if they want to use criteria, corresponding truth table sets to true at that value
+            //         if (use_criteria == "y") {
+            //             criteria_truth[i] = true;
+            //         } else {
+            //             criteria_truth[i] = false;
+            //         }
+            //     }
+            //     //TODO now that criteria is known, use library sort method to be created to sort
+            // }
 
         }
         //TODO add another choice to shuffle just a genre

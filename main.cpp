@@ -7,8 +7,13 @@
 int main(int argc, char*argv[]){
     std::string initial_choice;
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
-    int playlist_select, criteria, single_criteria, insertion_option;
-    int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
+    int criteria, single_criteria, insertion_option;
+    int song_select;
+    std::string shuffle_criteria;
+    std::string pop_lookup;
+    std::string genre_lookup;
+    std::string playlist_select;
+    std::string lookup;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
@@ -122,13 +127,13 @@ int main(int argc, char*argv[]){
                 std::cout << "5. Indie Rock" << std::endl;
                 std::cin >> playlist_select;
                 //error checking for playlist option
-                while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
+                while (playlist_select != "1" and playlist_select != "2" and playlist_select != "3" and playlist_select != "4" and playlist_select != "5") {
                     std::cout << "Invalid, please enter an option 1-5";
                     std::cin >> playlist_select;
                 }
                 //for playlist options 1-5, it will display the playlist.
                 //user can either confirm their selection or go back and choose another playlist
-                if (playlist_select == 1) {
+                if (playlist_select == "1") {
                     std::string playlistGenre = "Country";
                     std::cout << "Here is the Country playlist:" << std::endl;
                     playlist.genre_print(1,2);
@@ -141,7 +146,7 @@ int main(int argc, char*argv[]){
                     }
 
                 }
-                if (playlist_select == 2) {
+                if (playlist_select == "2") {
                     std::string playlistGenre = "Pop";
                     std::cout << "Here is the Pop playlist:" << std::endl;
                     playlist.genre_print(2,2);
@@ -154,7 +159,7 @@ int main(int argc, char*argv[]){
                         std::cin >> song_select;
                     }
                 }
-                if (playlist_select == 3) {
+                if (playlist_select == "3") {
                     std::string playlistGenre = "Rap";
                     std::cout << "Here is the Rap playlist:" << std::endl;
                     playlist.genre_print(3,2);
@@ -167,7 +172,7 @@ int main(int argc, char*argv[]){
                         std::cin >> song_select;
                     }
                 }
-                if (playlist_select == 4) {
+                if (playlist_select == "4") {
                     std::string playlistGenre = "80s Rock";
                     std::cout << "Here is the 80s Rock playlist:" << std::endl;
                     playlist.genre_print(4,2);
@@ -180,7 +185,7 @@ int main(int argc, char*argv[]){
                         std::cin >> song_select;
                     }
                 }
-                if (playlist_select == 5) {
+                if (playlist_select == "5") {
                     std::string playlistGenre = "Indie Rock";
                     std::cout << "Here is the Indie Rock playlist:" << std::endl;
                     playlist.genre_print(5,2);
@@ -223,9 +228,9 @@ int main(int argc, char*argv[]){
             for(int i = 0; i < order.size(); i++){
                 std::cout << order[i] << " ";
             }
-
+            
             */
-
+            
 
             // //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria
             // if (criteria == 1) {
@@ -298,12 +303,12 @@ int main(int argc, char*argv[]){
             std::cout << "2. Print songs that are above a certain popularity " << std::endl;
             std::cin >> lookup;
             //error checking for lookup options
-            while (lookup != 1 and lookup != 2) {
+            while (lookup != "1" and lookup != "2") {
                 std::cout << "Invalid option, try again." << std::endl;
                 std::cin >> lookup;
             }
             //choices
-            if (lookup == 1) {
+            if (lookup == "1") {
                 std::cout << "Which genre would you like to see songs of?" << std::endl;
                 std::cout << "1. Country" << std::endl;
                 std::cout << "2. Pop" << std::endl;
@@ -312,20 +317,38 @@ int main(int argc, char*argv[]){
                 std::cout << "5. Indie Rock" << std::endl;
                 std::cin >> genre_lookup;
                 //error checking for genre lookup
-                while (genre_lookup != 1 and genre_lookup != 2 and genre_lookup != 3 and genre_lookup != 4 and
-                       genre_lookup != 5) {
+                while (genre_lookup != "1" and genre_lookup != "2" and genre_lookup != "3" and genre_lookup != "4" and
+                       genre_lookup != "5") {
                     std::cout << "Invalid, please enter an option 1-5";
                     std::cin >> genre_lookup;
                 }
-                //IDK WHY THIS IS ERRORING!!!
-                playlist.genre_print(genre_lookup, 1);
+
+                int x =std::stoi(genre_lookup);
+                playlist.genre_print(x, 1);
             }
-            if (lookup == 2) {
+            if (lookup == "2") {
                 std::cout << "Enter a popularity to see songs only above that level of popularity:" << std::endl;
-                std::cin >> pop_lookup;
                 //TODO add error checking for popularity to ensure it is an integer between 1-100
                 //TODO add method to display songs above that level of popularity
-                playlist.popularity_print(pop_lookup);
+                while (true) {
+                    bool pass_check = true;
+                    std::cin >> pop_lookup;
+                    for (auto &c : pop_lookup) {
+                        if (!std::isdigit(c)) {
+                            std::cout << "Invalid, please enter an option 1-100" << '\n';
+                            pass_check = false;
+                        }
+                    }
+                    if (pass_check) {
+                        if (std::stoi(pop_lookup) < 1 || std::stoi(pop_lookup) > 100) {
+                            std::cout << "Invalid, please enter an option 1-100" << '\n';
+                        } else {
+                            break;
+                        }
+                    }
+                }
+
+                playlist.popularity_print(std::stoi(pop_lookup));
             }
         }
 

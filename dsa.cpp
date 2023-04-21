@@ -87,9 +87,6 @@ int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
 
     //song, genre, artist, popularity, and release year
-
-
-
     if(criteria==1){
         vec = (*database)[0];
     } else if(criteria == 2){
@@ -119,14 +116,12 @@ int Sorting::partition(int lo, int hi, int criteria){
         if(i >= j) break;
 
         // swap A[i] and A[j]
-
-
         std::swap(vec[i], vec[j]);
-        std::swap((*database)[0][i], (*database)[0][j]);
-        std::swap((*database)[1][i], (*database)[1][j]);
-        std::swap((*database)[2][i], (*database)[2][j]);
-        std::swap((*database)[3][i], (*database)[3][j]);
-        std::swap((*database)[4][i], (*database)[4][j]);
+       std::swap((*database)[0][i], (*database)[0][j]);
+       std::swap((*database)[1][i], (*database)[1][j]);
+       std::swap((*database)[2][i], (*database)[2][j]);
+       std::swap((*database)[3][i], (*database)[3][j]);
+       std::swap((*database)[4][i], (*database)[4][j]);
     }
 
     std::swap(vec[lo], vec[j]);
@@ -275,16 +270,21 @@ void Sorting::genre_print(int genre_lookup){
     for(int i=0; i<(*database)[1].size(); i++ ){
         if(genre_lookup==1 and (*database)[1][i]=="Country" ){
             std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
+            x++;
         }else if(genre_lookup==2 and (*database)[1][i]=="Pop" ){
             std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
+            x++;
         }else if(genre_lookup==3 and (*database)[1][i]=="Rap" ){
             std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
+            x++;
         }else if(genre_lookup==4 and (*database)[1][i]=="80s Rock" ){
             std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
+            x++;
         }else if(genre_lookup==5 and (*database)[1][i]=="Indie Rock" ){
             std::cout << x << ": " << (*database)[0][i] << ", " <<  (*database)[1][i] << ", " << (*database)[2][i] << ", " << (*database)[3][i] << ", " << (*database)[4][i] << std::endl;
+            x++;
         }
-        x++;
+
     }
 }
 

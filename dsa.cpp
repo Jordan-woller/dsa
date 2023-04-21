@@ -87,9 +87,6 @@ int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
 
     //song, genre, artist, popularity, and release year
-
-
-
     if(criteria==1){
         vec = (*database)[0];
     } else if(criteria == 2){

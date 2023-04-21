@@ -10,7 +10,8 @@ int main(int argc, char*argv[]){
 
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
     int playlist_select, criteria, single_criteria, insertion_option;
-    int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
+    int lookup, genre_lookup, pop_lookup, song_select;
+    std::string shuffle_criteria;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
@@ -285,16 +286,16 @@ int main(int argc, char*argv[]){
 
             std::cin >> shuffle_criteria;
             //error checking for shuffling criteria
-            while (shuffle_criteria != 1 and shuffle_criteria != 2 and shuffle_criteria != 3 and
-                   shuffle_criteria != 4 and shuffle_criteria != 5) {
+            while (shuffle_criteria != "1" and shuffle_criteria != "2" and shuffle_criteria != "3" and
+                   shuffle_criteria !="4" and shuffle_criteria != "5") {
                 std::cout << "Invalid option, try again." << std::endl;
                 std::cin >> shuffle_criteria;
             }
+           int x = std::stoi(shuffle_criteria);
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
-            playlist.shuffle(shuffle_criteria);
+            playlist.shuffle(x);
 
         }
-
 
         if (initial_choice == "4") {
             std::cout << "What would you like to see?" << std::endl;

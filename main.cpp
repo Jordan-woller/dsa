@@ -201,14 +201,31 @@ int main(int argc, char*argv[]){
             }
 
             //once user playlist has been filled with 5 songs
-            std::cout << std::endl << "Which of the below criteria is most important:" << std::endl;
-            std::cout << "1. Genre 2. Release Year 3. Popularity" << std::endl;
-            std::cin >> criteria;
-            //error check to make sure criteria is valid
-            while (criteria != 1 and criteria != 2 and criteria != 3) {
-                std::cout << "Invalid criteria, try again." << std::endl;
+            std::vector<std::string> topics = {"Genre", "Release Year", "Popularity"};
+            std::vector<std::string> order;
+            std::cout << std::endl << "Please rank the following criteria one at a time:(enter the corresponding number)" << std::endl;
+            for(int i = 1; i <= topics.size(); i++){
+                for(int i = 1; i <= topics.size(); i++){
+                    std::cout << i << ": " << topics[i-1] << " ";
+                }
+                std::cout << "\n";
                 std::cin >> criteria;
+                //error check to make sure criteria is valid
+                while (criteria != 1 and criteria != 2 and criteria != 3) {
+                    std::cout << "Invalid criteria, try again." << std::endl;
+                    std::cin >> criteria;
+                }
+                order.push_back(topics[criteria-1]);
+                topics.erase(topics.begin() + criteria-1);
             }
+            order.push_back(topics[criteria-1]);
+            topics = {"Genre", "Release Year", "Popularity"};
+            for(int i = 0; i < order.size(); i++){
+                std::cout << order[i] << " ";
+            }
+            
+            
+            
 
             // //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria
             // if (criteria == 1) {
@@ -250,7 +267,7 @@ int main(int argc, char*argv[]){
             //     }
             //     //TODO now that criteria is known, use library sort method to be created to sort
             // }
-
+            std::cout << "\n\n";
         }
         //TODO add another choice to shuffle just a genre
         if (initial_choice == "3") { //reshuffle playlist by criteria of users choosing

@@ -311,7 +311,7 @@ bool Sorting::checkSong(int index, std::string genre){
 std::string Sorting::getTitle(int index){
     return database[0][index-1];
 }
-
+ 
 bool Sorting::song_search(std::string song_lookup){
     for(int i=0; i<database[0].size(); i++ ){
       if(database[0][i] ==song_lookup ){

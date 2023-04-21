@@ -5,7 +5,9 @@
 #include <cctype>
 
 int main(int argc, char*argv[]){
-    int initial_choice = 0;
+
+    std::string initial_choice;
+
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
     int playlist_select, criteria, single_criteria, insertion_option;
     int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
@@ -34,8 +36,10 @@ int main(int argc, char*argv[]){
     // auto stop = std::chrono::high_resolution_clock::now();
     // auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
     // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
+    bool keepGoing = true;
 
-    while(initial_choice != 5) { //5 is the quit option
+
+    while(keepGoing) { //5 is the quit option
         std::cout << "Hello!\n";
         std::cout << "What would you like to do?" << std::endl;
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
@@ -44,14 +48,12 @@ int main(int argc, char*argv[]){
         std::cout << "4. Printout songs of a certain criteria" << std::endl;
         std::cout << "5. Quit" << std::endl;
         std::cin >> initial_choice;
-        while ( initial_choice != 1 and initial_choice != 2 and initial_choice != 3 and initial_choice != 4 and initial_choice != 5 ) {
+        if ( initial_choice != "1" and initial_choice != "2" and initial_choice != "3" and initial_choice != "4" and initial_choice != "5" ) {
             std::cout << "Invalid entry, please enter one of the listed options." << std::endl;
             std::cin >> initial_choice;
         }
-
-
         //Handling for the different choices
-        if (initial_choice == 1) {
+        if (initial_choice == "1") {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
             std::getline(std::cin, song_choice);  //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
@@ -110,7 +112,7 @@ int main(int argc, char*argv[]){
 
 
         }
-        if (initial_choice == 2) {
+        if (initial_choice == "2") {
             //by choosing a playlist, it will display the songs in that playlist.
             //user has the option to either confirm that playlist selection or go back and choose another playlist
             while (song_choice_vec.size() < 5) { //while the song vector of users choices is not filled with 5 songs
@@ -247,7 +249,7 @@ int main(int argc, char*argv[]){
 
         }
         //TODO add another choice to shuffle just a genre
-        if (initial_choice == 3) { //reshuffle playlist by criteria of users choosing
+        if (initial_choice == "3") { //reshuffle playlist by criteria of users choosing
             std::cout << "How do you want to shuffle the playlist?" << std::endl;
             std::cout << "(enter an option 1-5)" << std::endl;
             std::cout << "1. Shuffle based on song title" << std::endl;
@@ -269,14 +271,13 @@ int main(int argc, char*argv[]){
         }
 
 
-        if (initial_choice == 4) {
+        if (initial_choice == "4") {
             std::cout << "What would you like to see?" << std::endl;
             std::cout << "1. Print songs of a certain genre " << std::endl;
-            std::cout << "2. See if a specific song exists in the playlist " << std::endl;
-            std::cout << "3. Print songs that are above a certain popularity " << std::endl;
+            std::cout << "2. Print songs that are above a certain popularity " << std::endl;
             std::cin >> lookup;
             //error checking for lookup options
-            while (lookup != 1 and lookup != 2 and lookup != 3) {
+            while (lookup != 1 and lookup != 2) {
                 std::cout << "Invalid option, try again." << std::endl;
                 std::cin >> lookup;
             }
@@ -299,28 +300,23 @@ int main(int argc, char*argv[]){
                 playlist.genre_print(genre_lookup, 1);
             }
             if (lookup == 2) {
-                std::cout << "Enter a song:" << std::endl;
-                std::cin >> song_lookup;
-                //TODO add some sort of method that converts song to proper capitalization ex if all is lower case
-                playlist.song_search(song_lookup);
-            }
-            if (lookup == 3) {
                 std::cout << "Enter a popularity to see songs only above that level of popularity:" << std::endl;
                 std::cin >> pop_lookup;
                 //TODO add error checking for popularity to ensure it is an integer between 1-100
                 //TODO add method to display songs above that level of popularity
+                playlist.popularity_print(pop_lookup);
             }
         }
 
-        if (initial_choice == 5) {
-            break;
+        if (initial_choice == "5") {
+            keepGoing=false;
         }
 
         //resetting necessary variables
-        initial_choice = 0;
+        initial_choice = "0";
     }
 
-    exit(0);
+    //exit(0);
 
         //main options menu
     //Ask the user what they want to do
@@ -364,6 +360,6 @@ int main(int argc, char*argv[]){
     //asks for what genre
     //b print out if a specific song the user enters exists
     //c. prints songs that are above a certain popularity
-    return 0;
+   // return 0;
 }
 

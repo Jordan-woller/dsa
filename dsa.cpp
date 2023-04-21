@@ -19,7 +19,6 @@ void Sorting::read_data(std::string file_name){
     int rows = 0;
     while(std::getline(file_stream, line)){
         std::istringstream ss(line);
-
         //getting each column and storing into vector
         //song, genre, artist, popularity, release year
         int i = 0;
@@ -324,10 +323,12 @@ bool Sorting::song_search(std::string song_lookup){
 }
 
 void Sorting::popularity_print(int pop_lookup){
+    int y = 1;
     for(int i=0; i<database[3].size(); i++ ){
         int x= std::stoi(database[3][i]);
         if(x > pop_lookup ){
-            std::cout<<database[3][i];
+            std::cout << y << ": " << database[0][i] << ", " <<  database[1][i] << ", " << database[2][i] << ", " << database[3][i] << ", " << database[4][i] << std::endl;
+            y++;
         }
     }
 }

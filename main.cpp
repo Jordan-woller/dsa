@@ -56,7 +56,8 @@ int main(int argc, char*argv[]){
         //Handling for the different choices
         if (initial_choice == "1") {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
-            std::getline(std::cin, song_choice);  //no need to error check for song choice because songs can be numbers, characters, or strings
+           // std::getline(std::cin, song_choice);  //no need to error check for song choice because songs can be numbers, characters, or strings
+            std::cin >> song_choice;
             std::cout << "Enter the genre for this song:" << std::endl;
             std::cin >> genre_choice;
             //error checking for genre_choice loops through each character in the variable to ensure it is not a number
@@ -73,7 +74,8 @@ int main(int argc, char*argv[]){
             }
             std::cout << "Enter the artist of this song:" << std::endl;
             //this line isnt working
-            std::getline(std::cin, artist_choice);; //no need to error check for artist because artist can be numbers, characters, or strings
+            //std::getline(std::cin, artist_choice);; //no need to error check for artist because artist can be numbers, characters, or strings
+            std::cin >> artist_choice;
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
             //error checking for release year
@@ -107,10 +109,10 @@ int main(int argc, char*argv[]){
             //TODO calls quick sort shuffle to sort the playlist by whatever criteria the user wants
             playlist.shuffle(insertion_option);
             //TODO add function call to insertion method that sorts the added song into playlist database
-            playlist.insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
+            playlist.insertion(insertion_option-1, song_choice, genre_choice, artist_choice, release_year, popularity);
             //calls insertion method to sort added song into playlist database
             //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
-
+            playlist.print_database();
 
 
         }

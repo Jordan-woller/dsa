@@ -27,7 +27,7 @@ public:
     void insertion(int insertion_option, std::string song_choice, std::string genre_choice, std::string artist_choice, std::string release_year, std::string popularity);
     void library(std::vector<std::string> sort);
     void shuffle(int criteria);
-    void genre_print(int genre_lookup);
+    void genre_print(int genre_lookup, int mode);
     bool checkSong(int index, std::string genre);
     bool song_search(std::string song_lookup);
     void popularity_print(int pop_lookup);

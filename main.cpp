@@ -132,7 +132,7 @@ int main(int argc, char*argv[]){
                 if (playlist_select == 1) {
                     std::string playlistGenre = "Country";
                     std::cout << "Here is the Country playlist:" << std::endl;
-                    playlist.genre_print(1);
+                    playlist.genre_print(1,2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
@@ -145,7 +145,7 @@ int main(int argc, char*argv[]){
                 if (playlist_select == 2) {
                     std::string playlistGenre = "Pop";
                     std::cout << "Here is the Pop playlist:" << std::endl;
-                    playlist.genre_print(2);
+                    playlist.genre_print(2,2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -158,7 +158,7 @@ int main(int argc, char*argv[]){
                 if (playlist_select == 3) {
                     std::string playlistGenre = "Rap";
                     std::cout << "Here is the Rap playlist:" << std::endl;
-                    playlist.genre_print(3);
+                    playlist.genre_print(3,2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -171,7 +171,7 @@ int main(int argc, char*argv[]){
                 if (playlist_select == 4) {
                     std::string playlistGenre = "80s Rock";
                     std::cout << "Here is the 80s Rock playlist:" << std::endl;
-                    playlist.genre_print(4);
+                    playlist.genre_print(4,2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -184,7 +184,7 @@ int main(int argc, char*argv[]){
                 if (playlist_select == 5) {
                     std::string playlistGenre = "Indie Rock";
                     std::cout << "Here is the Indie Rock playlist:" << std::endl;
-                    playlist.genre_print(5);
+                    playlist.genre_print(5,2);
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
                               << std::endl;
                     std::cin >> song_select;
@@ -195,11 +195,6 @@ int main(int argc, char*argv[]){
                     }
                 }
                 song_choice_vec.push_back(playlist.getTitle(song_select));
-            }
-
-            std::cout << "\n\n\ngot here\n\n\n";
-            for(int i = 0; i < song_choice_vec.size();i++){
-                std::cout << song_choice_vec[i] << std::endl;
             }
 
             //once user playlist has been filled with 5 songs
@@ -301,7 +296,7 @@ int main(int argc, char*argv[]){
                     std::cin >> genre_lookup;
                 }
                 //IDK WHY THIS IS ERRORING!!!
-                 playlist.genre_print(genre_lookup);
+                playlist.genre_print(genre_lookup, 1);
             }
             if (lookup == 2) {
                 std::cout << "Enter a song:" << std::endl;

@@ -23,8 +23,11 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[4]);
     playlist.read_data(argv[5]);
 
-//    //playlist.merge_sort(1);
+//    playlist.print_database();
+//    playlist.merge_sort(1);
     playlist.print_database();
+    playlist.shuffle(2);
+    std::cout << std::endl;
 
     // auto start = std::chrono::high_resolution_clock::now();
     // //function call here
@@ -33,6 +36,7 @@ int main(int argc, char*argv[]){
     // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
     while(initial_choice != 5) { //5 is the quit option
+        std::cout << "Hello!\n";
         std::cout << "What would you like to do?" << std::endl;
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
         std::cout << "2. Get a personalized series of song recommendations based on songs you like." << std::endl;
@@ -40,7 +44,7 @@ int main(int argc, char*argv[]){
         std::cout << "4. Printout songs of a certain criteria" << std::endl;
         std::cout << "5. Quit" << std::endl;
         std::cin >> initial_choice;
-        while (initial_choice != 1 and initial_choice != 2 and initial_choice != 3 and initial_choice != 4) {
+        while ( initial_choice != 1 and initial_choice != 2 and initial_choice != 3 and initial_choice != 4 and initial_choice != 5 ) {
             std::cout << "Invalid entry, please enter one of the listed options." << std::endl;
             std::cin >> initial_choice;
         }
@@ -49,7 +53,7 @@ int main(int argc, char*argv[]){
         //Handling for the different choices
         if (initial_choice == 1) {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
-            std::cin >> song_choice;  //no need to error check for song choice because songs can be numbers, characters, or strings
+            std::getline(std::cin, song_choice);  //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             std::cin >> genre_choice;
             //error checking for genre_choice loops through each character in the variable to ensure it is not a number
@@ -65,18 +69,19 @@ int main(int argc, char*argv[]){
                 }
             }
             std::cout << "Enter the artist of this song:" << std::endl;
-            std::cin >> artist_choice; //no need to error check for artist because artist can be numbers, characters, or strings
+            //this line isnt working
+            std::getline(std::cin, artist_choice);; //no need to error check for artist because artist can be numbers, characters, or strings
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
             //error checking for release year
-            while(!std::isdigit(release_year[0]) and std::stoi(release_year) <= 2023){
+            while(!std::isdigit(release_year[0]) or std::stoi(release_year) > 2023){
                 std::cout << "Invalid year, please enter a valid year:" << std::endl;
                 std::cin >> release_year;
             }
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
             //error checking for popularity
-            while(!std::isdigit(popularity[0]) and std::stoi(popularity) >= 0 and std::stoi(popularity) <= 100){
+            while(!std::isdigit(popularity[0]) or std::stoi(popularity) < 0 or std::stoi(popularity) > 100){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }
@@ -304,6 +309,10 @@ int main(int argc, char*argv[]){
                 //TODO add error checking for popularity to ensure it is an integer between 1-100
                 //TODO add method to display songs above that level of popularity
             }
+        }
+
+        if (initial_choice == 5) {
+            break;
         }
 
         //resetting necessary variables

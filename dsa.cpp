@@ -179,7 +179,7 @@ bool Sorting::comparestr(std::string str1, std::string str2){
     unsigned int length = (str1.length() > str2.length()) ? str1.length() : str2.length();
 
     for (int i = 0 ; i < length ; i++){
-        if (str1[i] < str2[i]) {
+        if (str1[i] <= str2[i]) {
             return true;
         } else if (str1[i] > str2[i]) {
             return false;
@@ -198,31 +198,24 @@ void Sorting::merge_sort(int criteria){
 void Sorting::r_merge(int lo, int hi, int criteria) {
     std::vector<std::vector<std::string>> temp = *database;
     //basecase(single element or empty list)
-    if (hi <= lo) return;
+    if (lo >= hi) {return;}
 
     //divide
-    int mid = lo + (hi - lo) / 2;
+    int mid = lo + ((hi - lo) / 2);
 
     //recursively sort halves
     r_merge(lo, mid, criteria);
     r_merge(mid + 1, hi, criteria);
 
     //merge
-    merge(lo, mid, hi, criteria, temp);
-
-    for (int x = lo ; x <= hi ; x++){
-        (*database)[0][x] = temp[0][x];
-        (*database)[1][x] = temp[1][x];
-        (*database)[2][x] = temp[2][x];
-        (*database)[3][x] = temp[3][x];
-        (*database)[4][x] = temp[4][x];
-    }
-
+    merge(lo, mid, hi, criteria);
 }
 
 //private function to merge each vector together
-void Sorting::merge(int lo, int mid, int hi, int criteria, std::vector<std::vector<std::string>> &temp) {
+void Sorting::merge(int lo, int mid, int hi, int criteria) {
     int i = 0, j = mid + 1, k = 0;
+    std::vector<std::vector<std::string>> temp;
+    //(5, std::vector<std::string> (hi - lo + 1))
 
     while (i <= mid && j <= hi){
         if (comparestr((*database)[criteria-1][i], (*database)[criteria-1][j])){
@@ -263,8 +256,15 @@ void Sorting::merge(int lo, int mid, int hi, int criteria, std::vector<std::vect
         k++;
     }
 
-//    std::copy((*database)[lo + k], (*database)[lo + k + 1], temp[k]);
+    for (int x = lo ; x <= hi ; x++){
+        (*database)[0][x] = temp[0][x-lo];
+        (*database)[1][x] = temp[1][x-lo];
+        (*database)[2][x] = temp[2][x-lo];
+        (*database)[3][x] = temp[3][x-lo];
+        (*database)[4][x] = temp[4][x-lo];
+    }
 }
+
 //song, genre, artist, popularity, release year
 //Country
 // Pop

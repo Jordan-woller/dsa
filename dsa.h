@@ -33,6 +33,8 @@ public:
     void try_quicksort(int criteria);
 //    void genre_print(int genre_lookup);
     std::string getTitle(int index);
+
+    std::string multi_line();
 };
 
 //class Song{

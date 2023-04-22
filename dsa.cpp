@@ -55,12 +55,22 @@ void Sorting::print_database() {
      }
    std::cout << std::endl;
 }
+
+std::string multi_line(){
+    while(std::getline(std::cin, choice)){
+        if(choice.empty()) continue;
+        if(!choice.empty()) break;
+        std::istringstream is(choice);
+    }
+    return choice;
+}
+
 //if the first character in the string is an actual character and not a digit, it transforms it to an uppercase
 std::string Sorting::upper(std::string word){
     if(!std::isdigit(word[0])){
         word[0] = std::toupper(word[0]);
     }
-    std::cout << "word: " <<  word << std::endl;
+    //std::cout << "word: " <<  word << std::endl;
     return word;
 }
 void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
@@ -79,24 +89,46 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
 
     int size = database[0].size()-1;
 
-    for(int i = size; i > 0; i--){
-        int j = i;
 
-        //inserts j in sorted part
-        std::cout << "type a: " << database[insertion_option][j][0] << std::endl;
-        std::cout << "comparer: " << database[insertion_option][j-1][0] << std::endl;
-        //compares the first character
-        while(j > 0){
-            if(comparestr(database[insertion_option][j],
-                          database[insertion_option][j-1])){
-                //swaps every category with each other to be in proper place
-                std::swap(database[0][j-1], database[0][j]);
-                std::swap(database[1][j-1], database[1][j]);
-                std::swap(database[2][j-1], database[2][j]);
-                std::swap(database[3][j-1], database[3][j]);
-                std::swap(database[4][j-1], database[4][j]);
+
+    if(insertion_option == 0 or insertion_option == 1 or insertion_option == 2){
+        for(int i = size; i > 0; i--){
+            int j = i;
+            //inserts j in sorted part
+            //compares the first character
+            while(j > 0){
+                if(comparestr(database[insertion_option][j],
+                              database[insertion_option][j-1])){
+                    //swaps every category with each other to be in proper place
+                    std::swap(database[0][j-1], database[0][j]);
+                    std::swap(database[1][j-1], database[1][j]);
+                    std::swap(database[2][j-1], database[2][j]);
+                    std::swap(database[3][j-1], database[3][j]);
+                    std::swap(database[4][j-1], database[4][j]);
+                }
+                j--;
             }
-            j--;
+        }
+    } else{ //if insertion option is 4 or 5, it is an integer so it compares slightly differently
+        for(int k = size; k > 0; k--){
+            int l = k;
+            //inserts j in sorted part
+            //compares the first character
+            while(l > 0){
+                std::cout << "TEST: " <<  database[insertion_option][l-1];
+                int a = std::stoi(database[insertion_option][l-1]);
+                int b = std::stoi(database[insertion_option][l]);
+
+                if(a < b){
+                    //swaps every category with each other to be in proper place
+                    std::swap(database[0][l-1], database[0][l]);
+                    std::swap(database[1][l-1], database[1][l]);
+                    std::swap(database[2][l-1], database[2][l]);
+                    std::swap(database[3][l-1], database[3][l]);
+                    std::swap(database[4][l-1], database[4][l]);
+                }
+                l--;
+            }
         }
     }
 }

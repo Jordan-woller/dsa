@@ -38,7 +38,7 @@ void Sorting::read_data(std::string file_name){
         temp_vec.clear();
 
     }
-
+    file_stream.close();
 }
 
 void Sorting::print_database() {
@@ -55,12 +55,23 @@ void Sorting::print_database() {
      }
    std::cout << std::endl;
 }
+
+std::string Sorting::multi_line(){
+    std::string choice;
+    while(std::getline(std::cin, choice)){
+        if(choice.empty()) continue;
+        if(!choice.empty()) break;
+        std::istringstream is(choice);
+    }
+    return choice;
+}
+
 //if the first character in the string is an actual character and not a digit, it transforms it to an uppercase
 std::string Sorting::upper(std::string word){
     if(!std::isdigit(word[0])){
         word[0] = std::toupper(word[0]);
     }
-    std::cout << word;
+    //std::cout << "word: " <<  word << std::endl;
     return word;
 }
 
@@ -70,7 +81,6 @@ int Sorting::getLength(){
 
 void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
                         std::string artist_choice, std::string release_year, std::string popularity){
-
     //calls upper function for song, genre, and artist to ensure they are properly capitalized
     song_choice = upper(song_choice);
     genre_choice = upper(genre_choice);
@@ -80,26 +90,53 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     database[0].push_back(song_choice);
     database[1].push_back(genre_choice);
     database[2].push_back(artist_choice);
-    database[3].push_back(release_year);
-    database[4].push_back(popularity);
+    database[3].push_back(popularity);
+    database[4].push_back(release_year);
 
     int size = database[0].size()-1;
 
-    for(int i = size; i >= 0; i--){
-        int j = i;
-        //inserts j in sorted part
-        // std::cout << database[insertion_option][0][j][0] << std::endl;
-        // std::cout << database[insertion_option][0][j-1][0] << std::endl;
-        //compares the first character
-        while(j < size and comparestr(database[insertion_option][j],
-                                      database[insertion_option][j-1])){
-            //swaps every category with each other to be in proper place
-            std::swap(database[0][j-1], database[0][j]);
-            std::swap(database[1][j-1], database[1][j]);
-            std::swap(database[2][j-1], database[2][j]);
-            std::swap(database[3][j-1], database[3][j]);
-            std::swap(database[4][j-1], database[4][j]);
-            j++;
+
+
+    if(insertion_option == 0 or insertion_option == 1 or insertion_option == 2){
+        for(int i = size; i > 0; i--){
+            int j = i;
+            //inserts j in sorted part
+            //compares the first character
+            while(j > 0){
+                if(comparestr(database[insertion_option][j],
+                              database[insertion_option][j-1])){
+                    //swaps every category with each other to be in proper place
+                    std::swap(database[0][j-1], database[0][j]);
+                    std::swap(database[1][j-1], database[1][j]);
+                    std::swap(database[2][j-1], database[2][j]);
+                    std::swap(database[3][j-1], database[3][j]);
+                    std::swap(database[4][j-1], database[4][j]);
+                }
+                j--;
+            }
+        }
+    } else{ //if insertion option is 4 or 5, it is an integer so it compares slightly differently
+        for(int k = size; k > 0; k--){
+            int l = k;
+            //inserts j in sorted part
+            //compares the first character
+            while(l > 0){
+               // std::cout << "TEST: " <<  database[insertion_option][l-1] << std::endl;
+               // std::cout << "TEST NUMBER 2: " <<  database[insertion_option][l] << std::endl;
+
+                int a = std::stoi(database[insertion_option][l-1]);
+                int b = std::stoi(database[insertion_option][l]);
+
+                if(a > b){
+                    //swaps every category with each other to be in proper place
+                    std::swap(database[0][l-1], database[0][l]);
+                    std::swap(database[1][l-1], database[1][l]);
+                    std::swap(database[2][l-1], database[2][l]);
+                    std::swap(database[3][l-1], database[3][l]);
+                    std::swap(database[4][l-1], database[4][l]);
+                }
+                l--;
+            }
         }
     }
 }
@@ -177,7 +214,7 @@ bool Sorting::comparestr(std::string str1, std::string str2){
     unsigned int length = (str1.length() > str2.length()) ? str1.length() : str2.length();
 
     for (int i = 0 ; i < length ; i++){
-        if (str1[i] <= str2[i]) {
+        if (str1[i] < str2[i]) {
             return true;
         } else if (str1[i] > str2[i]) {
             return false;
@@ -194,7 +231,7 @@ void Sorting::merge_sort(int criteria){
 
 //private function to recursively separate vector
 void Sorting::r_merge(int lo, int hi, int criteria) {
-    std::vector<std::vector<std::string>> temp = database;
+//    std::vector<std::vector<std::string>> temp = database;
     //basecase(single element or empty list)
     if (lo >= hi) {return;}
 
@@ -211,54 +248,54 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
 
 //private function to merge each vector together
 void Sorting::merge(int lo, int mid, int hi, int criteria) {
-    int i = 0, j = mid + 1, k = 0;
+    int i = lo, j = mid + 1, k = 0;
     std::vector<std::vector<std::string>> temp (5, std::vector<std::string> (hi - lo + 1, " "));
 
     while (i <= mid && j <= hi){
         if (comparestr(database[criteria-1][i], database[criteria-1][j])){
-            temp.at(0).at(k) = database.at(0).at(i);
-            temp.at(1).at(k) = database.at(1).at(i);
-            temp.at(2).at(k) = database.at(2).at(i);
-            temp.at(3).at(k) = database.at(3).at(i);
-            temp.at(4).at(k) = database.at(4).at(i);
+            temp[0][k] = database[0][i];
+            temp[1][k] = database[1][i];
+            temp[2][k] = database[2][i];
+            temp[3][k] = database[3][i];
+            temp[4][k] = database[4][i];
             i++;
         } else {
-            temp.at(0).at(k) = database.at(0).at(j);
-            temp.at(1).at(k) = database.at(1).at(j);
-            temp.at(2).at(k) = database.at(2).at(j);
-            temp.at(3).at(k) = database.at(3).at(j);
-            temp.at(4).at(k) = database.at(4).at(j);
+            temp[0][k] = database[0][j];
+            temp[1][k] = database[1][j];
+            temp[2][k] = database[2][j];
+            temp[3][k] = database[3][j];
+            temp[4][k] = database[4][j];
             j++;
         }
         k++;
     }
 
     while (i <= mid){
-        temp.at(0).at(k) = database.at(0).at(i);
-        temp.at(1).at(k) = database.at(1).at(i);
-        temp.at(2).at(k) = database.at(2).at(i);
-        temp.at(3).at(k) = database.at(3).at(i);
-        temp.at(4).at(k) = database.at(4).at(i);
+        temp[0][k] = database[0][i];
+        temp[1][k] = database[1][i];
+        temp[2][k] = database[2][i];
+        temp[3][k] = database[3][i];
+        temp[4][k] = database[4][i];
         i++;
         k++;
     }
 
     while (j <= hi){
-        temp.at(0).at(k) = database.at(0).at(j);
-        temp.at(1).at(k) = database.at(1).at(j);
-        temp.at(2).at(k) = database.at(2).at(j);
-        temp.at(3).at(k) = database.at(3).at(j);
-        temp.at(4).at(k) = database.at(4).at(j);
+        temp[0][k] = database[0][j];
+        temp[1][k] = database[1][j];
+        temp[2][k] = database[2][j];
+        temp[3][k] = database[3][j];
+        temp[4][k] = database[4][j];
         j++;
         k++;
     }
 
     for (int x = lo ; x <= hi ; x++){
-        database.at(0).at(x) = temp.at(0).at(x-lo);
-        database.at(1).at(x) = temp.at(1).at(x-lo);
-        database.at(2).at(x) = temp.at(2).at(x-lo);
-        database.at(3).at(x) = temp.at(3).at(x-lo);
-        database.at(4).at(x) = temp.at(4).at(x-lo);
+        database[0][x] = temp[0][x-lo];
+        database[1][x] = temp[1][x-lo];
+        database[2][x] = temp[2][x-lo];
+        database[3][x] = temp[3][x-lo];
+        database[4][x] = temp[4][x-lo];
     }
 }
 

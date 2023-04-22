@@ -56,10 +56,12 @@ public:
     void try_quicksort(int criteria);
     void applySort(std::vector<Song> songs);
     std::vector<std::string> get(int row);
+//    void genre_print(int genre_lookup);
     std::string getTitle(int index);
     std::string getYear(int index);
     std::vector<int> getIndexs(std::string criteria, int category);
     std::vector<int> getRecommend(std::vector<int> genreVec,  std::vector<std::vector<std::string>> song_choice_vec);
+    std::string multi_line();
 };
 
 #endif //DSA_DSA_H

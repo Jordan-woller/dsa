@@ -555,12 +555,12 @@ int main(int argc, char*argv[]){
 
         std::cin >> shuffle_criteria;
         //error checking for shuffling criteria
-        while (shuffle_criteria != 1 and shuffle_criteria != 2 and shuffle_criteria != 3 and shuffle_criteria != 4 and shuffle_criteria != 5) {
+        while (shuffle_criteria != "1" and shuffle_criteria != "2" and shuffle_criteria != "3" and shuffle_criteria != "4" and shuffle_criteria != "5") {
             std::cout << "Invalid option, try again." << std::endl;
             std::cin >> shuffle_criteria;
         }
 
-        playlist.heapSort(shuffle_criteria);
+        playlist.heapSort(std::stoi(shuffle_criteria));
         playlist.print_database();
     }
 

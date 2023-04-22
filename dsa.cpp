@@ -116,13 +116,13 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
             //inserts j in sorted part
             //compares the first character
             while(l > 0){
-                std::cout << "TEST: " <<  database[insertion_option][l-1] << std::endl;
-                std::cout << "TEST NUMBER 2: " <<  database[insertion_option][l] << std::endl;
+               // std::cout << "TEST: " <<  database[insertion_option][l-1] << std::endl;
+               // std::cout << "TEST NUMBER 2: " <<  database[insertion_option][l] << std::endl;
 
                 int a = std::stoi(database[insertion_option][l-1]);
                 int b = std::stoi(database[insertion_option][l]);
 
-                if(a < b){
+                if(a > b){
                     //swaps every category with each other to be in proper place
                     std::swap(database[0][l-1], database[0][l]);
                     std::swap(database[1][l-1], database[1][l]);

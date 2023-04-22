@@ -56,7 +56,8 @@ void Sorting::print_database() {
    std::cout << std::endl;
 }
 
-std::string multi_line(){
+std::string Sorting::multi_line(){
+    std::string choice;
     while(std::getline(std::cin, choice)){
         if(choice.empty()) continue;
         if(!choice.empty()) break;
@@ -84,8 +85,8 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     database[0].push_back(song_choice);
     database[1].push_back(genre_choice);
     database[2].push_back(artist_choice);
-    database[3].push_back(release_year);
-    database[4].push_back(popularity);
+    database[3].push_back(popularity);
+    database[4].push_back(release_year);
 
     int size = database[0].size()-1;
 
@@ -115,7 +116,9 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
             //inserts j in sorted part
             //compares the first character
             while(l > 0){
-                std::cout << "TEST: " <<  database[insertion_option][l-1];
+                std::cout << "TEST: " <<  database[insertion_option][l-1] << std::endl;
+                std::cout << "TEST NUMBER 2: " <<  database[insertion_option][l] << std::endl;
+
                 int a = std::stoi(database[insertion_option][l-1]);
                 int b = std::stoi(database[insertion_option][l]);
 

@@ -56,10 +56,11 @@ int main(int argc, char*argv[]){
         //Handling for the different choices
         if (initial_choice == "1") {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
-           // std::getline(std::cin, song_choice);  //no need to error check for song choice because songs can be numbers, characters, or strings
-            std::cin >> song_choice;
+            song_choice = playlist.multi_line();
+           // std::getline(std::cin, song_choice);   //no need to error check for song choice because songs can be numbers, characters, or strings
+           // std::cin >> song_choice;
             std::cout << "Enter the genre for this song:" << std::endl;
-            std::cin >> genre_choice;
+            genre_choice = playlist.multi_line();
             //error checking for genre_choice loops through each character in the variable to ensure it is not a number
             bool genre_check = true;
             for(int i = 0; i < genre_choice.length()-1; i++) {
@@ -73,16 +74,8 @@ int main(int argc, char*argv[]){
                 }
             }
             std::cout << "Enter the artist of this song:" << std::endl;
-            //this line isnt working
-            //std::getline(std::cin, artist_choice);; //no need to error check for artist because artist can be numbers, characters, or strings
-            std::cin >> artist_choice;
-            std::cout << "Enter the release year of this song:" << std::endl;
-            std::cin >> release_year;
-            //error checking for release year
-            while(!std::isdigit(release_year[0]) or std::stoi(release_year) > 2023){
-                std::cout << "Invalid year, please enter a valid year:" << std::endl;
-                std::cin >> release_year;
-            }
+           //no need to error check for artist because artist can be numbers, characters, or strings
+            artist_choice = playlist.multi_line();
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
             //error checking for popularity
@@ -90,9 +83,16 @@ int main(int argc, char*argv[]){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }
+            std::cout << "Enter the release year of this song:" << std::endl;
+            std::cin >> release_year;
+            //error checking for release year
+            while(!std::isdigit(release_year[0]) or std::stoi(release_year) > 2023){
+                std::cout << "Invalid year, please enter a valid year:" << std::endl;
+                std::cin >> release_year;
+            }
             //displays the song the user chose
             std::cout << "You chose the following song: " << song_choice << ", " << genre_choice << ", "
-                      << artist_choice << ", " << release_year << ", " << popularity << std::endl;
+                      << artist_choice << ", " << popularity << ", " << release_year << std::endl;
             std::cout << "How would you like the playlist to be sorted by? Choose an option 1-5." << std::endl;
             std::cout << "1. Song Title" << std::endl;
             std::cout << "2. Genre" << std::endl;

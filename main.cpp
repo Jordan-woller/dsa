@@ -3,6 +3,74 @@
 #include <chrono>
 #include "dsa.h"
 #include <cctype>
+#include <algorithm>
+
+bool compare123(const Song& x, const Song& y) {
+    if (x.genre != y.genre) {
+        return x.genre < y.genre;
+    }
+    else if (x.release_year != y.release_year) {
+        return x.release_year < y.release_year;
+    }
+    else {
+        return x.popularity < y.popularity;
+    }
+}
+bool compare132(const Song& x, const Song& y) {
+    if (x.genre != y.genre) {
+        return x.genre < y.genre;
+    }
+    else if (x.popularity != y.popularity) {
+        return x.popularity < y.popularity;
+    }
+    else {
+        return x.release_year < y.release_year;
+    }
+}
+bool compare213(const Song& x, const Song& y) {
+    if (x.release_year != y.release_year) {
+        return x.release_year < y.release_year;
+    }
+    else if (x.genre != y.genre) {
+        return x.genre < y.genre;
+    }
+    else {
+        return x.popularity < y.popularity;
+    }
+}
+bool compare231(const Song& x, const Song& y) {
+    if (x.release_year != y.release_year) {
+        return x.release_year < y.release_year;
+    }
+    else if (x.popularity != y.popularity) {
+        return x.popularity < y.popularity;
+    }
+    else {
+        return x.genre < y.genre;
+    }
+}
+bool compare312(const Song& x, const Song& y) {
+    if (x.popularity != y.popularity) {
+        return x.popularity < y.popularity;
+    }
+    else if (x.genre != y.genre) {
+        return x.genre < y.genre;
+    }
+    else {
+        return x.release_year < y.release_year;
+    }
+}
+bool compare321(const Song& x, const Song& y) {
+    if (x.popularity != y.popularity) {
+        return x.popularity < y.popularity;
+    }
+    else if (x.release_year != y.release_year) {
+        return x.release_year < y.release_year;
+    }
+    else {
+        return x.genre < y.genre;
+    }
+}
 
 int main(int argc, char*argv[]){
 
@@ -14,7 +82,7 @@ int main(int argc, char*argv[]){
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
-    std::vector<std::string>song_choice_vec;
+    std::vector<std::vector<std::string>> song_choice_vec;
 
     Sorting playlist;
 
@@ -109,169 +177,281 @@ int main(int argc, char*argv[]){
             playlist.insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
             //calls insertion method to sort added song into playlist database
             //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
-
-
-
         }
+
         if (initial_choice == "2") {
             //by choosing a playlist, it will display the songs in that playlist.
             //user has the option to either confirm that playlist selection or go back and choose another playlist
-            while (song_choice_vec.size() < 5) { //while the song vector of users choices is not filled with 5 songs
-                std::cout << "Choose 5 songs you like from the different genre playlists below." << std::endl;
-                std::cout << "Chose an option 1-5 to display one of the playlists." << std::endl;
-                std::cout << "1. Country" << std::endl;
-                std::cout << "2. Pop" << std::endl;
-                std::cout << "3. Rap" << std::endl;
-                std::cout << "4. 80s Rock" << std::endl;
-                std::cout << "5. Indie Rock" << std::endl;
+        
+            std::cout << "Choose 5 songs you like from one of the different genre playlists below." << std::endl;
+            std::cout << "Chose an option 1-5 to display one of the playlists." << std::endl;
+            std::cout << "1. Country" << std::endl;
+            std::cout << "2. Pop" << std::endl;
+            std::cout << "3. Rap" << std::endl;
+            std::cout << "4. 80s Rock" << std::endl;
+            std::cout << "5. Indie Rock" << std::endl;
+            std::cin >> playlist_select;
+            //error checking for playlist option
+            while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
+                std::cout << "Invalid, please enter an option 1-5";
                 std::cin >> playlist_select;
-                //error checking for playlist option
-                while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
-                    std::cout << "Invalid, please enter an option 1-5";
-                    std::cin >> playlist_select;
-                }
-                //for playlist options 1-5, it will display the playlist.
-                //user can either confirm their selection or go back and choose another playlist
-                if (playlist_select == 1) {
-                    std::string playlistGenre = "Country";
-                    std::cout << "Here is the Country playlist:" << std::endl;
-                    playlist.genre_print(1,2);
+            }
+            std::vector<int> used;
+            std::string playlistGenre;
+            if (playlist_select == 1) {
+                std::cout << "Here is the Country playlist:" << std::endl;
+                playlist.genre_print(1,2);
+                playlistGenre = "Country";
+                while (song_choice_vec[0].size() < 5) {
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(song_select, playlistGenre)) {
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                 }
-                if (playlist_select == 2) {
-                    std::string playlistGenre = "Pop";
-                    std::cout << "Here is the Pop playlist:" << std::endl;
-                    playlist.genre_print(2,2);
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
-                              << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    while (playlist.checkSong(song_select, playlistGenre)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                }
-                if (playlist_select == 3) {
-                    std::string playlistGenre = "Rap";
-                    std::cout << "Here is the Rap playlist:" << std::endl;
-                    playlist.genre_print(3,2);
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
-                              << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    while (playlist.checkSong(song_select, playlistGenre)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                }
-                if (playlist_select == 4) {
-                    std::string playlistGenre = "80s Rock";
-                    std::cout << "Here is the 80s Rock playlist:" << std::endl;
-                    playlist.genre_print(4,2);
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
-                              << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    while (playlist.checkSong(song_select, playlistGenre)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                }
-                if (playlist_select == 5) {
-                    std::string playlistGenre = "Indie Rock";
-                    std::cout << "Here is the Indie Rock playlist:" << std::endl;
-                    playlist.genre_print(5,2);
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
-                              << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    while (playlist.checkSong(song_select, playlistGenre)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                }
-                song_choice_vec.push_back(playlist.getTitle(song_select));
             }
-
-            //once user playlist has been filled with 5 songs
-            std::string ranking;
-            std::vector<std::string> topics = {"Genre", "Release Year", "Popularity"};
-            std::vector<std::string> order;
-            std::cout << std::endl << "Please rank the following criteria" << std::endl;
-            std::cout << std::endl << "For Genre enter 1" << std::endl;
-            std::cout << std::endl << "For Release Year enter 2" << std::endl;
-            std::cout << std::endl << "For Popularity enter 3" << std::endl;
-            std::cout << std::endl << "For ex: Release Year, Popularity, Genre: enter 231" << std::endl;
-            std::cin >> ranking;
-
-
-                //error check to make sure criteria is valid
-                while (ranking != "231" and ranking != "123" and ranking != "132" and ranking != "321" and ranking != "312" and ranking != "213") {
-                    std::cout << "Invalid criteria, try again." << std::endl;
-                    std::cin >> criteria;
+            if (playlist_select == 2) {
+                std::cout << "Here is the Pop playlist:" << std::endl;
+                playlist.genre_print(2,2);
+                playlistGenre = "Pop";
+                while (song_choice_vec[0].size() < 5) {
+                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
+                    std::cin >> song_select;
+                    //error checking for song choice
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                        std::cout << "Invalid, please enter a valid song choice:";
+                        std::cin >> song_select;
+                    }
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                 }
-
-
-              /*  order.push_back(topics[criteria-1]);
-                topics.erase(topics.begin() + criteria-1);
             }
-            order.push_back(topics[criteria-1]);
-            topics = {"Genre", "Release Year", "Popularity"};
-            for(int i = 0; i < order.size(); i++){
-                std::cout << order[i] << " ";
+            if (playlist_select == 3) {
+                std::cout << "Here is the Rap playlist:" << std::endl;
+                playlist.genre_print(3,2);
+                playlistGenre = "Rap";
+                while (song_choice_vec[0].size() < 5) {
+                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
+                    std::cin >> song_select;
+                    //error checking for song choice
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                        std::cout << "Invalid, please enter a valid song choice:";
+                        std::cin >> song_select;
+                    }
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
+                }
+            }
+            if (playlist_select == 4) {
+                std::cout << "Here is the 80s Rock playlist:" << std::endl;
+                playlist.genre_print(4,2);
+                playlistGenre = "80s Rock";
+                while (song_choice_vec[0].size() < 5) {
+                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
+                    std::cin >> song_select;
+                    //error checking for song choice
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                        std::cout << "Invalid, please enter a valid song choice:";
+                        std::cin >> song_select;
+                    }
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
+                }
             }
             
-            */
-            
+            if (playlist_select == 5) {
+                std::cout << "Here is the Indie Rock playlist:" << std::endl;
+                playlist.genre_print(5,2);
+                playlistGenre = "Indie Rock";
+                while (song_choice_vec[0].size() < 5) {
+                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
+                    std::cin >> song_select;
+                    //error checking for song choice
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                        std::cout << "Invalid, please enter a valid song choice:";
+                        std::cin >> song_select;
+                    }
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
+                }
+            }
 
-            // //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria
-            // if (criteria == 1) {
-            //     std::cout << "Choose from one of the criteria to get your song recommendations based off: "
-            //               << std::endl;
-            //     std::cout << "1. Song" << std::endl;
-            //     std::cout << "2. Genre" << std::endl;
-            //     std::cout << "3. Artist" << std::endl;
-            //     std::cout << "4. Popularity" << std::endl;
-            //     std::cout << "5. Release Year" << std::endl;
-            //     std::cout << "Enter your choice as a number 1-5:" << std::endl;
-            //     std::cin >> single_criteria;
-            //     //error checking for single criteria choice
-            //     while (single_criteria != 1 and single_criteria != 2 and single_criteria != 3 and
-            //            single_criteria != 4 and single_criteria != 5) {
-            //         std::cout << "Invalid option, try again." << std::endl;
-            //         std::cin >> single_criteria;
+            playlist.heapSort(5);
+            std::vector<int> genreVec = playlist.getIndexs(playlistGenre, 2);
+            std::vector<int> recommendIndex = playlist.getRecommend(genreVec, song_choice_vec);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // while (song_choice_vec.size() < 5) { //while the song vector of users choices is not filled with 5 songs
+            //     std::cout << "Choose 5 songs you like from the different genre playlists below." << std::endl;
+            //     std::cout << "Chose an option 1-5 to display one of the playlists." << std::endl;
+            //     std::cout << "1. Country" << std::endl;
+            //     std::cout << "2. Pop" << std::endl;
+            //     std::cout << "3. Rap" << std::endl;
+            //     std::cout << "4. 80s Rock" << std::endl;
+            //     std::cout << "5. Indie Rock" << std::endl;
+            //     std::cin >> playlist_select;
+            //     //error checking for playlist option
+            //     while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
+            //         std::cout << "Invalid, please enter an option 1-5";
+            //         std::cin >> playlist_select;
             //     }
-                
+            //     //for playlist options 1-5, it will display the playlist.
+            //     //user can either confirm their selection or go back and choose another playlist
+            //     if (playlist_select == 1) {
+            //         std::string playlistGenre = "Country";
+            //         std::cout << "Here is the Country playlist:" << std::endl;
+            //         playlist.genre_print(1,2);
+            //         std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
+            //         std::cin >> song_select;
+            //         //error checking for song choice
+            //         while (playlist.checkSong(song_select, playlistGenre)) {
+            //             std::cout << "Invalid, please enter a valid song choice:";
+            //             std::cin >> song_select;
+            //         }
 
-
-            // }
-
-            //     //if the criteria is greater than 1, library sort is used to recommend songs based on the multiple criteria.
-            // else if (criteria == 2 or criteria == 3 or criteria == 4 or criteria == 5) {
-            //     std::cout << "Enter y for yes or n for no if you would like to use the prompted criteria" << std::endl;
-            //     //goes through all given criteria and asks user if they want to sort by each (vector with given criteria defined at top)
-            //     for (int i = 0; i < criteria_vec.size(); i++) {
-            //         std::cout << "Would you like " << criteria_vec[i] << "to be used as a criteria?" << std::endl
-            //                   << "Enter y or n" << std::endl;
-            //         std::cin >> use_criteria;
-            //         std::cout << std::endl;
-            //         //if they want to use criteria, corresponding truth table sets to true at that value
-            //         if (use_criteria == "y") {
-            //             criteria_truth[i] = true;
-            //         } else {
-            //             criteria_truth[i] = false;
+            //     }
+            //     if (playlist_select == 2) {
+            //         std::string playlistGenre = "Pop";
+            //         std::cout << "Here is the Pop playlist:" << std::endl;
+            //         playlist.genre_print(2,2);
+            //         std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
+            //                   << std::endl;
+            //         std::cin >> song_select;
+            //         //error checking for song choice
+            //         while (playlist.checkSong(song_select, playlistGenre)) {
+            //             std::cout << "Invalid, please enter a valid song choice:";
+            //             std::cin >> song_select;
             //         }
             //     }
-            //     //TODO now that criteria is known, use library sort method to be created to sort
+            //     if (playlist_select == 3) {
+            //         std::string playlistGenre = "Rap";
+            //         std::cout << "Here is the Rap playlist:" << std::endl;
+            //         playlist.genre_print(3,2);
+            //         std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
+            //                   << std::endl;
+            //         std::cin >> song_select;
+            //         //error checking for song choice
+            //         while (playlist.checkSong(song_select, playlistGenre)) {
+            //             std::cout << "Invalid, please enter a valid song choice:";
+            //             std::cin >> song_select;
+            //         }
+            //     }
+            //     if (playlist_select == 4) {
+            //         std::string playlistGenre = "80s Rock";
+            //         std::cout << "Here is the 80s Rock playlist:" << std::endl;
+            //         playlist.genre_print(4,2);
+            //         std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
+            //                   << std::endl;
+            //         std::cin >> song_select;
+            //         //error checking for song choice
+            //         while (playlist.checkSong(song_select, playlistGenre)) {
+            //             std::cout << "Invalid, please enter a valid song choice:";
+            //             std::cin >> song_select;
+            //         }
+            //     }
+            //     if (playlist_select == 5) {
+            //         std::string playlistGenre = "Indie Rock";
+            //         std::cout << "Here is the Indie Rock playlist:" << std::endl;
+            //         playlist.genre_print(5,2);
+            //         std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)"
+            //                   << std::endl;
+            //         std::cin >> song_select;
+            //         //error checking for song choice
+            //         while (playlist.checkSong(song_select, playlistGenre)) {
+            //             std::cout << "Invalid, please enter a valid song choice:";
+            //             std::cin >> song_select;
+            //         }
+            //     }
+            //     song_choice_vec.push_back(playlist.getTitle(song_select));
             // }
-            std::cout << "\n\n";
+
+            // //once user playlist has been filled with 5 songs
+            // std::string ranking;
+            // std::vector<std::string> topics = {"Genre", "Release Year", "Popularity"};
+            // std::vector<std::string> order;
+            // std::cout << std::endl << "Please rank the following criteria" << std::endl;
+            // std::cout << "For Genre enter 1" << std::endl;
+            // std::cout << "For Release Year enter 2" << std::endl;
+            // std::cout << "For Popularity enter 3" << std::endl;
+            // std::cout << "Example: Release Year, Popularity, Genre: enter 231" << std::endl;
+            // std::cin >> ranking;
+
+
+            // //error check to make sure criteria is valid
+            // while (ranking != "231" and ranking != "123" and ranking != "132" and ranking != "321" and ranking != "312" and ranking != "213") {
+            //     std::cout << "Invalid criteria, try again." << std::endl;
+            //     std::cin >> criteria;
+            // }
+
+            // std::vector<Song> songs;
+            // for(int i = 0; i < playlist.getLength(); i++){
+            //     std::vector<std::string> temp = playlist.get(i);
+            //     songs.push_back(Song(temp[0],temp[1],temp[2],temp[3],temp[4]));
+            // }
+
+            // if(ranking == "123"){std::sort(songs.begin(), songs.end(), compare123);}
+            // else if(ranking == "132"){std::sort(songs.begin(), songs.end(), compare132);}
+            // else if(ranking == "213"){std::sort(songs.begin(), songs.end(), compare213);}
+            // else if(ranking == "231"){std::sort(songs.begin(), songs.end(), compare231);}
+            // else if(ranking == "312"){std::sort(songs.begin(), songs.end(), compare312);}
+            // else if(ranking == "321"){std::sort(songs.begin(), songs.end(), compare321);}
+            // playlist.applySort(songs);
+
+            // std::cout << "How do you want to sort the playlist?" << std::endl;
+            // std::cout << "(enter an option 1-5)" << std::endl;
+            // std::cout << "1. Shuffle based on song title" << std::endl;
+            // std::cout << "2. Shuffle based on genre" << std::endl;
+            // std::cout << "3. Shuffle based on artist" << std::endl;
+            // std::cout << "4. Shuffle based on popularity" << std::endl;
+            // std::cout << "5. Shuffle based on release year" << std::endl;
+
+            // std::cin >> shuffle_criteria;
+            // //error checking for shuffling criteria
+            // while (shuffle_criteria != 1 and shuffle_criteria != 2 and shuffle_criteria != 3 and shuffle_criteria != 4 and shuffle_criteria != 5) {
+            //     std::cout << "Invalid option, try again." << std::endl;
+            //     std::cin >> shuffle_criteria;
+            // }
+
+            // playlist.heapSort(shuffle_criteria);
+
+
+
+
+
+
+
+
+
+
         }
         //TODO add another choice to shuffle just a genre
         if (initial_choice == "3") { //reshuffle playlist by criteria of users choosing
@@ -292,7 +472,7 @@ int main(int argc, char*argv[]){
             }
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
             playlist.shuffle(shuffle_criteria);
-
+            continue;
         }
 
 
@@ -334,11 +514,30 @@ int main(int argc, char*argv[]){
         }
 
         if (initial_choice == "5") {
-            keepGoing=false;
+            keepGoing = false;
+            continue;
         }
 
         //resetting necessary variables
         initial_choice = "0";
+
+        std::cout << "How do you want to sort the playlist?" << std::endl;
+        std::cout << "(enter an option 1-5)" << std::endl;
+        std::cout << "1. Shuffle based on song title" << std::endl;
+        std::cout << "2. Shuffle based on genre" << std::endl;
+        std::cout << "3. Shuffle based on artist" << std::endl;
+        std::cout << "4. Shuffle based on popularity" << std::endl;
+        std::cout << "5. Shuffle based on release year" << std::endl;
+
+        std::cin >> shuffle_criteria;
+        //error checking for shuffling criteria
+        while (shuffle_criteria != 1 and shuffle_criteria != 2 and shuffle_criteria != 3 and shuffle_criteria != 4 and shuffle_criteria != 5) {
+            std::cout << "Invalid option, try again." << std::endl;
+            std::cin >> shuffle_criteria;
+        }
+
+        playlist.heapSort(shuffle_criteria);
+        playlist.print_database();
     }
 
     //exit(0);

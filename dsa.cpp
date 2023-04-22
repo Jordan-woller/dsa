@@ -63,6 +63,11 @@ std::string Sorting::upper(std::string word){
     std::cout << word;
     return word;
 }
+
+int Sorting::getLength(){
+    return database[0].size();
+}
+
 void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
                         std::string artist_choice, std::string release_year, std::string popularity){
 
@@ -149,7 +154,6 @@ int Sorting::partition(int lo, int hi, int criteria){
     return j;
 }
 
-
 void Sorting::r_quicksort(int lo, int hi, int criteria){
     if (hi <= lo) return;
 
@@ -166,16 +170,6 @@ void Sorting::shuffle(int criteria){
   //print_database();
     r_quicksort(0, hi, criteria);
     print_database();
-}
-
-bool Sorting::compareBy(int cat1, int cat2, int index1, int index2){
-    if (database[cat1][index1] < database[cat2][index2]) {
-        return true;
-    } else if (database[cat1][index1] == database[cat2][index2]) {
-        return database[cat1][index1] < database[cat2][index2];
-    } else {
-        return false;
-    }
 }
 
 //compares two strings based on ascii values
@@ -325,6 +319,10 @@ bool Sorting::checkSong(int index, std::string genre){
 std::string Sorting::getTitle(int index){
     return database[0][index-1];
 }
+
+std::string Sorting::getYear(int index){
+    return database[4][index-1];
+}
  
 bool Sorting::song_search(std::string song_lookup){
     for(int i=0; i<database[0].size(); i++ ){
@@ -346,4 +344,152 @@ void Sorting::popularity_print(int pop_lookup){
             y++;
         }
     }
+}
+
+std::vector<std::string> Sorting::get(int row){
+    std::vector<std::string> temp;
+    for(int i = 0;i< 5; i++){
+        temp.push_back(database[i][row]);
+    }
+    return temp;
+}
+
+void Sorting::applySort(std::vector<Song> songs){
+    for(int i = 0; i < songs.size(); i++){
+        database[0][i] = songs[i].song_name;
+        database[1][i] = songs[i].genre;
+        database[2][i] = songs[i].artist;
+        database[3][i] = songs[i].popularity;
+        database[4][i] = songs[i].release_year;
+    }
+}
+
+void Sorting::heapSort(int criteria){
+    std::vector<std::string> temp = database[criteria-1];
+    heap_sort(temp);
+}
+
+void Sorting::heapify(std::vector<std::string>& myVec, int n, int i){
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+ 
+    if (left < n && myVec[left] > myVec[largest])
+        largest = left;
+ 
+    if (right < n && myVec[right] > myVec[largest])
+        largest = right;
+ 
+    if (largest != i) {
+        swap(myVec[i], myVec[largest]);
+
+        swap(database[0][i], database[0][largest]);
+        swap(database[1][i], database[1][largest]);
+        swap(database[2][i], database[2][largest]);
+        swap(database[3][i], database[3][largest]);
+        swap(database[4][i], database[4][largest]);
+
+        heapify(myVec, n, largest);
+    }
+}
+
+void Sorting::heap_sort(std::vector<std::string>& myVec){
+    int n = myVec.size();
+    
+    // Build the heap
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(myVec, n, i);
+ 
+    // Extract elements from the heap one by one
+    for (int i = n - 1; i >= 0; i--) {
+        swap(myVec[0], myVec[i]);
+
+        swap(database[0][0], database[0][i]);
+        swap(database[1][0], database[1][i]);
+        swap(database[2][0], database[2][i]);
+        swap(database[3][0], database[3][i]);
+        swap(database[4][0], database[4][i]);
+
+        heapify(myVec, i, 0);
+    }
+}
+
+void Sorting::heapify2(std::vector<std::string>& myVec, int n, int i, std::vector<std::vector<std::string>>& mVec){
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+ 
+    if (left < n && myVec[left] > myVec[largest])
+        largest = left;
+ 
+    if (right < n && myVec[right] > myVec[largest])
+        largest = right;
+ 
+    if (largest != i) {
+        swap(myVec[i], myVec[largest]);
+
+        swap(mVec[0][i], mVec[0][largest]);
+        swap(mVec[1][i], mVec[1][largest]);
+        swap(mVec[2][i], mVec[2][largest]);
+        swap(mVec[3][i], mVec[3][largest]);
+        swap(mVec[4][i], mVec[4][largest]);
+
+        heapify2(myVec, n, largest, mVec);
+    }
+}
+
+void Sorting::heap_sort2(std::vector<std::string>& myVec, std::vector<std::vector<std::string>>& mVec){
+    int n = myVec.size();
+    
+    // Build the heap
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify2(myVec, n, i, mVec);
+ 
+    // Extract elements from the heap one by one
+    for (int i = n - 1; i >= 0; i--) {
+        swap(myVec[0], myVec[i]);
+
+        swap(mVec[0][0], mVec[0][i]);
+        swap(mVec[1][0], mVec[1][i]);
+        swap(mVec[2][0], mVec[2][i]);
+        swap(mVec[3][0], mVec[3][i]);
+        swap(mVec[4][0], mVec[4][i]);
+
+        heapify2(myVec, i, 0, mVec);
+    }
+}
+
+std::vector<int> Sorting::getIndexs(std::string criteria, int category){
+    std::vector<int> returner;
+    for(int i = 0; i < database[category].size(); i++){
+        if(database[category-1][i] == criteria){
+            returner.push_back(i);
+        }
+    }
+    return returner;
+}
+
+std::vector<int> Sorting::getRecommend(std::vector<int> genreVec, std::vector<std::vector<std::string>> song_choice_vec){
+    int average = std::stoi(song_choice_vec[1][0]) + std::stoi(song_choice_vec[1][1]) + std::stoi(song_choice_vec[1][2]) + std::stoi(song_choice_vec[1][3]) + std::stoi(song_choice_vec[1][4]);
+    average /= 5;
+    std::vector<int> indexs;
+    for(int i = 0; i < genreVec.size(); i++){
+        if(std::stoi(database[4][genreVec[i]]) >= average - 5 and std::stoi(database[4][genreVec[i]]) <= average + 5 and !(std::count(song_choice_vec[0].begin(), song_choice_vec[0].end(), database[0][genreVec[i]]))){
+            indexs.push_back(genreVec[i]);
+        }
+    }
+
+    std::vector<std::vector<std::string>> songsinrange;
+    for(int i = 0; i < indexs.size(); i++){
+        std::vector<std::string> temp = get(indexs[i]);
+        for(int j = 0; j < temp.size(); j++){
+            songsinrange[j].push_back(temp[j]);
+        }
+    }
+
+    std::vector<std::string> temp = songsinrange[3];
+    heap_sort2(temp,songsinrange);
+    
+    std::cout << songsinrange[0][0] << " " << songsinrange[0][1] << " " << songsinrange[0][2] << " " << songsinrange[0][3] << " " << songsinrange[0][4];
+    return indexs;
 }

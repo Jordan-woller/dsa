@@ -6,9 +6,9 @@
 
 int main(int argc, char*argv[]){
     std::string initial_choice;
-    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
+    std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity, shuffle_criteria;
     int playlist_select, criteria, single_criteria, insertion_option;
-    int shuffle_criteria, lookup, genre_lookup, pop_lookup, song_select;
+    int lookup, genre_lookup, pop_lookup, song_select;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
@@ -23,17 +23,13 @@ int main(int argc, char*argv[]){
     playlist.read_data(argv[4]);
     playlist.read_data(argv[5]);
 
-//    playlist.print_database();
-//    playlist.shuffle(5);
-//    std::cout << std::endl;
+    auto start = std::chrono::high_resolution_clock::now();
+    playlist.merge_sort(4);
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    std::cout << "Time taken by merge sort function: " << duration.count() << " microseconds" << std::endl;
 
-    // auto start = std::chrono::high_resolution_clock::now();
-    // //function call here
-    // auto stop = std::chrono::high_resolution_clock::now();
-    // auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
     bool keepGoing = true;
-
 
     while(keepGoing) { //5 is the quit option
         std::cout << "Hello!\n";
@@ -99,16 +95,20 @@ int main(int argc, char*argv[]){
                 std::cin >> insertion_option;
             }
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
-            //TODO calls quick sort shuffle to sort the playlist by whatever criteria the user wants
+            //calls quick sort shuffle to sort the playlist by whatever criteria the user wants
+            auto start = std::chrono::high_resolution_clock::now();
             playlist.shuffle(insertion_option);
-            //TODO add function call to insertion method that sorts the added song into playlist database
+            auto stop = std::chrono::high_resolution_clock::now();
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+            std::cout << "Time taken by quick sort function: " << duration.count() << " microseconds" << std::endl;
+
+            start = std::chrono::high_resolution_clock::now();
             playlist.insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
-            //calls insertion method to sort added song into playlist database
-            //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
-
-
-
+            stop = std::chrono::high_resolution_clock::now();
+            duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+            std::cout << "Time taken by insertion sort function: " << duration.count() << " microseconds" << std::endl;
         }
+
         if (initial_choice == "2") {
             //by choosing a playlist, it will display the songs in that playlist.
             //user has the option to either confirm that playlist selection or go back and choose another playlist
@@ -122,7 +122,7 @@ int main(int argc, char*argv[]){
                 std::cout << "5. Indie Rock" << std::endl;
                 std::cin >> playlist_select;
                 //error checking for playlist option
-                while (playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
+                while (!std::isdigit(playlist_select) and playlist_select != 1 and playlist_select != 2 and playlist_select != 3 and playlist_select != 4 and playlist_select != 5) {
                     std::cout << "Invalid, please enter an option 1-5";
                     std::cin >> playlist_select;
                 }
@@ -139,7 +139,6 @@ int main(int argc, char*argv[]){
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-
                 }
                 if (playlist_select == 2) {
                     std::string playlistGenre = "Pop";
@@ -207,66 +206,12 @@ int main(int argc, char*argv[]){
             std::cout << std::endl << "For ex: Release Year, Popularity, Genre: enter 231" << std::endl;
             std::cin >> ranking;
 
-
                 //error check to make sure criteria is valid
                 while (ranking != "231" and ranking != "123" and ranking != "132" and ranking != "321" and ranking != "312" and ranking != "213") {
                     std::cout << "Invalid criteria, try again." << std::endl;
                     std::cin >> criteria;
                 }
 
-
-              /*  order.push_back(topics[criteria-1]);
-                topics.erase(topics.begin() + criteria-1);
-            }
-            order.push_back(topics[criteria-1]);
-            topics = {"Genre", "Release Year", "Popularity"};
-            for(int i = 0; i < order.size(); i++){
-                std::cout << order[i] << " ";
-            }
-
-            */
-
-
-            // //if the criteria is 1, it asks the user what criteria that is and uses merge sort to return top songs based on that criteria
-            // if (criteria == 1) {
-            //     std::cout << "Choose from one of the criteria to get your song recommendations based off: "
-            //               << std::endl;
-            //     std::cout << "1. Song" << std::endl;
-            //     std::cout << "2. Genre" << std::endl;
-            //     std::cout << "3. Artist" << std::endl;
-            //     std::cout << "4. Popularity" << std::endl;
-            //     std::cout << "5. Release Year" << std::endl;
-            //     std::cout << "Enter your choice as a number 1-5:" << std::endl;
-            //     std::cin >> single_criteria;
-            //     //error checking for single criteria choice
-            //     while (single_criteria != 1 and single_criteria != 2 and single_criteria != 3 and
-            //            single_criteria != 4 and single_criteria != 5) {
-            //         std::cout << "Invalid option, try again." << std::endl;
-            //         std::cin >> single_criteria;
-            //     }
-
-
-
-            // }
-
-            //     //if the criteria is greater than 1, library sort is used to recommend songs based on the multiple criteria.
-            // else if (criteria == 2 or criteria == 3 or criteria == 4 or criteria == 5) {
-            //     std::cout << "Enter y for yes or n for no if you would like to use the prompted criteria" << std::endl;
-            //     //goes through all given criteria and asks user if they want to sort by each (vector with given criteria defined at top)
-            //     for (int i = 0; i < criteria_vec.size(); i++) {
-            //         std::cout << "Would you like " << criteria_vec[i] << "to be used as a criteria?" << std::endl
-            //                   << "Enter y or n" << std::endl;
-            //         std::cin >> use_criteria;
-            //         std::cout << std::endl;
-            //         //if they want to use criteria, corresponding truth table sets to true at that value
-            //         if (use_criteria == "y") {
-            //             criteria_truth[i] = true;
-            //         } else {
-            //             criteria_truth[i] = false;
-            //         }
-            //     }
-            //     //TODO now that criteria is known, use library sort method to be created to sort
-            // }
             std::cout << "\n\n";
         }
         //TODO add another choice to shuffle just a genre
@@ -288,8 +233,11 @@ int main(int argc, char*argv[]){
             }
            int x = std::stoi(shuffle_criteria);
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
+            start = std::chrono::high_resolution_clock::now();
             playlist.shuffle(x);
-
+            stop = std::chrono::high_resolution_clock::now();
+            duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+            std::cout << "Time taken by quick sort function: " << duration.count() << " microseconds" << std::endl;
         }
 
         if (initial_choice == "4") {
@@ -312,8 +260,7 @@ int main(int argc, char*argv[]){
                 std::cout << "5. Indie Rock" << std::endl;
                 std::cin >> genre_lookup;
                 //error checking for genre lookup
-                while (genre_lookup != 1 and genre_lookup != 2 and genre_lookup != 3 and genre_lookup != 4 and
-                       genre_lookup != 5) {
+                while (!std::isdigit(genre_lookup) and genre_lookup != 1 and genre_lookup != 2 and genre_lookup != 3 and genre_lookup != 4 and genre_lookup != 5) {
                     std::cout << "Invalid, please enter an option 1-5";
                     std::cin >> genre_lookup;
                 }
@@ -336,51 +283,5 @@ int main(int argc, char*argv[]){
         //resetting necessary variables
         initial_choice = "0";
     }
-
-    //exit(0);
-
-        //main options menu
-    //Ask the user what they want to do
-    //a. insert a song of your choice into the database (insertion)
-    //b. Recommend songs from playlist based on another playlist (merge)
-    //c. Re-shuffle playlist by a given criteria (quicksort)
-    //d. Printout songs of a certain criteria
-
-
-    //Option B: Recommend songs from playlist based on another playlist
-    //what do you want to do?
-    //a. Make a playlist from scratch
-
-
-    //asks the user how many criteria they want to be used to recommend them songs.
-    //If the amount of criteria is greater than 1, then use library sort to best recommend songs from
-    //database that fit the multiple criteria
-
-    //if the criteria is 1, it asks the user what criteria they want the songs recommended by
-    // (returns top recommendation based on the criteria using merge sort)
-    //a. year
-    //b. song title
-    //c. popularity
-    //etc...
-    //b. Choose from a preselected playlist
-    //asks the user what criteria they want the songs recommended by (returns top recommendation
-    //based on the criteria)
-    //a. year
-    //b. song title
-    //c. popularity
-    //etc...
-
-    //C. Option C: Re-shuffle playlist by a given criteria (quicksort)
-    //How do you want to shuffle the playlist? (playlist is currently shuffled by song title)
-    //a. Shuffle based on popularity
-    //b. Shuffle based on song year
-    //c. Shuffle based on genre
-
-    //D. Option D: What would you like to lookup?
-    //a. print songs of a certain genre
-    //asks for what genre
-    //b print out if a specific song the user enters exists
-    //c. prints songs that are above a certain popularity
-   // return 0;
 }
 

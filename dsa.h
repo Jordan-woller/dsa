@@ -60,7 +60,7 @@ public:
     std::string getTitle(int index);
     std::string getYear(int index);
     std::vector<int> getIndexs(std::string criteria, int category);
-    std::vector<int> getRecommend(std::vector<int> genreVec,  std::vector<std::vector<std::string>> song_choice_vec);
+    std::vector<std::vector<std::string>> getRecommend(std::vector<int> genreVec,  std::vector<std::vector<std::string>> song_choice_vec);
     std::string multi_line();
 };
 

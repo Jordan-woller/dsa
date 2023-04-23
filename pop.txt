@@ -1,25 +1,500 @@
-All About That Bass,Pop,Meghan Trainor,72,2014
-Break My Heart,Pop,Dua Lipa,85,2020
-Call Me Maybe,Pop,Carly Rae Jepsen,72,2012
-Dancing On My Own,Pop,Robyn,72,2010
-Everytime We Touch,Pop,Cascada,62,2005
-Firework,Pop,Katy Perry,70,2010
-Good 4 U,Pop,Olivia Rodrigo,96,2021
-Hot N Cold,Pop,Katy Perry,65,2008
-I Gotta Feeling,Pop,The Black Eyed Peas,69,2009
-Just Dance,Pop,Lady Gaga,71,2008
-Kiss Me More,Pop,Doja Cat ft. SZA,89,2021
-Love Story,Pop,Taylor Swift,71,2008
-Moves Like Jagger,Pop,Maroon 5 ft. Christina Aguilera,68,2011
-New Rules,Pop,Dua Lipa,80,2017
-Only Girl (In The World),Pop,Rihanna,68,2010
-Poker Face,Pop,Lady Gaga,73,2008
-Royals,Pop,Lorde,72,2013
-Shape of You,Pop,Ed Sheeran,81,2017
-Thank U Next,Pop,Ariana Grande,78,2018
-Umbrella,Pop,Rihanna ft. Jay-Z,72,2007
-Viva La Vida,Pop,Coldplay,76,2008
-Wannabe,Pop,Spice Girls,63,1996
-X,Pop,Jonas Brothers ft. Karol G,73,2021
-You Belong With Me,Pop,Taylor Swift,68,2008
-7 Rings,Pop,Ariana Grande,82,2019
+Shape of You;Pop;Ed Sheeran;85;2017
+Uptown Funk;Pop;Mark Ronson ft. Bruno Mars;84;2014
+Dance Monkey;Pop;Tones and I;83;2019
+Blinding Lights;Pop;The Weeknd;92;2019
+Somebody That I Used to Know;Pop;Gotye ft. Kimbra;76;2011
+Don't Start Now;Pop;Dua Lipa;87;2019
+Dynamite;Pop;BTS;88;2020
+All of Me;Pop;John Legend;79;2013
+Girls Like You;Pop;Maroon 5 ft. Cardi B;81;2018
+Happier;Pop;Marshmello ft. Bastille;80;2018
+Watermelon Sugar;Pop;Harry Styles;85;2020
+Senorita;Pop;Shawn Mendes & Camila Cabello;86;2019
+Old Town Road;Pop;Lil Nas X ft. Billy Ray Cyrus;78;2019
+Shallow;Pop;Lady Gaga & Bradley Cooper;87;2018
+Thank U, Next;Pop;Ariana Grande;84;2018
+Stressed Out;Pop;Twenty One Pilots;77;2015
+Cheap Thrills;Pop;Sia ft. Sean Paul;75;2016
+Can't Stop the Feeling!;Pop;Justin Timberlake;80;2016
+Memories;Pop;Maroon 5;82;2019
+Royals;Pop;Lorde;77;2013
+Without Me;Pop;Halsey;83;2018
+Perfect;Pop;Ed Sheeran;89;2017
+I'm the One;Pop;DJ Khaled ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne;76;2017
+Stay with Me;Pop;Sam Smith;80;2014
+One Kiss;Pop;Calvin Harris & Dua Lipa;81;2018
+Attention;Pop;Charlie Puth;78;2017
+Love Yourself;Pop;Justin Bieber;83;2015
+We Found Love;Pop;Rihanna ft. Calvin Harris;84;2011
+Sugar;Pop;Maroon 5;76;2015
+See You Again;Pop;Wiz Khalifa ft. Charlie Puth;81;2015
+Thinking Out Loud;Pop;Ed Sheeran;86;2014
+Happy;Pop;Pharrell Williams;80;2013
+Sucker;Pop;Jonas Brothers;82;2019
+I Don't Care;Pop;Ed Sheeran & Justin Bieber;79;2019
+Circles;Pop;Post Malone;85;2019
+Havana;Pop;Camila Cabello ft. Young Thug;84;2017
+Perfect Duet;Pop;Ed Sheeran & Beyonce;79;2017
+Shake It Off;Pop;Taylor Swift;77;2014
+7 Rings;Pop;Ariana Grande;83;2019
+Memories...Do Not Open;Pop;The Chainsmokers;78;2017
+Rockstar;Pop;Post Malone ft. 21 Savage;86;2017
+Royals;Pop;Lorde;77;2013
+Lose You To Love Me;Pop;Selena Gomez;80;2019
+Someone Like You;Pop;Adele;84;2011
+Wrecking Ball;Pop;Miley Cyrus;75;2013
+We Are Young;Pop;fun. ft. Janelle Monae;81;2011
+Blank Space;Pop;Taylor Swift;80;2014
+Thunder;Pop;Imagine Dragons;81;2017
+Radioactive;Pop;Imagine Dragons;79;2012
+Stitches;Pop;Shawn Mendes;76;2015
+God's Plan;Pop;Drake;87;2018
+Bad Guy;Pop;Billie Eilish;85;2019
+Good as Hell;Pop;Lizzo;82;2016
+Love on Top;Pop;Beyonce;77;2011
+Side to Side;Pop;Ariana Grande ft. Nicki Minaj;78;2016
+Bad Romance;Pop;Lady Gaga;82;2009
+Cheap Thrills;Pop;Sia ft. Sean Paul;75;2016
+Señorita;Pop;Shawn Mendes & Camila Cabello;86;2019
+WAP;Pop;Cardi B ft. Megan Thee Stallion;85;2020
+Wild Thoughts;Pop;DJ Khaled ft. Rihanna & Bryson Tiller;77;2017
+Dynamite;Pop;BTS;88;2020
+Can't Hold Us;Pop;Macklemore & Ryan Lewis ft. Ray Dalton;78;2011
+This Is What You Came For;Pop;Calvin Harris ft. Rihanna;82;2016
+Havana;Pop;Camila Cabello ft. Young Thug;84;2017
+What Do You Mean?;Pop;Justin Bieber;76;2015
+Cheerleader;Pop;OMI;75;2012
+I Will Always Love You;Pop;Whitney Houston;83;1992
+Happy;Pop;Pharrell Williams;80;2013
+Can't Stop the Feeling!;Pop;Justin Timberlake;80;2016
+I Feel It Coming;Pop;The Weeknd ft. Daft Punk;77;2016
+Closer;Pop;The Chainsmokers ft. Halsey;84;2016
+Dark Horse;Pop;Katy Perry ft. Juicy J;76;2013
+Love Yourself;Pop;Justin Bieber;83;2015
+California Gurls;Pop;Katy Perry ft. Snoop Dogg;78;2010
+Roar;Pop;Katy Perry;81;2013
+Roar;Pop;Katy Perry;81;2013
+Save Your Tears;Pop;The Weeknd & Ariana Grande;88;2021
+The Middle;Pop;Zedd, Maren Morris, Grey;79;2018
+Levitating;Pop;Dua Lipa ft. DaBaby;88;2020
+Mr. Brightside;Pop;The Killers;83;2003
+Uptown Funk;Pop;Mark Ronson ft. Bruno Mars;89;2014
+Shape of You;Pop;Ed Sheeran;89;2017
+That's What I Like;Pop;Bruno Mars;84;2016
+Party in the USA;Pop;Miley Cyrus;77;2009
+Meant to Be;Pop;Bebe Rexha ft. Florida Georgia Line;81;2017
+Shake It Off;Pop;Taylor Swift;80;2014
+Girls Like You;Pop;Maroon 5 ft. Cardi B;87;2018
+Happier;Pop;Marshmello ft. Bastille;82;2018
+Senorita;Pop;Shawn Mendes & Camila Cabello;86;2019
+Rolling in the Deep;Pop;Adele;86;2010
+Hello;Pop;Adele;85;2015
+Blinding Lights;Pop;The Weeknd;90;2019
+The Scientist;Pop;Coldplay;81;2002
+Take Me To Church;Pop;Hozier;80;2013
+Sugar;Pop;Maroon 5;83;2014
+Shallow;Pop;Lady Gaga, Bradley Cooper;88;2018
+Grenade;Pop;Bruno Mars;80;2010
+Watermelon Sugar;Pop;Harry Styles;89;2020
+Positions;Pop;Ariana Grande;87;2020
+Perfect;Pop;Ed Sheeran;84;2017
+Say You Won't Let Go;Pop;James Arthur;81;2016
+I Like Me Better;Pop;Lauv;79;2017
+Memories;Pop;Maroon 5;83;2019
+Havana;Pop;Camila Cabello ft. Young Thug;84;2017
+I Don't Want to Miss a Thing;Pop;Aerosmith;82;1998
+Beautiful;Pop;Christina Aguilera;76;2002
+Love Story;Pop;Taylor Swift;81;2008
+Royals;Pop;Lorde;77;2013
+Let Me Love You;Pop;DJ Snake ft. Justin Bieber;80;2016
+Thinking Out Loud;Pop;Ed Sheeran;87;2014
+Don't Start Now;Pop;Dua Lipa;87;2019
+Attention;Pop;Charlie Puth;79;2017
+Shivers;Pop;Ed Sheeran;88;2021
+Unwritten;Pop;Natasha Bedingfield;76;2004
+Bad Guy;Pop;Billie Eilish;89;2019
+Love On Top;Pop;Beyoncé;80;2011
+I Want It That Way;Pop;Backstreet Boys;80;1999
+Toxic;Pop;Britney Spears;85;2003
+Tik Tok;Pop;Ke$ha;81;2009
+Don't Stop the Music;Pop;Rihanna;82;2007
+Cake By The Ocean;Pop;DNCE;81;2015
+All About That Bass;Pop;Meghan Trainor;80;2014
+Blurred Lines;Pop;Robin Thicke ft. T.I., Pharrell Williams;78;2013
+Rude;Pop;MAGIC!;78;2013
+Moves Like Jagger;Pop;Maroon 5 ft. Christina Aguilera;84;2011
+Viva La Vida;Pop;Coldplay;81;2008
+Royals;Pop;Lorde;77;2013
+Cheerleader;Pop;OMI;79;2012
+Firework;Pop;Katy Perry;81;2010
+Somebody That I Used to Know;Pop;Gotye ft. Kimbra;83;2011
+Only Girl (In the World);Pop;Rihanna;80;2010
+Wrecking Ball;Pop;Miley Cyrus;81;2013
+Shake Your Body (Down to the Ground);Pop;The Jacksons;75;1979
+Stitches;Pop;Shawn Mendes;81;2015
+Take a Bow;Pop;Rihanna;81;2008
+You Belong With Me;Pop;Taylor Swift;79;2008
+Love Me Like You Do;Pop;Ellie Goulding;81;2015
+Break Your Heart;Pop;Taio Cruz ft. Ludacris;77;2009
+Take My Breath;Pop;The Weeknd;90;2021
+Love Again;Pop;Dua Lipa;85;2020
+Titanium;Pop;David Guetta ft. Sia;84;2011
+Just Dance;Pop;Lady Gaga ft. Colby O'Donis;77;2008
+Can't Stop The Feeling!;Pop;Justin Timberlake;83;2016
+Side To Side;Pop;Ariana Grande ft. Nicki Minaj;82;2016
+Hotline Bling;Pop;Drake;81;2015
+Stupid Love;Pop;Lady Gaga;85;2020
+Dynamite;Pop;BTS;88;2020
+Just the Way You Are;Pop;Bruno Mars;82;2010
+Blinding Lights;Pop;The Weeknd;90;2019
+Beautiful Girls;Pop;Sean Kingston;76;2007
+We Found Love;Pop;Rihanna ft. Calvin Harris;83;2011
+Uptown Funk;Pop;Mark Ronson ft. Bruno Mars;88;2014
+Can't Hold Us;Pop;Macklemore & Ryan Lewis ft. Ray Dalton;84;2011
+I Kissed A Girl;Pop;Katy Perry;79;2008
+Someone You Loved;Pop;Lewis Capaldi;87;2018
+Boyfriend;Pop;Justin Bieber;78;2012
+One More Night;Pop;Maroon 5;82;2012
+I Gotta Feeling;Pop;The Black Eyed Peas;81;2009
+Lean On;Pop;Major Lazer ft. MØ & DJ Snake;83;2015
+Call Me Maybe;Pop;Carly Rae Jepsen;78;2011
+Royals;Pop;Lorde;77;2013
+Sorry;Pop;Justin Bieber;81;2015
+Watermelon Sugar;Pop;Harry Styles;87;2019
+This Is What You Came For;Pop;Calvin Harris ft. Rihanna;82;2016
+Poker Face;Pop;Lady Gaga;80;2008
+Fireflies;Pop;Owl City;75;2009
+I Will Always Love You;Pop;Whitney Houston;82;1992
+Without Me;Pop;Halsey;84;2018
+Perfect;Pop;Ed Sheeran;84;2017
+Sorry Not Sorry;Pop;Demi Lovato;81;2017
+Never Be the Same;Pop;Camila Cabello;78;2018
+Sucker;Pop;Jonas Brothers;80;2019
+Senorita;Pop;Shawn Mendes & Camila Cabello;86;2019
+That's What I Like;Pop;Bruno Mars;81;2016
+It's My Life;Pop;Bon Jovi;75;2000
+Memories;Pop;Maroon 5;83;2019
+Love Story;Pop;Taylor Swift;79;2008
+Lose You To Love Me;Pop;Selena Gomez;82;2019
+Party In The U.S.A.;Pop;Miley Cyrus;78;2009
+Circles;Pop;Post Malone;87;2019
+Girls Like You;Pop;Maroon 5 ft. Cardi B;83;2018
+Beautiful;Pop;Christina Aguilera;80;2002
+Cheap Thrills;Pop;Sia ft. Sean Paul;80;2016
+Sweet But Psycho;Pop;Ava Max;85;2018
+Shallow;Pop;Lady Gaga & Bradley Cooper;86;2018
+Heat Waves;Pop;Glass Animals;84;2020
+I Like Me Better;Pop;Lauv;80;2017
+Cheer Up;Pop;TWICE;86;2016
+Despacito;Pop;Luis Fonsi ft. Daddy Yankee;89;2017
+Black Magic;Pop;Little Mix;80;2015
+Shut Up and Dance;Pop;Walk the Moon;81;2014
+Love On Top;Pop;Beyoncé;79;2011
+All About That Bass;Pop;Meghan Trainor;77;2014
+High Hopes;Pop;Panic! At The Disco;84;2018
+Dynamite;Pop;BTS;88;2020
+Dancing On My Own;Pop;Robyn;82;2010
+Bad Guy;Pop;Billie Eilish;89;2019
+Can't Stop The Feeling!;Pop;Justin Timberlake;82;2016
+We Are Never Ever Getting Back Together;Pop;Taylor Swift;75;2012
+Happy;Pop;Pharrell Williams;81;2013
+Just Give Me A Reason;Pop;P!nk ft. Nate Ruess;78;2012
+Shake It Off;Pop;Taylor Swift;80;2014
+I'm Yours;Pop;Jason Mraz;78;2008
+Old Town Road;Pop;Lil Nas X ft. Billy Ray Cyrus;88;2019
+In My Blood;Pop;Shawn Mendes;83;2018
+Send My Love (To Your New Lover);Pop;Adele;79;2015
+Closer;Pop;The Chainsmokers ft. Halsey;85;2016
+Blinding Lights;Pop;The Weeknd;90;2019
+Stitches;Pop;Shawn Mendes;79;2015
+Style;Pop;Taylor Swift;78;2014
+Somebody That I Used To Know;Pop;Gotye ft. Kimbra;81;2011
+24K Magic;Pop;Bruno Mars;83;2016
+Don't Start Now;Pop;Dua Lipa;86;2019
+Bad Romance;Pop;Lady Gaga;83;2009
+Baby;Pop;Justin Bieber ft. Ludacris;75;2010
+The Middle;Pop;Zedd, Maren Morris, Grey;84;2018
+What Do You Mean?;Pop;Justin Bieber;77;2015
+Price Tag;Pop;Jessie J ft. B.o.B;76;2011
+Havana;Pop;Camila Cabello ft. Young Thug;87;2017
+California Gurls;Pop;Katy Perry ft. Snoop Dogg;80;2010
+All of Me;Pop;John Legend;83;2013
+Happier;Pop;Marshmello ft. Bastille;86;2018
+Love Me Like You Do;Pop;Ellie Goulding;82;2015
+7 Rings;Pop;Ariana Grande;88;2019
+Shape of You;Pop;Ed Sheeran;88;2017
+Levitating;Pop;Dua Lipa ft. DaBaby;89;2020
+You Belong With Me;Pop;Taylor Swift;76;2008
+Sunflower;Pop;Post Malone, Swae Lee;85;2018
+Can't Hold Us;Pop;Macklemore & Ryan Lewis ft. Ray Dalton;78;2012
+Royals;Pop;Lorde;77;2013
+Cheap Thrills;Pop;Sia;80;2016
+Beautiful;Pop;Christina Aguilera;76;2002
+Hey, Soul Sister;Pop;Train;76;2009
+Stay With Me;Pop;Sam Smith;81;2014
+What Makes You Beautiful;Pop;One Direction;76;2011
+Watermelon Sugar;Pop;Harry Styles;87;2019
+All I Want For Christmas Is You;Pop;Mariah Carey;90;1994
+Love Story;Pop;Taylor Swift;78;2008
+Girls Like You;Pop;Maroon 5 ft. Cardi B;85;2018
+Don't Stop The Music;Pop;Rihanna;81;2007
+Memories;Pop;Maroon 5;83;2019
+Rolling in the Deep;Pop;Adele;85;2010
+Umbrella;Pop;Rihanna ft. Jay-Z;80;2007
+I Gotta Feeling;Pop;The Black Eyed Peas;80;2009
+Bang Bang;Pop;Jessie J, Ariana Grande, Nicki Minaj;79;2014
+Firework;Pop;Katy Perry;79;2010
+Perfect;Pop;Ed Sheeran;83;2017
+Roar;Pop;Katy Perry;80;2013
+Say You Won't Let Go;Pop;James Arthur;79;2016
+Party in the U.S.A.;Pop;Miley Cyrus;76;2009
+Love Yourself;Pop;Justin Bieber;80;2015
+Counting Stars;Pop;OneRepublic;79;2013
+100 Years;Pop;Five for Fighting;74;2003
+Good 4 U;Pop;Olivia Rodrigo;90;2021
+Bad Habits;Pop;Ed Sheeran;87;2021
+Drivers License;Pop;Olivia Rodrigo;91;2021
+Kiss Me More;Pop;Doja Cat ft. SZA;88;2021
+Without You;Pop;The Kid LAROI & Miley Cyrus;89;2021
+Positions;Pop;Ariana Grande;87;2020
+Levitating (Remix);Pop;Dua Lipa ft. DaBaby, Madonna & Missy Elliott;88;2021
+Yummy;Pop;Justin Bieber;77;2020
+I Will Always Love You;Pop;Whitney Houston;82;1992
+Viva La Vida;Pop;Coldplay;80;2008
+Lose You To Love Me;Pop;Selena Gomez;83;2019
+Stupid Love;Pop;Lady Gaga;79;2020
+Better Now;Pop;Post Malone;82;2018
+I Like Me Better;Pop;Lauv;76;2017
+The One That Got Away;Pop;Katy Perry;78;2010
+Someone Like You;Pop;Adele;84;2011
+I Don't Wanna Live Forever;Pop;Zayn, Taylor Swift;77;2016
+Havana;Pop;Camila Cabello ft. Young Thug;83;2017
+Señorita;Pop;Shawn Mendes, Camila Cabello;88;2019
+Good as Hell;Pop;Lizzo;81;2016
+Baby One More Time;Pop;Britney Spears;79;1998
+Scars To Your Beautiful;Pop;Alessia Cara;79;2015
+Wrecking Ball;Pop;Miley Cyrus;79;2013
+Sweet But Psycho;Pop;Ava Max;82;2018
+Pillowtalk;Pop;Zayn;78;2016
+Shape of You;Pop;Ed Sheeran;85;2017
+Timber;Pop;Pitbull ft. Kesha;77;2013
+Jealous;Pop;Nick Jonas;79;2014
+Raise Your Glass;Pop;P!nk;76;2010
+You're Beautiful;Pop;James Blunt;78;2005
+Can't Stop The Feeling!;Pop;Justin Timberlake;83;2016
+Toxic;Pop;Britney Spears;79;2004
+You're Still The One;Pop;Shania Twain;75;1998
+Whistle;Pop;Flo Rida;76;2012
+Beautiful People;Pop;Ed Sheeran ft. Khalid;84;2019
+Bad Guy;Pop;Billie Eilish;89;2019
+Thank U, Next;Pop;Ariana Grande;85;2018
+Rain On Me;Pop;Lady Gaga, Ariana Grande;87;2020
+All About That Bass;Pop;Meghan Trainor;79;2014
+Cake By The Ocean;Pop;DNCE;79;2015
+7 Rings;Pop;Ariana Grande;84;2019
+Lose My Breath;Pop;Destiny's Child;75;2004
+Sorry;Pop;Justin Bieber;80;2015
+Sucker;Pop;Jonas Brothers;83;2019
+Just Dance;Pop;Lady Gaga ft. Colby O'Donis;77;2008
+Style;Pop;Taylor Swift;78;2014
+Heat Waves;Pop;Glass Animals;89;2020
+Good 4 U;Pop;Olivia Rodrigo;93;2021
+Need You Now;Pop;Lady Antebellum;80;2010
+Burn;Pop;Ellie Goulding;82;2013
+Yeah!;Pop;Usher ft. Lil Jon, Ludacris;83;2004
+Your Song;Pop;Elton John;81;1970
+Last Friday Night (T.G.I.F.);Pop;Katy Perry;77;2010
+Party in the USA;Pop;Miley Cyrus;73;2009
+Can't Stop the Feeling!;Pop;Justin Timberlake;80;2016
+Cheap Thrills;Pop;Sia ft. Sean Paul;75;2016
+Style;Pop;Taylor Swift;76;2014
+Stay With Me;Pop;Sam Smith;78;2014
+My Heart Will Go On;Pop;Celine Dion;80;1997
+Royals;Pop;Lorde;75;2013
+How Do You Sleep?;Pop;Sam Smith;77;2019
+Locked Out of Heaven;Pop;Bruno Mars;81;2012
+Levitating;Pop;Dua Lipa ft. DaBaby;87;2020
+Havana;Pop;Camila Cabello ft. Young Thug;84;2017
+That's What I Like;Pop;Bruno Mars;82;2016
+Don't Stop Believin';Pop;Journey;83;1981
+Since U Been Gone;Pop;Kelly Clarkson;78;2004
+Don't You (Forget About Me);Pop;Simple Minds;75;1985
+Kings & Queens;Pop;Ava Max;80;2020
+Treat You Better;Pop;Shawn Mendes;78;2016
+Complicated;Pop;Avril Lavigne;77;2002
+The Twist;Pop;Chubby Checker;78;1960
+Shut Up and Dance;Pop;Walk the Moon;80;2014
+Happy;Pop;Pharrell Williams;84;2013
+Rather Be;Pop;Clean Bandit ft. Jess Glynne;77;2014
+Sugar, We're Goin Down;Pop;Fall Out Boy;75;2005
+Say You Won't Let Go;Pop;James Arthur;81;2016
+Girls Just Want to Have Fun;Pop;Cyndi Lauper;80;1983
+24k Magic;Pop;Bruno Mars;83;2016
+All About That Bass;Pop;Meghan Trainor;77;2014
+I Gotta Feeling;Pop;The Black Eyed Peas;84;2009
+Shake It Off;Pop;Taylor Swift;80;2014
+Somebody That I Used to Know;Pop;Gotye ft. Kimbra;82;2011
+Umbrella;Pop;Rihanna ft. Jay-Z;82;2007
+Sugar;Pop;Maroon 5;82;2014
+Empire State of Mind;Pop;Jay-Z ft. Alicia Keys;80;2009
+Uptown Funk;Pop;Mark Ronson ft. Bruno Mars;87;2014
+What Makes You Beautiful;Pop;One Direction;78;2011
+California Gurls;Pop;Katy Perry ft. Snoop Dogg;77;2010
+The Power of Love;Pop;Huey Lewis and the News;74;1985
+Livin' la Vida Loca;Pop;Ricky Martin;76;1999
+This Love;Pop;Maroon 5;75;2004
+Let Me Love You;Pop;DJ Snake ft. Justin Bieber;81;2016
+I Don't Want to Miss a Thing;Pop;Aerosmith;77;1998
+Cheap Thrills;Pop;Sia ft. Sean Paul;79;2016
+Poker Face;Pop;Lady Gaga;83;2008
+Don't Stop Believin';Pop;Journey;81;1981
+Stitches;Pop;Shawn Mendes;80;2015
+Killing Me Softly With His Song;Pop;Roberta Flack;76;1973
+Hey Jude;Pop;The Beatles;82;1968
+Say Something;Pop;A Great Big World ft. Christina Aguilera;79;2013
+Radioactive;Pop;Imagine Dragons;82;2012
+Tik Tok;Pop;Ke$ha;80;2009
+Take My Breath Away;Pop;Berlin;76;1986
+I Will Always Love You;Pop;Whitney Houston;84;1992
+Say My Name;Pop;Destiny's Child;81;1999
+Somebody to Love;Pop;Queen;77;1976
+Livin' on a Prayer;Pop;Bon Jovi;83;1986
+We Found Love;Pop;Rihanna ft. Calvin Harris;85;2011
+Viva la Vida;Pop;Coldplay;84;2008
+Need You Now;Pop;Lady Antebellum;78;2009
+Shallow;Pop;Lady Gaga & Bradley Cooper;89;2018
+Happy;Pop;Pharrell Williams;87;2013
+Grenade;Pop;Bruno Mars;81;2010
+Wrecking Ball;Pop;Miley Cyrus;80;2013
+Eye of the Tiger;Pop;Survivor;80;1982
+Don't Stop the Music;Pop;Rihanna;79;2007
+Girls Just Want to Have Fun;Pop;Cyndi Lauper;77;1983
+Roar;Pop;Katy Perry;82;2013
+Perfect;Pop;Ed Sheeran;84;2017
+Billie Jean;Pop;Michael Jackson;86;1983
+I Will Survive;Pop;Gloria Gaynor;82;1978
+Bleeding Love;Pop;Leona Lewis;78;2007
+How Deep Is Your Love;Pop;Bee Gees;80;1977
+Stronger;Pop;Kelly Clarkson;80;2011
+Heart of Glass;Pop;Blondie;79;1979
+Another One Bites the Dust;Pop;Queen;82;1980
+Pumped Up Kicks;Pop;Foster the People;79;2010
+Take On Me;Pop;a-ha;81;1985
+Stay with Me;Pop;Sam Smith;80;2014
+One More Night;Pop;Maroon 5;78;2012
+Shake It Off;Pop;Taylor Swift;85;2014
+Total Eclipse of the Heart;Pop;Bonnie Tyler;81;1983
+I Want It That Way;Pop;Backstreet Boys;82;1999
+Wannabe;Pop;Spice Girls;79;1996
+Call Me Maybe;Pop;Carly Rae Jepsen;83;2011
+I'm Still Standing;Pop;Elton John;79;1983
+Hold On;Pop;Wilson Phillips;76;1990
+Rehab;Pop;Amy Winehouse;81;2006
+Rude;Pop;Magic!;76;2013
+Black or White;Pop;Michael Jackson;84;1991
+Like a Prayer;Pop;Madonna;83;1989
+Time After Time;Pop;Cyndi Lauper;80;1983
+Waka Waka (This Time for Africa);Pop;Shakira;78;2010
+Say You, Say Me;Pop;Lionel Richie;76;1985
+Whenever, Wherever;Pop;Shakira;81;2001
+Tik Tok;Pop;Ke$ha;82;2009
+Stronger (What Doesn't Kill You);Pop;Kelly Clarkson;79;2011
+California Gurls;Pop;Katy Perry;81;2010
+Genie in a Bottle;Pop;Christina Aguilera;78;1999
+Don't Stop Believin';Pop;Journey;82;1981
+I Wanna Dance with Somebody (Who Loves Me);Pop;Whitney Houston;84;1987
+Roar;Pop;Katy Perry;80;2013
+Africa;Pop;Toto;79;1982
+Party in the U.S.A.;Pop;Miley Cyrus;78;2009
+Umbrella;Pop;Rihanna feat. Jay-Z;81;2007
+Billie Jean;Pop;Michael Jackson;84;1983
+I Will Always Love You;Pop;Whitney Houston;84;1992
+End of the Road;Pop;Boyz II Men;76;1991
+Don't You (Forget About Me);Pop;Simple Minds;77;1985
+All About That Bass;Pop;Meghan Trainor;80;2014
+Empire State of Mind;Pop;Jay-Z feat. Alicia Keys;79;2009
+Hey Ya!;Pop;OutKast;82;2003
+Bad Romance;Pop;Lady Gaga;84;2009
+Somebody That I Used to Know;Pop;Gotye feat. Kimbra;83;2011
+Apologize;Pop;OneRepublic;78;2006
+Royals;Pop;Lorde;81;2013
+Pumped Up Kicks;Pop;Foster the People;80;2010
+Uptown Funk;Pop;Mark Ronson feat. Bruno Mars;86;2014
+Just Dance;Pop;Lady Gaga feat. Colby O'Donis;78;2008
+One Sweet Day;Pop;Mariah Carey & Boyz II Men;75;1995
+What Makes You Beautiful;Pop;One Direction;79;2011
+Just the Way You Are;Pop;Bruno Mars;83;2010
+Call Me Maybe;Pop;Carly Rae Jepsen;80;2011
+Genie in a Bottle;Pop;Christina Aguilera;78;1999
+How Will I Know;Pop;Whitney Houston;79;1985
+We Belong Together;Pop;Mariah Carey;82;2005
+A Thousand Miles;Pop;Vanessa Carlton;76;2002
+La Bamba;Pop;Los Lobos;74;1987
+True Colors;Pop;Cyndi Lauper;77;1986
+Smooth;Pop;Santana feat. Rob Thomas;81;1999
+Vogue;Pop;Madonna;83;1990
+Dancing on My Own;Pop;Robyn;80;2010
+Jump;Pop;Van Halen;79;1984
+Here Comes the Sun;Pop;The Beatles;80;1969
+You Make My Dreams;Pop;Hall & Oates;76;1980
+Poker Face;Pop;Lady Gaga;82;2008
+24K Magic;Pop;Bruno Mars;84;2016
+Lose You to Love Me;Pop;Selena Gomez;81;2019
+Party in the U.S.A.;Pop;Miley Cyrus;78;2009
+Sorry;Pop;Justin Bieber;82;2015
+A Whole New World;Pop;Peabo Bryson & Regina Belle;77;1992
+Kiss Me;Pop;Sixpence None the Richer;75;1997
+Eye of the Tiger;Pop;Survivor;76;1982
+Love Me Like You Do;Pop;Ellie Goulding;81;2015
+Unwritten;Pop;Natasha Bedingfield;76;2004
+The Sign;Pop;Ace of Base;78;1993
+Royals;Pop;Lorde;80;2013
+Stitches;Pop;Shawn Mendes;79;2015
+Jolene;Pop;Dolly Parton;77;1974
+Royals;Pop;Lorde;80;2013
+Party Rock Anthem;Pop;LMFAO feat. Lauren Bennett & GoonRock;82;2011
+Nothing Breaks Like a Heart;Pop;Mark Ronson feat. Miley Cyrus;79;2018
+Despacito;Pop;Luis Fonsi & Daddy Yankee feat. Justin Bieber;86;2017
+Don't Stop the Music;Pop;Rihanna;80;2007
+I'm Like a Bird;Pop;Nelly Furtado;75;2000
+A Moment Like This;Pop;Kelly Clarkson;76;2002
+Whenever, Wherever;Pop;Shakira;78;2001
+I Wanna Dance With Somebody (Who Loves Me);Pop;Whitney Houston;80;1987
+Tik Tok;Pop;Ke$ha;82;2009
+MMMBop;Pop;Hanson;75;1997
+If You Had My Love;Pop;Jennifer Lopez;77;1999
+Love Song;Pop;Sara Bareilles;76;2007
+Without Me;Pop;Halsey;81;2018
+Cheerleader;Pop;OMI;77;2014
+Happy;Pop;Pharrell Williams;82;2013
+Closer;Pop;The Chainsmokers feat. Halsey;83;2016
+Believe;Pop;Cher;79;1998
+7 Rings;Pop;Ariana Grande;84;2019
+Firework;Pop;Katy Perry;80;2010
+Thinking Out Loud;Pop;Ed Sheeran;81;2014
+I Gotta Feeling;Pop;The Black Eyed Peas;83;2009
+Call Me Maybe;Pop;Carly Rae Jepsen;80;2011
+Hello;Pop;Adele;83;2015
+We Found Love;Pop;Rihanna feat. Calvin Harris;81;2011
+Poker Face;Pop;Lady Gaga;81;2008
+Oops!...I Did It Again;Pop;Britney Spears;77;2000
+Just Dance;Pop;Lady Gaga feat. Colby O'Donis;78;2008
+Can't Stop the Feeling!;Pop;Justin Timberlake;82;2016
+Umbrella;Pop;Rihanna feat. Jay-Z;79;2007
+Love Me Like You Do;Pop;Ellie Goulding;80;2015
+Dynamite;Pop;BTS;84;2020
+You Belong With Me;Pop;Taylor Swift;79;2008
+La La Land;Pop;Demi Lovato;75;2008
+Royals;Pop;Lorde;76;2013
+Rockstar;Pop;Post Malone feat. 21 Savage;83;2017
+In My Blood;Pop;Shawn Mendes;78;2018
+This Love;Pop;Maroon 5;77;2004
+Can't Hold Us;Pop;Macklemore & Ryan Lewis feat. Ray Dalton;80;2011
+Watermelon Sugar;Pop;Harry Styles;83;2019
+We Are Never Ever Getting Back Together;Pop;Taylor Swift;76;2012
+Shake It Off;Pop;Taylor Swift;81;2014
+Don't Start Now;Pop;Dua Lipa;82;2019
+Work From Home;Pop;Fifth Harmony feat. Ty Dolla $ign;76;2016
+Hotline Bling;Pop;Drake;79;2015
+Style;Pop;Taylor Swift;80;2014
+Party in the U.S.A.;Pop;Miley Cyrus;75;2009

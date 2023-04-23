@@ -1,25 +1,500 @@
-Alone,80s Rock,Heart,69,1987
-Billie Jean,80s Rock,Michael Jackson,81,1982
-Crazy Train,80s Rock,Ozzy Osbourne,74,1980
-Don't Stop Believin',80s Rock,Journey,87,1981
-Every Breath You Take,80s Rock,The Police,83,1983
-Faithfully,80s Rock,Journey,69,1983
-Girls Just Want to Have Fun,80s Rock,Cyndi Lauper,74,1983
-Here I Go Again,80s Rock,Whitesnake,73,1982
-I Love Rock 'n' Roll,80s Rock,Joan Jett & The Blackhearts,73,1981
-Jessie's Girl,80s Rock,Rick Springfield,75,1981
-Kiss,80s Rock,Prince,77,1986
-Livin' on a Prayer,80s Rock,Bon Jovi,82,1986
-Money for Nothing,80s Rock,Dire Straits,77,1985
-Nothing's Gonna Stop Us Now,80s Rock,Starship,68,1987
-Owner of a Lonely Heart,80s Rock,Yes,68,1983
-Pour Some Sugar on Me,80s Rock,Def Leppard,80,1987
-Queen of the Broken Hearts,80s Rock,Loverboy,41,1983
-Runaway,80s Rock,Bon Jovi,66,1984
-Sweet Child o' Mine,80s Rock,Guns N' Roses,88,1987
-Take On Me,80s Rock,A-ha,80,1985
-Under Pressure,80s Rock,Queen & David Bowie,77,1981
-Video Killed the Radio Star,80s Rock,The Buggles,70,1979
-Wanted Dead or Alive,80s Rock,Bon Jovi,69,1986
-Xanadu,80s Rock,Olivia Newton-John & Electric Light Orchestra,49,1980
-You Give Love a Bad Name,80s Rock,Bon Jovi,80,1986
+Livin' On A Prayer;80s Rock;Bon Jovi;90;1986
+Sweet Child O' Mine;80s Rock;Guns N' Roses;95;1987
+Pour Some Sugar On Me;80s Rock;Def Leppard;92;1987
+You Give Love A Bad Name;80s Rock;Bon Jovi;89;1986
+Don't Stop Believin';80s Rock;Journey;93;1981
+Every Breath You Take;80s Rock;The Police;91;1983
+Eye Of The Tiger;80s Rock;Survivor;89;1982
+Jump;80s Rock;Van Halen;87;1984
+The Final Countdown;80s Rock;Europe;86;1986
+Take On Me;80s Rock;a-ha;85;1985
+Billie Jean;80s Rock;Michael Jackson;93;1982
+Livin' After Midnight;80s Rock;Judas Priest;83;1980
+Rebel Yell;80s Rock;Billy Idol;83;1983
+With Or Without You;80s Rock;U2;82;1987
+Faithfully;80s Rock;Journey;81;1983
+Jessie's Girl;80s Rock;Rick Springfield;80;1981
+Here I Go Again;80s Rock;Whitesnake;79;1982
+Don't You (Forget About Me);80s Rock;Simple Minds;63;1985
+Jumpin' Jack Flash;80s Rock;The Rolling Stones;62;1986
+Love Shack;80s Rock;The B-52's;61;1989
+When Doves Cry;80s Rock;Prince;60;1984
+Living In America;80s Rock;James Brown;59;1985
+Legs;80s Rock;ZZ Top;58;1983
+Dancing In The Dark;80s Rock;Bruce Springsteen;57;1984
+Bad Medicine;80s Rock;Bon Jovi;56;1988
+Photograph;80s Rock;Def Leppard;55;1983
+It's The End Of The World As We Know It (And I Feel Fine);80s Rock;R.E.M.;54;1987
+I Can't Drive 55;80s Rock;Sammy Hagar;53;1984
+Shout;80s Rock;Tears For Fears;52;1984
+Love In An Elevator;80s Rock;Aerosmith;51;1989
+The Boys Of Summer;80s Rock;Don Henley;50;1984
+Rock Me Amadeus;80s Rock;Falco;49;1985
+Money For Nothing;80s Rock;Dire Straits;48;1985
+Danger Zone;80s Rock;Kenny Loggins;47;1986
+Addicted To Love;80s Rock;Robert Palmer;46;1985
+White Wedding;80s Rock;Billy Idol;45;1982
+Walk This Way;80s Rock;Run-DMC feat. Aerosmith;44;1986
+Girls, Girls, Girls;80s Rock;Mötley Crüe;43;1987
+Don't Believe Anymore;80s Rock;Icehouse;42;1984
+Heaven;80s Rock;Bryan Adams;41;1985
+Crazy Little Thing Called Love;80s Rock;Queen;40;1980
+We Built This City;80s Rock;Starship;39;1985
+The Power Of Love;80s Rock;Huey Lewis And The News;38;1985
+Centerfold;80s Rock;The J. Geils Band;37;1981
+Round And Round;80s Rock;Ratt;36;1984
+Nothin' But A Good Time;80s Rock;Poison;35;1988
+We Didn't Start The Fire;80s Rock;Billy Joel;34;1989
+I Ran (So Far Away);80s Rock;A Flock Of Seagulls;33;1982
+The One I Love;80s Rock;R.E.M.;32;1987
+Hungry Like The Wolf;80s Rock;Duran Duran;31;1982
+Rock Of Ages;80s Rock;Def Leppard;30;1983
+I Want Action;80s Rock;Poison;29;1986
+Love Stinks;80s Rock;The J. Geils Band;28;1980
+Come On Eileen;80s Rock;Dexys Midnight Runners;27;1982
+Don't Stop The Music;80s Rock;Yarbrough & Peoples;26;1980
+The Stroke;80s Rock;Billy Squier;25;1981
+Tainted Love;80s Rock;Soft Cell;24;1981
+Take Me Home Tonight;80s Rock;Eddie Money;23;1986
+You Shook Me All Night Long;80s Rock;AC/DC;22;1980
+Burnin' For You;80s Rock;Blue Öyster Cult;21;1981
+Eye of the Tiger;80s Rock;Survivor;19;1982
+Edge of Seventeen;80s Rock;Stevie Nicks;18;1981
+Sweet Child O' Mine;80s Rock;Guns N' Roses;17;1987
+Livin' on a Prayer;80s Rock;Bon Jovi;16;1986
+Sister Christian;80s Rock;Night Ranger;15;1983
+Keep on Loving You;80s Rock;REO Speedwagon;14;1980
+Every Breath You Take;80s Rock;The Police;13;1983
+Owner of a Lonely Heart;80s Rock;Yes;12;1983
+Rosanna;80s Rock;Toto;11;1982
+Working for the Weekend;80s Rock;Loverboy;10;1981
+I Love Rock 'n' Roll;80s Rock;Joan Jett & The Blackhearts;9;1982
+The Final Countdown;80s Rock;Europe;8;1986
+Don't You (Forget About Me);80s Rock;Simple Minds;7;1985
+Just Like Heaven;80s Rock;The Cure;6;1987
+The Warrior;80s Rock;Scandal featuring Patty Smyth;5;1984
+I Want to Know What Love Is;80s Rock;Foreigner;4;1984
+Pour Some Sugar on Me;80s Rock;Def Leppard;3;1987
+Alone;80s Rock;Heart;2;1987
+I Still Haven't Found What I'm Looking For;80s Rock;U2;1;1987
+Love Bites;80s Rock;Def Leppard;2;1987
+Africa;80s Rock;Toto;3;1982
+Rock You Like a Hurricane;80s Rock;Scorpions;4;1984
+Boys Don't Cry;80s Rock;The Cure;5;1980
+The Reflex;80s Rock;Duran Duran;6;1984
+Legs;80s Rock;ZZ Top;7;1984
+Maneater;80s Rock;Hall & Oates;8;1982
+Rebel Yell;80s Rock;Billy Idol;9;1983
+Cum On Feel The Noize;80s Rock;Quiet Riot;10;1983
+The Heat is On;80s Rock;Glenn Frey;11;1984
+I'm Still Standing;80s Rock;Elton John;12;1983
+Faithfully;80s Rock;Journey;13;1983
+When Doves Cry;80s Rock;Prince;14;1984
+Rockin' in the Free World;80s Rock;Neil Young;15;1989
+Rock the Casbah;80s Rock;The Clash;16;1982
+Welcome to the Jungle;80s Rock;Guns N' Roses;17;1987
+Shakin';80s Rock;Eddie Money;18;1982
+I'll Be There for You;80s Rock;Bon Jovi;19;1989
+Runaway;80s Rock;Bon Jovi;20;1984
+Urgent;80s Rock;Foreigner;21;1981
+Take Me Home Tonight;80s Rock;Eddie Money;22;1986
+Talk Dirty to Me;80s Rock;Poison;23;1986
+Cherry Pie;80s Rock;Warrant;24;1989
+We're Not Gonna Take It;80s Rock;Twisted Sister;25;1984
+Something to Believe In;80s Rock;Poison;26;1988
+18 and Life;80s Rock;Skid Row;27;1989
+Tom Sawyer;80s Rock;Rush;28;1981
+Jump;80s Rock;Van Halen;29;1983
+With or Without You;80s Rock;U2;30;1987
+It's the End of the World As We Know It (And I Feel Fine);80s Rock;R.E.M.;31;1987
+Faith;80s Rock;George Michael;32;1987
+Living After Midnight;80s Rock;Judas Priest;33;1980
+Crazy Train;80s Rock;Ozzy Osbourne;34;1980
+Heaven;80s Rock;Warrant;35;1989
+Nothin' But A Good Time;80s Rock;Poison;36;1988
+Love Shack;80s Rock;The B-52's;37;1989
+Photograph;80s Rock;Def Leppard;38;1983
+Just What I Needed;80s Rock;The Cars;39;1988
+Waiting for a Girl Like You;80s Rock;Foreigner;40;1981
+Shake Me;80s Rock;Cinderella;41;1986
+The Power of Love;80s Rock;Huey Lewis and the News;42;1985
+Bang Your Head (Metal Health);80s Rock;Quiet Riot;43;1983
+In the Air Tonight;80s Rock;Phil Collins;44;1981
+Higher Love;80s Rock;Steve Winwood;45;1986
+Dancing in the Dark;80s Rock;Bruce Springsteen;46;1984
+Smooth Criminal;80s Rock;Michael Jackson;47;1987
+Heaven is a Place on Earth;80s Rock;Belinda Carlisle;48;1987
+We Built This City;80s Rock;Starship;49;1985
+Welcome Home (Sanitarium);80s Rock;Metallica;50;1986
+Shake It Up;80s Rock;The Cars;51;1981
+The One I Love;80s Rock;R.E.M.;52;1987
+Save Your Love;80s Rock;Great White;53;1987
+Open Arms;80s Rock;Journey;54;1981
+Rock of Ages;80s Rock;Def Leppard;55;1983
+You Give Love a Bad Name;80s Rock;Bon Jovi;56;1986
+Livin' in the Limelight;80s Rock;Peter Cetera;57;1986
+Love Stinks;80s Rock;The J. Geils Band;58;1980
+Paradise City;80s Rock;Guns N' Roses;59;1987
+Don't Stop Believin';80s Rock;Journey;62;1981
+Love Bites;80s Rock;Def Leppard;63;1987
+Every Breath You Take;80s Rock;The Police;64;1983
+Don't You (Forget About Me);80s Rock;Simple Minds;65;1985
+Sweet Child o' Mine;80s Rock;Guns N' Roses;66;1987
+Poison;80s Rock;Alice Cooper;67;1989
+I Want to Know What Love Is;80s Rock;Foreigner;68;1984
+Hit Me with Your Best Shot;80s Rock;Pat Benatar;69;1980
+Eyes Without a Face;80s Rock;Billy Idol;70;1984
+One;80s Rock;Metallica;71;1989
+Drive;80s Rock;The Cars;72;1984
+I Love Rock 'n' Roll;80s Rock;Joan Jett & the Blackhearts;73;1981
+Rebel Yell;80s Rock;Billy Idol;74;1983
+Sister Christian;80s Rock;Night Ranger;75;1984
+The Final Countdown;80s Rock;Europe;76;1986
+Girls, Girls, Girls;80s Rock;Mötley Crüe;77;1987
+We Will Rock You;80s Rock;Queen;78;1980
+Panama;80s Rock;Van Halen;79;1984
+Summer of '69;80s Rock;Bryan Adams;80;1984
+Sledgehammer;80s Rock;Peter Gabriel;81;1986
+Jumpin' Jack Flash;80s Rock;The Rolling Stones;82;1986
+I Can't Drive 55;80s Rock;Sammy Hagar;83;1984
+Money for Nothing;80s Rock;Dire Straits;84;1985
+Pour Some Sugar on Me;80s Rock;Def Leppard;85;1987
+Walk This Way;80s Rock;Run-DMC feat. Aerosmith;86;1986
+The Boys of Summer;80s Rock;Don Henley;87;1984
+Edge of Seventeen;80s Rock;Stevie Nicks;88;1981
+Back in Black;80s Rock;AC/DC;89;1980
+Kiss;80s Rock;Prince;90;1986
+Separate Ways (Worlds Apart);80s Rock;Journey;91;1983
+Love in an Elevator;80s Rock;Aerosmith;92;1989
+Bad Medicine;80s Rock;Bon Jovi;93;1988
+Don't Believe Anymore;80s Rock;Icehouse;94;1984
+Hold on Loosely;80s Rock;38 Special;95;1981
+Living on a Prayer;80s Rock;Bon Jovi;96;1986
+Edge of a Broken Heart;80s Rock;Vixen;97;1988
+Wanted Dead or Alive;80s Rock;Bon Jovi;98;1986
+Hot for Teacher;80s Rock;Van Halen;99;1984
+Addicted to Love;80s Rock;Robert Palmer;100;1985
+The Power of Love;80s Rock;Huey Lewis and the News;51;1985
+Hysteria;80s Rock;Def Leppard;52;1987
+Livin' on a Prayer;80s Rock;Bon Jovi;53;1986
+Dream On;80s Rock;Aerosmith;54;1980
+Wanted: Dead or Alive;80s Rock;Bon Jovi;55;1986
+You Shook Me All Night Long;80s Rock;AC/DC;56;1980
+Heaven;80s Rock;Bryan Adams;57;1985
+Legs;80s Rock;ZZ Top;58;1983
+Nothing's Gonna Stop Us Now;80s Rock;Starship;59;1987
+Patience;80s Rock;Guns N' Roses;60;1989
+She's a Beauty;80s Rock;The Tubes;61;1983
+The Living Years;80s Rock;Mike + The Mechanics;62;1988
+Angel;80s Rock;Aerosmith;63;1988
+Something to Believe In;80s Rock;Poison;64;1988
+Heaven Is a Place on Earth;80s Rock;Belinda Carlisle;65;1987
+We're Not Gonna Take It;80s Rock;Twisted Sister;66;1984
+Shake Me;80s Rock;Cinderella;67;1986
+Who's Crying Now;80s Rock;Journey;68;1981
+Everytime You Go Away;80s Rock;Paul Young;69;1985
+Living After Midnight;80s Rock;Judas Priest;70;1980
+We Belong;80s Rock;Pat Benatar;71;1984
+Is This Love;80s Rock;Whitesnake;72;1987
+Can't Fight This Feeling;80s Rock;REO Speedwagon;73;1984
+Smooth Criminal;80s Rock;Michael Jackson;74;1988
+Heart and Soul;80s Rock;T'Pau;75;1987
+Rock You Like a Hurricane;80s Rock;Scorpions;76;1984
+Centerfold;80s Rock;The J. Geils Band;77;1981
+Urgent;80s Rock;Foreigner;78;1981
+Faithfully;80s Rock;Journey;79;1983
+Heat of the Moment;80s Rock;Asia;80;1982
+In the Air Tonight;80s Rock;Phil Collins;81;1981
+Love Song;80s Rock;Tesla;82;1989
+Come on Eileen;80s Rock;Dexys Midnight Runners;83;1982
+Rock of Ages;80s Rock;Def Leppard;84;1983
+I Want to Know What Love Is;80s Rock;Foreigner;86;1984
+Separate Ways (Worlds Apart);80s Rock;Journey;87;1983
+Don't Stop Believin';80s Rock;Journey;88;1981
+Nothin' But a Good Time;80s Rock;Poison;89;1988
+You Give Love a Bad Name;80s Rock;Bon Jovi;90;1986
+Rock Me Amadeus;80s Rock;Falco;91;1985
+Bad Medicine;80s Rock;Bon Jovi;92;1988
+Every Rose Has Its Thorn;80s Rock;Poison;93;1988
+Sister Christian;80s Rock;Night Ranger;94;1983
+Working for the Weekend;80s Rock;Loverboy;95;1981
+Eye of the Tiger;80s Rock;Survivor;96;1982
+With or Without You;80s Rock;U2;97;1987
+Africa;80s Rock;Toto;98;1982
+Crazy Little Thing Called Love;80s Rock;Queen;99;1980
+Dancing in the Dark;80s Rock;Bruce Springsteen;100;1984
+Love Bites;80s Rock;Def Leppard;51;1987
+I Hate Myself for Loving You;80s Rock;Joan Jett and the Blackhearts;52;1988
+Don't Dream It's Over;80s Rock;Crowded House;53;1986
+Faith;80s Rock;George Michael;54;1987
+I Ran (So Far Away);80s Rock;A Flock of Seagulls;55;1982
+Walking on Sunshine;80s Rock;Katrina and The Waves;56;1985
+The Warrior;80s Rock;Scandal featuring Patty Smyth;57;1984
+Jump;80s Rock;Van Halen;58;1984
+Owner of a Lonely Heart;80s Rock;Yes;59;1983
+Smooth Operator;80s Rock;Sade;60;1984
+Separate Lives;80s Rock;Phil Collins and Marilyn Martin;61;1985
+Love Stinks;80s Rock;The J. Geils Band;62;1980
+Let's Go Crazy;80s Rock;Prince and The Revolution;63;1984
+One Thing Leads to Another;80s Rock;The Fixx;64;1983
+Life in a Northern Town;80s Rock;The Dream Academy;65;1985
+Free Fallin';80s Rock;Tom Petty;66;1989
+Take My Breath Away;80s Rock;Berlin;67;1986
+The Promise;80s Rock;When In Rome;68;1987
+The Final Countdown;80s Rock;Europe;69;1986
+Jessie's Girl;80s Rock;Rick Springfield;70;1981
+Every Breath You Take;80s Rock;The Police;71;1983
+Money for Nothing;80s Rock;Dire Straits;72;1985
+Don't You (Forget About Me);80s Rock;Simple Minds;73;1985
+She Drives Me Crazy;80s Rock;Fine Young Cannibals;74;1989
+Rebel Yell;80s Rock;Billy Idol;75;1983
+Roam;80s Rock;The B-52's;76;1989
+Head Over Heels;80s Rock;Tears for Fears;77;1985
+Sharp Dressed Man;80s Rock;ZZ Top;78;1983
+Heaven Is a Place on Earth;80s Rock;Belinda Carlisle;79;1987
+Boys of Summer;80s Rock;Don Henley;80;1984
+Love Shack;80s Rock;The B-52's;81;1989
+Simply Irresistible;80s Rock;Robert Palmer;82;1988
+Nothing's Gonna Stop Us Now;80s Rock;Starship;83;1987
+Edge of Seventeen;80s Rock;Stevie Nicks;84;1981
+Shake It Up;80s Rock;The Cars;85;1981
+Get Outta My Dreams, Get into My Car;80s Rock;Billy Ocean;86;1988
+Pink Houses;80s Rock;John Mellencamp;87;1983
+Rock of Ages;80s Rock;Def Leppard;88;1983
+Cum On Feel the Noize;80s Rock;Quiet Riot;89;1983
+Let's Dance;80s Rock;David Bowie;90;1983
+Love Walks In;80s Rock;Van Halen;91;1986
+Kiss Me Deadly;80s Rock;Lita Ford;92;1988
+I Want Action;80s Rock;Poison;93;1986
+Turn Up the Radio;80s Rock;Autograph;94;1984
+Panama;80s Rock;Van Halen;95;1984
+Once Bitten, Twice Shy;80s Rock;Great White;96;1987
+We're Not Gonna Take It;80s Rock;Twisted Sister;97;1984
+Somebody's Watching Me;80s Rock;Rockwell;98;1984
+The Boys Are Back in Town;80s Rock;Thin Lizzy;99;1980
+Something About You;80s Rock;Level 42;100;1985
+Welcome to the Jungle;80s Rock;Guns N' Roses;51;1987
+Livin' on a Prayer;80s Rock;Bon Jovi;52;1986
+White Wedding;80s Rock;Billy Idol;53;1982
+Owner of the Lonely Heart;80s Rock;Yes;54;1983
+Drive;80s Rock;The Cars;55;1984
+A View to a Kill;80s Rock;Duran Duran;56;1985
+Heat of the Moment;80s Rock;Asia;57;1982
+New Year's Day;80s Rock;U2;58;1983
+Here I Go Again;80s Rock;Whitesnake;59;1982
+Love in an Elevator;80s Rock;Aerosmith;60;1989
+Holding Back the Years;80s Rock;Simply Red;61;1985
+I'll Be There for You;80s Rock;Bon Jovi;62;1988
+What I Like About You;80s Rock;The Romantics;63;1980
+The Final Countdown;80s Rock;Europe;64;1986
+Sister Christian;80s Rock;Night Ranger;65;1983
+Cumbersome;80s Rock;Seven Mary Three;66;1995
+You Give Love a Bad Name;80s Rock;Bon Jovi;67;1986
+Who Can It Be Now?;80s Rock;Men at Work;68;1981
+Wanted Dead or Alive;80s Rock;Bon Jovi;69;1986
+Shout;80s Rock;Tears for Fears;70;1985
+Eye of the Tiger;80s Rock;Survivor;71;1982
+Working for the Weekend;80s Rock;Loverboy;72;1981
+Don't Stop Believin';80s Rock;Journey;73;1981
+The Stroke;80s Rock;Billy Squier;74;1981
+Every Rose Has Its Thorn;80s Rock;Poison;75;1988
+With or Without You;80s Rock;U2;76;1987
+The Power of Love;80s Rock;Huey Lewis and the News;77;1985
+Summer of '69;80s Rock;Bryan Adams;78;1984
+Shake It;80s Rock;Metro Station;79;2007
+Go Your Own Way;80s Rock;Fleetwood Mac;80;1977
+Walking on Sunshine;80s Rock;Katrina and the Waves;81;1985
+(I Just) Died in Your Arms;80s Rock;Cutting Crew;82;1986
+Don't You (Forget About Me);80s Rock;Simple Minds;83;1985
+Sister Havana;80s Rock;Urge Overkill;84;1993
+Poison Arrow;80s Rock;ABC;85;1982
+I Love Rock 'n' Roll;80s Rock;Joan Jett and the Blackhearts;86;1981
+Tainted Love;80s Rock;Soft Cell;87;1981
+Beat It;80s Rock;Michael Jackson;88;1983
+Total Eclipse of the Heart;80s Rock;Bonnie Tyler;89;1983
+Every Breath You Take;80s Rock;The Police;90;1983
+Heaven;80s Rock;Bryan Adams;91;1983
+Never Gonna Give You Up;80s Rock;Rick Astley;92;1987
+Electric Avenue;80s Rock;Eddy Grant;93;1982
+Take on Me;80s Rock;A-ha;94;1985
+Safety Dance;80s Rock;Men Without Hats;95;1982
+Blister in the Sun;80s Rock;Violent Femmes;96;1982
+Abracadabra;80s Rock;Steve Miller Band;97;1982
+Jump;80s Rock;Van Halen;98;1984
+Keep on Loving You;80s Rock;REO Speedwagon;99;1980
+Waiting For A Girl Like You;80s Rock;Foreigner;86;1981
+The Boys Of Summer;80s Rock;Don Henley;71;1984
+Never Tear Us Apart;80s Rock;INXS;90;1987
+Eye of the Tiger;80s Rock;Survivor;82;1982
+The One I Love;80s Rock;R.E.M.;94;1987
+Take on Me;80s Rock;a-ha;80;1985
+No More Words;80s Rock;Berlin;75;1984
+Perfect Way;80s Rock;Scritti Politti;65;1985
+I Hate Myself for Loving You;80s Rock;Joan Jett & The Blackhearts;88;1988
+Higher Love;80s Rock;Steve Winwood;78;1986
+Land of Confusion;80s Rock;Genesis;85;1986
+Sweet Dreams (Are Made of This);80s Rock;Eurythmics;91;1983
+Holding Back the Years;80s Rock;Simply Red;72;1985
+I'm Still Standing;80s Rock;Elton John;77;1983
+The Warrior;80s Rock;Scandal feat. Patty Smyth;68;1984
+Owner of a Lonely Heart;80s Rock;Yes;79;1983
+Sister Christian;80s Rock;Night Ranger;70;1983
+Heat Of The Moment;80s Rock;Asia;83;1982
+Drive;80s Rock;The Cars;74;1984
+Jessie's Girl;80s Rock;Rick Springfield;92;1981
+Heaven;80s Rock;Bryan Adams;89;1985
+Like a Prayer;80s Rock;Madonna;86;1989
+You Give Love a Bad Name;80s Rock;Bon Jovi;93;1986
+Don't Stop Believin';80s Rock;Journey;97;1981
+Every Breath You Take;80s Rock;The Police;98;1983
+I Love Rock 'n' Roll;80s Rock;Joan Jett & The Blackhearts;96;1982
+Livin' on a Prayer;80s Rock;Bon Jovi;99;1986
+With or Without You;80s Rock;U2;87;1987
+Billie Jean;80s Rock;Michael Jackson;95;1983
+Dancing With Myself;80s Rock;Billy Idol;84;1980
+Separate Ways (Worlds Apart);80s Rock;Journey;73;1983
+Rock You Like a Hurricane;80s Rock;Scorpions;91;1984
+Rebel Yell;80s Rock;Billy Idol;79;1983
+Africa;80s Rock;Toto;82;1982
+New Sensation;80s Rock;INXS;76;1987
+Jump;80s Rock;Van Halen;88;1984
+We Built This City;80s Rock;Starship;81;1985
+We Built This City;80s Rock;Starship;77;1985
+Don't Stop Believin';80s Rock;Journey;89;1981
+Livin' on a Prayer;80s Rock;Bon Jovi;94;1986
+Eye of the Tiger;80s Rock;Survivor;90;1982
+Faith;80s Rock;George Michael;88;1987
+I Want to Know What Love Is;80s Rock;Foreigner;86;1984
+Something to Believe In;80s Rock;Poison;79;1988
+The One I Love;80s Rock;R.E.M.;80;1987
+Bad Medicine;80s Rock;Bon Jovi;83;1988
+We Didn't Start the Fire;80s Rock;Billy Joel;82;1989
+Nothing's Gonna Stop Us Now;80s Rock;Starship;84;1987
+Rock You Like a Hurricane;80s Rock;Scorpions;88;1984
+I Can't Go for That (No Can Do);80s Rock;Hall & Oates;83;1981
+Love in an Elevator;80s Rock;Aerosmith;81;1989
+Heat of the Moment;80s Rock;Asia;76;1982
+Separate Ways (Worlds Apart);80s Rock;Journey;79;1983
+Electric Avenue;80s Rock;Eddy Grant;77;1982
+99 Luftballons;80s Rock;Nena;81;1983
+The Warrior;80s Rock;Scandal featuring Patty Smyth;80;1984
+Every Breath You Take;80s Rock;The Police;92;1983
+Africa;80s Rock;Toto;85;1982
+Rock Me Amadeus;80s Rock;Falco;83;1985
+Smooth Operator;80s Rock;Sade;82;1984
+Sledgehammer;80s Rock;Peter Gabriel;89;1986
+Shout;80s Rock;Tears for Fears;86;1984
+Never Surrender;80s Rock;Corey Hart;78;1985
+Somebody's Watching Me;80s Rock;Rockwell;75;1984
+Dirty Diana;80s Rock;Michael Jackson;81;1988
+Fight the Power;80s Rock;Public Enemy;80;1989
+Sowing the Seeds of Love;80s Rock;Tears for Fears;77;1989
+Rebel Yell;80s Rock;Billy Idol;84;1983
+Wild Wild West;80s Rock;Escape Club;79;1988
+Heaven Is a Place on Earth;80s Rock;Belinda Carlisle;87;1987
+Here I Go Again;80s Rock;Whitesnake;84;1982
+The Reflex;80s Rock;Duran Duran;80;1984
+Rhythm Nation;80s Rock;Janet Jackson;83;1989
+Need You Tonight;80s Rock;INXS;84;1987
+Total Eclipse of the Heart;80s Rock;Bonnie Tyler;85;1983
+Owner of a Lonely Heart;80s Rock;Yes;81;1983
+Boys of Summer;80s Rock;Don Henley;86;1984
+Holding Back the Years;80s Rock;Simply Red;78;1985
+Faithfully;80s Rock;Journey;83;1983
+Love Bites;80s Rock;Def Leppard;81;1987
+Walk This Way;80s Rock;Run-DMC feat. Aerosmith;87;1986
+I Love Rock 'n' Roll;80s Rock;Joan Jett & The Blackhearts;88;1981
+Never Tear Us Apart;80s Rock;INXS;82;1987
+She's a Beauty;80s Rock;The Tubes;77;1983
+Everybody Wants to Rule the World;80s Rock;Tears for Fears;89;1985
+Don't You (Forget About Me);80s Rock;Simple Minds;88;1985
+Heaven;80s Rock;Bryan Adams;82;1985
+Every Rose Has Its Thorn;80s Rock;Poison;80;1988
+Edge of Seventeen;80s Rock;Stevie Nicks;81;1981
+Shake It Up;80s Rock;The Cars;77;1981
+Take On Me;80s Rock;a-ha;90;1985
+Danger Zone;80s Rock;Kenny Loggins;76;1986
+Your Love;80s Rock;The Outfield;81;1985
+I Wanna Dance with Somebody (Who Loves Me);80s Rock;Whitney Houston;87;1987
+King of Pain;80s Rock;The Police;80;1983
+Maneater;80s Rock;Hall & Oates;81;1982
+Centerfold;80s Rock;The J. Geils Band;79;1981
+Pride (In the Name of Love);80s Rock;U2;84;1984
+The Final Countdown;80s Rock;Europe;83;1986
+Sledgehammer;80s Rock;Peter Gabriel;88;1986
+Burning Down the House;80s Rock;Talking Heads;81;1983
+China Girl;80s Rock;David Bowie;78;1983
+When Doves Cry;80s Rock;Prince;90;1984
+I Want to Know What Love Is;80s Rock;Foreigner;85;1984
+Rock You Like a Hurricane;80s Rock;Scorpions;83;1984
+Little Lies;80s Rock;Fleetwood Mac;79;1987
+I Still Haven't Found What I'm Looking For;80s Rock;U2;87;1987
+Money for Nothing;80s Rock;Dire Straits;85;1985
+In the Air Tonight;80s Rock;Phil Collins;86;1981
+The Power of Love;80s Rock;Huey Lewis and the News;82;1985
+Just Like Heaven;80s Rock;The Cure;80;1987
+Here I Go Again;80s Rock;Whitesnake;79;1982
+We're Not Gonna Take It;80s Rock;Twisted Sister;80;1984
+Kyrie;80s Rock;Mr. Mister;75;1985
+Separate Ways (Worlds Apart);80s Rock;Journey;80;1983
+Walk of Life;80s Rock;Dire Straits;79;1985
+I Can't Drive 55;80s Rock;Sammy Hagar;78;1984
+Let's Dance;80s Rock;David Bowie;84;1983
+Pour Some Sugar on Me;80s Rock;Def Leppard;87;1987
+You Give Love a Bad Name;80s Rock;Bon Jovi;86;1986
+Working for the Weekend;80s Rock;Loverboy;80;1981
+Don't Stop Believin';80s Rock;Journey;90;1981
+Livin' on a Prayer;80s Rock;Bon Jovi;89;1986
+Every Breath You Take;80s Rock;The Police;90;1983
+She Sells Sanctuary;80s Rock;The Cult;80;1985
+Something About You;80s Rock;Level 42;77;1985
+Sweet Child o' Mine;80s Rock;Guns N' Roses;91;1987
+Kiss;80s Rock;Prince;80;1986
+Addicted to Love;80s Rock;Robert Palmer;82;1986
+Rebel Yell;80s Rock;Billy Idol;84;1983
+Time After Time;80s Rock;Cyndi Lauper;88;1984
+The Boys of Summer;80s Rock;Don Henley;83;1984
+Like a Prayer;80s Rock;Madonna;86;1989
+It's the End of the World as We Know It (And I Feel Fine);80s Rock;R.E.M.;85;1987
+Danger Zone;80s Rock;Kenny Loggins;78;1986
+Bad;80s Rock;Michael Jackson;89;1987
+Don't Stand So Close to Me;80s Rock;The Police;80;1980
+Edge of Seventeen;80s Rock;Stevie Nicks;83;1981
+Every Rose Has Its Thorn;80s Rock;Poison;82;1988
+Girls Just Want to Have Fun;80s Rock;Cyndi Lauper;88;1983
+I Ran (So Far Away);80s Rock;A Flock of Seagulls;81;1982
+Love Shack;80s Rock;The B-52's;86;1989
+Money for Nothing;80s Rock;Dire Straits;87;1985
+Panama;80s Rock;Van Halen;82;1984
+Rock You Like a Hurricane;80s Rock;Scorpions;85;1984
+Somebody's Watching Me;80s Rock;Rockwell;78;1984
+The Power of Love;80s Rock;Huey Lewis and the News;87;1985
+Total Eclipse of the Heart;80s Rock;Bonnie Tyler;88;1983
+Walk of Life;80s Rock;Dire Straits;80;1985
+You Shook Me All Night Long;80s Rock;AC/DC;88;1980
+Centerfold;80s Rock;The J. Geils Band;82;1981
+Drive;80s Rock;The Cars;85;1984
+Ghostbusters;80s Rock;Ray Parker Jr.;80;1984
+Hysteria;80s Rock;Def Leppard;81;1987
+Love Bites;80s Rock;Def Leppard;84;1987
+Smooth Criminal;80s Rock;Michael Jackson;89;1988
+Africa;80s Rock;Toto;87;1982
+Beat It;80s Rock;Michael Jackson;89;1982
+Burning Down the House;80s Rock;Talking Heads;81;1983
+Dancing in the Dark;80s Rock;Bruce Springsteen;87;1984
+Eye of the Tiger;80s Rock;Survivor;87;1982
+Glory Days;80s Rock;Bruce Springsteen;84;1985
+Heaven;80s Rock;Bryan Adams;87;1985
+Livin' on a Prayer;80s Rock;Bon Jovi;88;1986
+Never Gonna Give You Up;80s Rock;Rick Astley;83;1987
+Sweet Child o' Mine;80s Rock;Guns N' Roses;89;1987
+Take on Me;80s Rock;a-ha;87;1985
+The Final Countdown;80s Rock;Europe;85;1986
+The Way You Make Me Feel;80s Rock;Michael Jackson;86;1987
+Walking on Sunshine;80s Rock;Katrina and the Waves;84;1985
+We Built This City;80s Rock;Starship;83;1985
+With or Without You;80s Rock;U2;88;1987
+A Little Respect;80s Rock;Erasure;79;1988
+Big Love;80s Rock;Fleetwood Mac;80;1987
+Head Over Heels;80s Rock;Tears for Fears;82;1985
+Heaven Is a Place on Earth;80s Rock;Belinda Carlisle;86;1987

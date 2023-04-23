@@ -1,25 +1,500 @@
-Amarillo By Morning,Country,George Strait,59,1983
-Blue,Country,LeAnn Rimes,49,1996
-Chattahoochee,Country,Alan Jackson,58,1992
-Don't It Make My Brown Eyes Blue,Country,Crystal Gayle,48,1977
-Elvira,Country,The Oak Ridge Boys,46,1981
-Friends In Low Places,Country,Garth Brooks,70,1990
-Galveston,Country,Glen Campbell3,49,1969
-Harper Valley P.T.A.,Country,Jeannie C. Riley,47,1968
-I Walk The Line,Country,Johnny Cash,65,1956
-Jolene,Country,Dolly Parton,63,1973
-King of the Road,Country,Roger Miller,54,1965
-The Devil Went Down To Georgia,Country,Charlie Daniels Band,67,1979
-Mama Tried,Country,Merle Haggard,47,1968
-Neon Moon,Country,Brooks & Dunn,58,1992
-On the Road Again,Country,Willie Nelson,59,1980
-Picture,Country,Kid Rock ft. Sheryl Crow,57,2002
-Rhinestone Cowboy,Country,Glen Campbell,53,1975
-Stand By Your Man,Country,Tammy Wynette,49,1968
-Take Me Home Country Roads,Country,John Denver,70,1971
-The Dance,Country,Garth Brooks,60,1990
-The Gambler,Country,Kenny Rogers,58,1978
-Wichita Lineman,Country,Glen Campbell,51,1968
-You're Still The One,Country,Shania Twain,64,1998
-Your Cheatin' Heart,Country,Hank Williams,46,1953
-You've Got a Friend,Country,James Taylor,57,1971
+Forever After All; country; Luke Combs; 94; 2020
+Die From A Broken Heart; country; Maddie & Tae; 87; 2019
+What's Your Country Song; country; Thomas Rhett; 78; 2020
+Tennessee Whiskey; country; Chris Stapleton; 91; 2015
+I Hope; country; Gabby Barrett; 88; 2019
+Drinkin' Problem; country; Midland; 84; 2017
+The Bones; country; Maren Morris; 95; 2019
+Beer Never Broke My Heart; country; Luke Combs; 89; 2019
+I Don't Want This Night To End; country; Luke Bryan; 83; 2011
+House Party; country; Sam Hunt; 76; 2014
+Tequila Does; country; Miranda Lambert; 82; 2019
+Good Vibes; country; Chris Janson; 80; 2019
+Girl Crush; country; Little Big Town; 90; 2014
+She's Country; country; Jason Aldean; 85; 2009
+A Little Dive Bar In Dahlonega; country; Ashley McBryde; 79; 2017
+Somewhere On A Beach; country; Dierks Bentley; 77; 2016
+Cruise; country; Florida Georgia Line; 86; 2012
+Jolene; country; Dolly Parton; 93; 1973
+My Church; country; Maren Morris; 92; 2015
+Wagon Wheel; country; Darius Rucker; 88; 2013
+You Broke Up With Me; country; Walker Hayes; 81; 2017
+Body Like A Back Road; country; Sam Hunt; 90; 2017
+Folsom Prison Blues; country; Johnny Cash; 94; 1955
+Friends In Low Places; country; Garth Brooks; 89; 1990
+I Walk The Line; country; Johnny Cash; 92; 1956
+Stand By Your Man; country; Tammy Wynette; 87; 1968
+Devil Went Down To Georgia; country; Charlie Daniels Band; 90; 1979
+Mama Tried; country; Merle Haggard; 91; 1968
+He Stopped Loving Her Today; country; George Jones; 95; 1980
+Coal Miner's Daughter; country; Loretta Lynn; 93; 1970
+Friends Don't; country; Maddie & Tae; 82; 2018
+Wasted On You; country; Morgan Wallen; 89; 2021
+Chicken Fried; country; Zac Brown Band; 86; 2008
+Bluebird; country; Miranda Lambert; 91; 2019
+Speechless; country; Dan + Shay; 84; 2018
+Amazed; country; Lonestar; 90; 1999
+Blue Ain't Your Color; country; Keith Urban; 87;
+Follow Your Arrow; country; Kacey Musgraves; 88; 2013
+Cruise; country; Florida Georgia Line ft. Nelly; 83; 2012
+Man! I Feel Like a Woman!; country; Shania Twain; 90; 1997
+Drowns the Whiskey; country; Jason Aldean ft. Miranda Lambert; 82; 2018
+I Hope You Dance; country; Lee Ann Womack; 91; 2000
+More Than My Hometown; country; Morgan Wallen; 80; 2020
+Strawberry Wine; country; Deana Carter; 89; 1996
+Some Beach; country; Blake Shelton; 82; 2004
+Before He Cheats; country; Carrie Underwood; 90; 2005
+Wagon Wheel; country; Old Crow Medicine Show; 88; 2004
+Tequila; country; Dan + Shay; 91; 2018
+Chicken Fried; country; Zac Brown Band; 87; 2008
+We Were Us; country; Keith Urban ft. Miranda Lambert; 84; 2013
+Die A Happy Man; country; Thomas Rhett; 93; 2015
+Highwayman; country; The Highwaymen; 90; 1985
+God Bless the U.S.A.; country; Lee Greenwood; 94; 1984
+I Hope; country; Ryan Hurd ft. Maren Morris; 87; 2019
+You Say; country; Lauren Daigle; 86; 2018
+In Case You Didn't Know; country; Brett Young; 89; 2017
+I Love This Bar; country; Toby Keith; 82; 2003
+Like A Cowboy; country; Randy Houser; 80; 2014
+Take Me Home, Country Roads; country; John Denver; 92; 1971
+The Gambler; country; Kenny Rogers; 88; 1978
+Tennessee Whiskey; country; David Allan Coe; 87; 1981
+That's My Kind of Night; country; Luke Bryan; 85; 2013
+Need You Now; country; Lady A; 90; 2009
+Don't Rock the Jukebox; country; Alan Jackson; 87; 1991
+The House That Built Me; country; Miranda Lambert; 92; 2010
+9 to 5; country; Dolly Parton; 89; 1980
+Before the Next Teardrop Falls; country; Freddy Fender; 91; 1974
+I Hope; country; Matt Stell ft. Jimmie Allen; 80; 2019
+She's My Kind of Rain; country; Tim McGraw; 83; 2002
+Drunk On A Plane; country; Dierks Bentley; 86; 2014
+Cruise; country; Florida Georgia Line ft. Backstreet Boys; 81; 2012
+John Cougar, John Deere, John 3:16; country; Keith Urban; 79; 2015
+Dirt Road Anthem; country; Jason Aldean; 85; 2010
+Live Like You Were Dying; country; Tim McGraw; 93; 2004
+Girl Crush; country; Little Big Town; 90; 2014
+Any Man of Mine; country; Shania Twain; 89; 1995
+How Do You Like Me Now?!; country; Toby Keith; 85; 1999
+There's Your Trouble; country; Dixie Chicks; 84; 1998
+My Maria; country; Brooks & Dunn; 87; 1996
+Drink a Beer; country; Luke Bryan; 83; 2013
+The Dance; country; Garth Brooks; 92; 1989
+Die From A Broken Heart; country; Maddie & Tae; 85; 2019
+Tequila Makes Her Clothes Fall Off; country; Joe Nichols; 81; 2005
+Whiskey Lullaby; country; Brad Paisley ft. Alison Krauss; 91; 2003
+I Don't Want This Night To End; country; Luke Bryan; 88; 2011
+Jolene; country; Dolly Parton; 90; 1973
+The Devil Went Down to Georgia; country; The Charlie Daniels Band; 92; 1979
+Something Like That; country; Tim McGraw; 88; 1999
+One Man Band; country; Old Dominion; 82; 2019
+Drunk Girl; country; Chris Janson; 80; 2017
+Forever And Ever, Amen; country; Randy Travis; 90; 1987
+God's Country; country; Blake Shelton; 87; 2019
+Friends in Low Places; country; Garth Brooks; 93; 1990
+Rain Is A Good Thing; country; Luke Bryan; 83; 2009
+Cruise; country; Florida Georgia Line; 80; 2012
+Chicken Fried; country; Zac Brown Band; 87; 2008
+Remember When; country; Alan Jackson; 91; 2003
+I Drive Your Truck; country; Lee Brice; 89; 2012
+The House That Jack Built; country; Alan Jackson; 85; 1995
+Blue Ain't Your Color; country; Keith Urban; 89; 2016
+All My Ex's Live in Texas; country; George Strait; 88; 1987
+Good Directions; country; Billy Currington; 84; 2007
+Wanted; country; Hunter Hayes; 86; 2012
+What A Beautiful Day; country; Chris Cagle; 81; 2002
+Stay; country; Sugarland; 87; 2007
+Stuck Like Glue; country; Sugarland; 84; 2010
+When You Say Nothing At All; country; Keith Whitley; 92; 1988
+Strawberry Wine; country; Kelsea Ballerini; 83; 2015
+Body Like A Back Road; country; Sam Hunt; 87; 2017
+Thunder Rolls; country; Garth Brooks; 91; 1991
+Should've Been A Cowboy; country; Toby Keith; 86; 1993
+Mama's Broken Heart; country; Miranda Lambert; 84; 2013
+Achy Breaky Heart; country; Billy Ray Cyrus; 80; 1992
+It's Five O'Clock Somewhere; country; Alan Jackson ft. Jimmy Buffett; 88; 2003
+How Forever Feels; country; Kenny Chesney; 85; 1999
+Austin; country; Blake Shelton; 83; 2001
+Beer For My Horses; country; Toby Keith ft. Willie Nelson; 81; 2003
+It Happens; country; Sugarland; 83; 2009
+My Church; country; Maren Morris; 89; 2015
+Dust on the Bottle; country; David Lee Murphy; 82; 1994
+Chattahoochee; country; Alan Jackson; 91; 1992
+God Blessed Texas; country; Little Texas; 86; 1993
+Come a Little Closer; country; Dierks Bentley; 87; 2005
+I Hope; country; Gabby Barrett; 88; 2019
+You Belong With Me; country; Taylor Swift; 85; 2008
+Neon Moon; country; Brooks & Dunn; 89; 1992
+I Don't Want to Miss a Thing; country; Mark Chesnutt; 83; 1998
+My Best Friend; country; Tim McGraw; 82; 1999
+Blue Eyes Crying in the Rain; country; Willie Nelson; 87; 1975
+Stand By Your Man; country; Tammy Wynette; 90; 1968
+Just To See You Smile; country; Tim McGraw; 87; 1997
+Dust on the Bottle; country; David Lee Murphy; 82; 1994
+Strawberry Wine; country; Deana Carter; 87; 1996
+Nobody But You; country; Blake Shelton ft. Gwen Stefani; 84; 2019
+When The Sun Goes Down; country; Kenny Chesney ft. Uncle Kracker; 83; 2004
+Strawberry Wine; country; Kelsea Ballerini; 83; 2015
+One More Last Chance; country; Vince Gill; 86; 1993
+Church Bells; country; Carrie Underwood; 85; 2016
+Here's A Quarter (Call Someone Who Cares); country; Travis Tritt; 84; 1991
+Need You Now; country; Lady A; 90; 2009
+Beer In Mexico; country; Kenny Chesney; 83; 2006
+Dibs; country; Kelsea Ballerini; 81; 2015
+Whiskey River; country; Willie Nelson; 84; 1973
+Don't Blink; country; Kenny Chesney; 88; 2007
+When I Said I Do; country; Clint Black ft. Lisa Hartman Black; 87; 1999
+Neon Moon; country; Casi Joy; 83; 2021
+Before He Cheats; country; Carrie Underwood; 91; 2005
+Beautiful Crazy; country; Luke Combs; 90; 2018
+Love You Like That; country; Canaan Smith; 82; 2014
+Tennessee Whiskey; country; Chris Stapleton; 89; 2015
+Tennessee River; country; Alabama; 84; 1980
+I Walk The Line; country; Johnny Cash; 88; 1956
+Tennessee Flat Top Box; country; Rosanne Cash; 86; 1987
+Family Tradition; country; Hank Williams Jr.; 85; 1979
+I'm So Lonesome I Could Cry; country; Hank Williams; 87; 1949
+Mountain Music; country; Alabama; 83; 1982
+Islands In The Stream; country; Kenny Rogers & Dolly Parton; 90; 1983
+The Thunder Rolls; country; Garth Brooks; 89; 1991
+You Needed Me; country; Anne Murray; 86; 1978
+I Swear; country; John Michael Montgomery; 88; 1994
+Man! I Feel Like A Woman!; country; Shania Twain; 91; 1997
+Achy Breaky Heart; country; The Buckaroos; 84; 1992
+I Can Love You Like That; country; John Michael Montgomery; 85; 1995
+Don't Take The Girl; country; Tim McGraw; 89; 1994
+Forever And Ever, Amen; country; Randy Travis; 87; 1987
+God Bless The USA; country; Lee Greenwood; 89; 1984
+Daddy Sang Bass; country; Johnny Cash; 83; 1968
+Friends In Low Places; country; Garth Brooks; 92; 1990
+Somebody Like You; country; Keith Urban; 87; 2002
+Something Like That; country; Tim McGraw; 86; 1999
+Drive (For Daddy Gene); country; Alan Jackson; 84; 2002
+You're Still The One; country; Shania Twain; 89; 1997
+Chicken Fried; country; Zac Brown Band; 86; 2003
+All-American Girl; country; Carrie Underwood; 83; 2007
+The Good Stuff; country; Kenny Chesney; 85; 2002
+The Dance; country; Garth Brooks; 90; 1990
+The Devil Went Down To Georgia; country; The Charlie Daniels Band; 88; 1979
+Don't It Make My Brown Eyes Blue; country; Crystal Gayle; 85; 1977
+When You Say Nothing At All; country; Alison Krauss & Union Station; 89; 1995
+If Tomorrow Never Comes; country; Garth Brooks; 88; 1989
+All My Ex's Live In Texas; country; George Strait; 87; 1987
+The Gambler; country; Kenny Rogers; 88; 1978
+Jolene; country; Dolly Parton; 89; 1973
+Chattahoochee; country; Alan Jackson; 91; 1992
+Highwayman; country; The Highwaymen; 87; 1985
+I Will Always Love You; country; Dolly Parton; 91; 1974
+Live Like You Were Dying; country; Tim McGraw; 87; 2004
+The House That Built Me; country; Miranda Lambert; 86; 2009
+A Boy Named Sue; country; Johnny Cash; 89; 1969
+Little Red Wagon; country; Miranda Lambert; 85; 2015
+Stuck Like Glue; country; Sugarland; 84; 2010
+Cruise; country; Florida Georgia Line; 88; 2012
+Strawberry Wine; country; Deana Carter; 87; 1996
+Amarillo By Morning; country; George Strait; 88; 1982
+Remember When; country; Alan Jackson; 85; 2003
+Stay; country; Sugarland; 89; 2007
+Man Of Constant Sorrow; country; The Soggy Bottom Boys; 87; 2000
+In Color; country; Jamey Johnson; 86; 2008
+My Church; country; Maren Morris; 84; 2016
+This Is How We Roll; country; Florida Georgia Line ft. Luke Bryan; 87; 2014
+Follow Your Arrow; country; Kacey Musgraves; 85; 2013
+Chicken Fried; country; Zac Brown Band; 87; 2008
+Drunk On A Plane; country; Dierks Bentley; 86; 2014
+Two Black Cadillacs; country; Carrie Underwood; 84; 2012
+Neon Moon; country; Brooks & Dunn; 89; 1992
+That Don't Impress Me Much; country; Shania Twain; 88; 1997
+God's Country; country; Blake Shelton; 85; 2019
+We Were Us; country; Keith Urban ft. Miranda Lambert; 86; 2013
+One Man Band; country; Old Dominion; 84; 2019
+Austin; country; Blake Shelton; 88; 2001
+Good Directions; country; Billy Currington; 85; 2007
+Wanted; country; Hunter Hayes; 86; 2011
+You Belong With Me; country; Taylor Swift; 87; 2008
+Amazed; country; Lonestar; 89; 1999
+Tennessee Whiskey; country; David Allan Coe; 86; 1981
+The Night The Lights Went Out In Georgia; country; Reba McEntire; 87; 1991
+Neon Moon; country; Cimorelli; 85; 2017
+I Cross My Heart; country; George Strait; 90; 1992
+Why Don't We Just Dance; country; Josh Turner; 85; 2009
+Life Is A Highway; country; Tom Cochrane; 88; 1991
+Something To Talk About; country; Bonnie Raitt; 86; 1990
+It's Five O'Clock Somewhere; country; Alan Jackson & Jimmy Buffett; 87; 2003
+Strawberry Wine; country; Sam Hunt; 84; 2014
+How Do You Like Me Now?!; country; Toby Keith; 86; 1999
+A Broken Wing; country; Martina McBride; 85; 1997
+Don't Take The Girl; country; Tim McGraw; 89; 1994
+Born To Boogie; country; Hank Williams Jr.; 88; 1987
+Should've Been A Cowboy; country; Toby Keith; 87; 1993
+The Dance; country; Garth Brooks; 90; 1990
+The Thunder Rolls; country; Garth Brooks; 88; 1990
+Toes; country; Zac Brown Band; 86; 2009
+Whiskey Lullaby; country; Brad Paisley ft. Alison Krauss; 89; 2003
+I Walk The Line; country; Johnny Cash; 87; 1956
+Chattahoochee; country; Alan Jackson; 88; 1992
+Angel Flying Too Close To The Ground; country; Willie Nelson; 85; 1981
+Don't Rock The Jukebox; country; Alan Jackson; 86; 1991
+Before He Cheats; country; Carrie Underwood; 89; 2005
+Friends In Low Places; country; Garth Brooks; 90; 1990
+She's Country; country; Jason Aldean; 87; 2008
+Good Time; country; Alan Jackson; 85; 2008
+Forever And Ever, Amen; country; Randy Travis; 88; 1987
+Drivin' My Life Away; country; Eddie Rabbitt; 86; 1980
+All My Ex's Live In Texas; country; George Strait; 89; 1987
+Here For A Good Time; country; George Strait; 87; 2011
+God Bless The U.S.A.; country; Lee Greenwood; 90; 1984
+Mama Tried; country; Merle Haggard; 85; 1968
+The Devil Went Down To Georgia; country; The Charlie Daniels Band; 89; 1979
+I Hope You Dance; country; Lee Ann Womack; 86; 2000
+I'm No Stranger To The Rain; country; Keith Whitley; 87; 1989
+Where The Green Grass Grows; country; Tim McGraw; 85; 1998
+Forever And For Always; country; Shania Twain; 88; 2002
+Blue Clear Sky; country; George Strait; 87; 1996
+Ain't Goin' Down ('Til The Sun Comes Up); country; Garth Brooks; 85; 1993
+The Chair; country; George Strait; 86; 1985
+She Believes In Me; country; Kenny Rogers; 89; 1979
+Save A Horse (Ride A Cowboy); country; Big & Rich; 87; 2004
+He Stopped Loving Her Today; country; George Jones; 90; 1980
+That's My Kind Of Night; country; Luke Bryan; 85; 2013
+In Case You Didn't Know; country; Brett Young; 86; 2017
+I Hope; country; Gabby Barrett ft. Charlie Puth; 88; 2020
+Tequila; country; Dan + Shay; 87; 2018
+My Church; country; Maren Morris; 85; 2015
+Love You Like I Used To; country; Russell Dickerson; 86; 2020
+Heaven; country; Kane Brown; 88; 2017
+Speechless; country; Dan + Shay; 89; 2018
+Homesick; country; Kane Brown; 85; 2019
+I Don't Want This Night To End; country; Luke Bryan; 87; 2011
+Cruise; country; Florida Georgia Line; 90; 2012
+Hurricane; country; Luke Combs; 88; 2015
+Die A Happy Man; country; Thomas Rhett; 89; 2015
+Love Story; country; Taylor Swift; 86; 2008
+Girl Crush; country; Little Big Town; 88; 2014
+My Wish; country; Rascal Flatts; 87; 2006
+You Look Good; country; Lady A; 85; 2017
+Die From A Broken Heart; country; Maddie & Tae; 86; 2019
+Tennessee Whiskey; country; Chris Stapleton; 90; 2015
+It Goes Like This; country; Thomas Rhett; 87; 2013
+What Ifs; country; Kane Brown ft. Lauren Alaina; 88; 2017
+You Make It Easy; country; Jason Aldean; 85; 2018
+Body Like A Back Road; country; Sam Hunt; 89; 2017
+Tennessee Whiskey; country; David Allan Coe; 87; 1981
+Amarillo By Morning; country; George Strait; 88; 1983
+Independence Day; country; Martina McBride; 90; 1994
+The Dance; country; Tony Arata; 88; 1990
+Coat of Many Colors; country; Dolly Parton; 85; 1971
+Rhinestone Cowboy; country; Glen Campbell; 89; 1975
+Jolene; country; Dolly Parton; 90; 1973
+You're Still the One; country; Shania Twain; 88; 1997
+Strawberry Wine; country; Deana Carter; 85; 1996
+The House That Built Me; country; Miranda Lambert; 89; 2010
+The Night The Lights Went Out In Georgia; country; Vicki Lawrence; 87; 1972
+Desperado; country; The Eagles; 86; 1973
+I Will Always Love You; country; Dolly Parton; 90; 1974
+Always On My Mind; country; Willie Nelson; 88; 1982
+I Walk The Line; country; Johnny Cash; 87; 1956
+Live Like You Were Dying; country; Tim McGraw; 89; 2004
+Friends In Low Places; country; Garth Brooks; 90; 1990
+Mama Tried; country; Merle Haggard; 88; 1968
+The Devil Went Down to Georgia; country; The Charlie Daniels Band; 90; 1979
+God Bless the U.S.A.; country; Lee Greenwood; 89; 1984
+D-I-V-O-R-C-E; country; Tammy Wynette; 87; 1968
+The Gambler; country; Kenny Rogers; 86; 1978
+Coal Miner's Daughter; country; Loretta Lynn; 90; 1970
+On the Road Again; country; Willie Nelson; 89; 1980
+El Paso; country; Marty Robbins; 88; 1959
+Stand by Your Man; country; Tammy Wynette; 87; 1968
+Crazy; country; Patsy Cline; 90; 1961
+He Stopped Loving Her Today; country; George Jones; 89; 1980
+Ring of Fire; country; Johnny Cash; 88; 1963
+The Thunder Rolls; country; Garth Brooks; 87; 1990
+Forever and Ever, Amen; country; Randy Travis; 86; 1987
+The Dance; country; Garth Brooks; 90; 1990
+When You Say Nothing At All; country; Keith Whitley; 89; 1988
+Highwayman; country; The Highwaymen; 88; 1985
+Don't Close Your Eyes; country; Keith Whitley; 87; 1988
+Angel Flying Too Close to the Ground; country; Willie Nelson; 86; 1981
+Amarillo Sky; country; Jason Aldean; 85; 2006
+Strawberry Wine; country; Sam Hunt; 84; 2014
+One Number Away; country; Luke Combs; 88; 2017
+Tequila Makes Her Clothes Fall Off; country; Joe Nichols; 85; 2005
+Tennessee Whiskey; country; Chris Stapleton; 90; 2015
+I Hold On; country; Dierks Bentley; 89; 2013
+Take Me Home, Country Roads; country; John Denver; 87; 1971
+Mama's Broken Heart; country; Miranda Lambert; 86; 2013
+House Party; country; Sam Hunt; 85; 2014
+Blue Ain't Your Color; country; Keith Urban; 88; 2016
+Follow Your Arrow; country; Kacey Musgraves; 89; 2013
+Better Man; country; Little Big Town; 87; 2016
+You Broke Up with Me; country; Walker Hayes; 85; 2017
+Head Over Boots; country; Jon Pardi; 86; 2015
+Drinkin' Problem; country; Midland; 88; 2016
+Body Like A Back Road; country; Sam Hunt; 89; 2017
+Girl Crush; country; Little Big Town; 90; 2014
+Drowns the Whiskey; country; Jason Aldean ft. Miranda Lambert; 86; 2018
+In Case You Didn't Know; country; Brett Young; 88; 2017
+The House That Built Me; country; Miranda Lambert; 89; 2009
+Blue Tacoma; country; Russell Dickerson; 85; 2017
+Millionaire; country; Chris Stapleton; 87; 2018
+I Hope; country; Gabby Barrett; 90; 2019
+Whiskey Glasses; country; Morgan Wallen; 89; 2018
+The Bones; country; Maren Morris; 88; 2019
+When It Rains It Pours; country; Luke Combs; 87; 2017
+My Church; country; Maren Morris; 86; 2015
+House of the Rising Sun; country; The Animals; 88; 1964
+God's Country; country; Blake Shelton; 89; 2019
+All My Ex's Live in Texas; country; George Strait; 87; 1987
+If Tomorrow Never Comes; country; Garth Brooks; 86; 1989
+Copperhead Road; country; Steve Earle; 88; 1988
+The Devil Went Down to Georgia; country; The Charlie Daniels Band; 90; 1979
+Remember When; country; Alan Jackson; 89; 2003
+Beautiful Crazy; country; Luke Combs; 88; 2018
+We Were; country; Keith Urban; 87; 2019
+Tennessee River; country; Alabama; 86; 1980
+I Walk the Line; country; Johnny Cash; 88; 1956
+It's Your Love; country; Tim McGraw ft. Faith Hill; 89; 1997
+Die a Happy Man; country; Thomas Rhett; 90; 2015
+I Drive Your Truck; country; Lee Brice; 87; 2012
+Man! I Feel Like a Woman!; country; Shania Twain; 86; 1997
+In Color; country; Jamey Johnson; 88; 2008
+You Belong with Me; country; Taylor Swift; 89; 2008
+Toes; country; Zac Brown Band; 87; 2008
+Drinkin' Beer. Talking God. Amen.; country; Chase Rice ft. Florida Georgia Line; 85; 2020
+Country Again; country; Thomas Rhett; 86; 2021
+Take Back Home Girl; country; Chris Lane ft. Tori Kelly; 88; 2017
+Something Like That; country; Tim McGraw; 89; 1999
+Born to Boogie; country; Hank Williams Jr.; 87; 1987
+Life Is a Highway; country; Tom Cochrane; 86; 1991
+Rumor; country; Lee Brice; 88; 2018
+The Fighter; country; Keith Urban ft. Carrie Underwood; 89; 2016
+Hell on Heels; country; Pistol Annies; 87; 2011
+Somebody Like You; country; Keith Urban; 86; 2002
+That's What I Love About Sunday; country; Craig Morgan; 85; 2004
+You Should Be Here; country; Cole Swindell; 88; 2015
+Beer Never Broke My Heart; country; Luke Combs; 89; 2019
+Every Little Thing; country; Carly Pearce; 86; 2017
+Pontoon; country; Little Big Town; 87; 2012
+My Maria; country; Brooks & Dunn; 88; 1996
+Drunk on You; country; Luke Bryan; 89; 2012
+5-1-5-0; country; Dierks Bentley; 86; 2012
+Free and Easy (Down the Road I Go); country; Dierks Bentley; 87; 2006
+A Little Dive Bar in Dahlonega; country; Ashley McBryde; 88; 2017
+High Horse; country; Kacey Musgraves; 89; 2018
+You Look Good; country; Lady A; 86; 2017
+Break Up in a Small Town; country; Sam Hunt; 87; 2014
+Tequila; country; Dan + Shay; 88; 2018
+Black Sheep; country; Gin Wigmore; 89; 2011
+Ain't No Grave; country; Johnny Cash; 86; 2010
+Feels Like A Party; country; LOCASH; 87; 2019
+You Make It Easy; country; Jason Aldean; 88; 2017
+Wagon Wheel; country; Darius Rucker; 89; 2013
+Cruise; country; Florida Georgia Line; 86; 2012
+Chicken Fried; country; Zac Brown Band; 87; 2008
+Speechless; country; Dan + Shay; 88; 2018
+Wanted; country; Hunter Hayes; 89; 2012
+Love Story; country; Taylor Swift; 86; 2008
+Home; country; Blake Shelton; 87; 2008
+I Hold On; country; Dierks Bentley; 88; 2013
+The Good Stuff; country; Kenny Chesney; 89; 2002
+Man of Constant Sorrow; country; Soggy Bottom Boys; 86; 2000
+Little Red Wagon; country; Miranda Lambert; 87; 2014
+I'm Comin' Over; country; Chris Young; 88; 2015
+A Thousand Miles from Nowhere; country; Dwight Yoakam; 89; 1993
+Don't Stop Believin'; country; Journey; 86; 1981
+Just Got Started Lovin' You; country; James Otto; 87; 2008
+She's Country; country; Jason Aldean; 88; 2008
+Drive; country; Alan Jackson; 89; 2002
+Here for the Party; country; Gretchen Wilson; 86; 2004
+If I Die Young; country; The Band Perry; 87; 2010
+Die a Happy Man; country; Thomas Rhett; 89; 2015
+What Was I Thinkin'; country; Dierks Bentley; 86; 2003
+When It Rains It Pours; country; Luke Combs; 87; 2017
+The House That Built Me; country; Miranda Lambert; 88; 2009
+Fishin' in the Dark; country; Nitty Gritty Dirt Band; 89; 1987
+Burning House; country; Cam; 86; 2015
+God's Country; country; Blake Shelton; 87; 2019
+In Case You Didn't Know; country; Brett Young; 88; 2017
+Leave the Night On; country; Sam Hunt; 89; 2014
+Dirt on My Boots; country; Jon Pardi; 86; 2016
+Tennessee Whiskey; country; Chris Stapleton; 87; 2015
+Good Vibes; country; Chris Janson; 88; 2019
+Stay a Little Longer; country; Brothers Osborne; 89; 2015
+Drink in My Hand; country; Eric Church; 86; 2011
+Family Tradition; country; Hank Williams Jr.; 87; 1979
+Somethin' Bad; country; Miranda Lambert ft. Carrie Underwood; 88; 2014
+The Dance; country; Garth Brooks; 89; 1990
+I Like It, I Love It; country; Tim McGraw; 86; 1995
+Blue Ain't Your Color; country; Keith Urban; 87; 2016
+Stuck Like Glue; country; Sugarland; 88; 2010
+Body Like a Back Road; country; Sam Hunt; 89; 2017
+Jolene; country; Dolly Parton; 86; 1974
+She's Everything; country; Brad Paisley; 87; 2005
+I Hope You Dance; country; Lee Ann Womack; 88; 2000
+Red Dirt Road; country; Brooks & Dunn; 89; 2003
+Small Town USA; country; Justin Moore; 86; 2009
+You Belong With Me; country; Taylor Swift; 87; 2008
+This Is How We Roll; country; Florida Georgia Line ft. Luke Bryan; 88; 2013
+Good Girl; country; Carrie Underwood; 89; 2012
+How Do You Like Me Now?!; country; Toby Keith; 86; 1999
+One More Last Chance; country; Vince Gill; 87; 1993
+The Night We Met; country; Lord Huron; 88; 2015
+Homemade Dynamite; country; Lorde; 89; 2017
+I Will Always Love You; country; Dolly Parton; 86; 1974
+Southern Girl; country; Tim McGraw; 87; 2013
+Toes; country; Zac Brown Band; 88; 2009
+Fast Cars and Freedom; country; Rascal Flatts; 89; 2005
+Mama Tried; country; Merle Haggard; 86; 1968
+Drunk on a Plane; country; Dierks Bentley; 87; 2013
+In Color; country; Jamey Johnson; 88; 2008
+Neon Moon; country; Brooks & Dunn; 89; 1992
+I Walk the Line; country; Johnny Cash; 86; 1956
+Wagon Wheel; country; Darius Rucker; 87; 2013
+Fancy; country; Reba McEntire; 88; 1990
+Neon Light; country; Blake Shelton; 89; 2014
+Better Man; country; Little Big Town; 86; 2016
+Save a Horse (Ride a Cowboy); country; Big & Rich; 87; 2004
+Don't Take the Girl; country; Tim McGraw; 88; 1994
+You Look Good; country; Lady A; 89; 2017
+There Goes My Life; country; Kenny Chesney; 86; 2003
+Bless the Broken Road; country; Rascal Flatts; 87; 2004
+You Should Be Here; country; Cole Swindell; 88; 2016
+Friends in Low Places; country; Garth Brooks; 89; 1990
+Girl Crush; country; Little Big Town; 86; 2014
+Heart Like Mine; country; Miranda Lambert; 87; 2009
+Die From A Broken Heart; country; Maddie & Tae; 88; 2019
+Wanted; country; Hunter Hayes; 89; 2012
+Achy Breaky Heart; country; Billy Ray Cyrus; 86; 1992
+Boot Scootin' Boogie; country; Brooks & Dunn; 87; 1992
+Chicken Fried; country; Zac Brown Band; 88; 2008
+How Forever Feels; country; Kenny Chesney; 89; 1999
+You're Still the One; country; Shania Twain; 86; 1997
+Thunder Rolls; country; Garth Brooks; 87; 1991
+My Church; country; Maren Morris; 88; 2015
+Wild Angels; country; Martina McBride; 89; 1995
+Strawberry Wine; country; Deana Carter; 86; 1996
+Remember When; country; Alan Jackson; 87; 2003
+The Good Stuff; country; Kenny Chesney; 88; 2002
+Check Yes or No; country; George Strait; 89; 1995
+She's Country; country; Jason Aldean; 86; 2009
+All My Ex's Live in Texas; country; George Strait; 87; 1987
+Man! I Feel Like a Woman!; country; Shania Twain; 88; 1997
+Amarillo by Morning; country; George Strait; 89; 1983
+Born to Fly; country; Sara Evans; 86; 2000
+Cruise; country; Florida Georgia Line; 87; 2012
+Amazed; country; Lonestar; 89; 1999
+All My Ex's Live In Texas; country; George Strait; 82; 1987
+Tennessee Whiskey; country; Chris Stapleton; 93; 2015
+Before He Cheats; country; Carrie Underwood; 86; 2005
+Chicken Fried; country; Zac Brown Band; 81; 2008
+I Cross My Heart; country; George Strait; 79; 1992
+Strawberry Wine; country; Deana Carter; 76; 1996
+You're Still the One; country; Shania Twain; 85; 1998
+Buy Me a Boat; country; Chris Janson; 72; 2015
+I Hope; country; Gabby Barrett; 88; 2019
+Die a Happy Man; country; Thomas Rhett; 91; 2015
+Girl Crush; country; Little Big Town; 83; 2014
+Good Directions; country; Billy Currington; 77; 2007
+Nobody But You; country; Blake Shelton, Gwen Stefani; 84; 2020
+Springsteen; country; Eric Church; 80; 2011
+Tequila; country; Dan + Shay; 90; 2018
+The House That Built Me; country; Miranda Lambert; 76; 2009

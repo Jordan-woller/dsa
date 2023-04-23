@@ -118,15 +118,14 @@ int main(int argc, char*argv[]){
         std::cout << "5. Quit" << std::endl;
         std::cin >> initial_choice;
         if ( initial_choice != "1" and initial_choice != "2" and initial_choice != "3" and initial_choice != "4" and initial_choice != "5" ) {
-            std::cout << "Invalid entry, please enter one of the listed options." << std::endl;
+            std::cout << "Invalid entry, please enter one of the listed options:" << std::endl;
             std::cin >> initial_choice;
         }
         //Handling for the different choices
         if (initial_choice == "1") {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
             song_choice = playlist.multi_line();
-           // std::getline(std::cin, song_choice);   //no need to error check for song choice because songs can be numbers, characters, or strings
-           // std::cin >> song_choice;
+            //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             genre_choice = playlist.multi_line();
             //error checking for genre_choice loops through each character in the variable to ensure it is not a number
@@ -161,6 +160,7 @@ int main(int argc, char*argv[]){
             //displays the song the user chose
             std::cout << "You chose the following song: " << song_choice << ", " << genre_choice << ", "
                       << artist_choice << ", " << popularity << ", " << release_year << std::endl;
+            //different criteria to sort by
             std::cout << "How would you like the playlist to be sorted by? Choose an option 1-5." << std::endl;
             std::cout << "1. Song Title" << std::endl;
             std::cout << "2. Genre" << std::endl;
@@ -168,21 +168,19 @@ int main(int argc, char*argv[]){
             std::cout << "4. Popularity" << std::endl;
             std::cout << "5. Release Year" << std::endl;
             std::cin >> insertion_option;
+            //error checking for insertion_option
             while (insertion_option != 1 and insertion_option != 2 and insertion_option != 3 and
                    insertion_option != 4 and insertion_option != 5) {
                 std::cout << "Invalid entry, try again." << std::endl;
                 std::cin >> insertion_option;
             }
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
-            //TODO calls quick sort shuffle to sort the playlist by whatever criteria the user wants
+            //calls shuffle which calls quicksort to sort by given criteria.
             playlist.shuffle(insertion_option);
-            //TODO add function call to insertion method that sorts the added song into playlist database
+            //calls insertion sort and takes in all options provided by the user
             playlist.insertion(insertion_option-1, song_choice, genre_choice, artist_choice, release_year, popularity);
-            //calls insertion method to sort added song into playlist database
-            //this->Sorting::insertion(insertion_option, song_choice, genre_choice, artist_choice, release_year, popularity);
+            //prints the database with new song and criteria inserted
             playlist.print_database();
-
-
         }
 
         if (initial_choice == "2") {

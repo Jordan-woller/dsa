@@ -93,16 +93,14 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     database[3].push_back(popularity);
     database[4].push_back(release_year);
 
-    int size = database[0].size()-1;
+    int size = database[0].size()-1; //getting size of database
 
-
-
+    //if the insertion option is a string, it does insertion sort by ascii character value
     if(insertion_option == 0 or insertion_option == 1 or insertion_option == 2){
-        for(int i = size; i > 0; i--){
+        for(int i = size; i > 0; i--){ //goes through size of database
             int j = i;
-            //inserts j in sorted part
-            //compares the first character
             while(j > 0){
+                //calles comparestr method to compare by ascii value
                 if(comparestr(database[insertion_option][j],
                               database[insertion_option][j-1])){
                     //swaps every category with each other to be in proper place
@@ -115,15 +113,11 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
                 j--;
             }
         }
-    } else{ //if insertion option is 4 or 5, it is an integer so it compares slightly differently
-        for(int k = size; k > 0; k--){
+    } else{ //if insertion option is 4 or 5, it compares by integer value
+        for(int k = size; k > 0; k--){ //goes through size of database
             int l = k;
-            //inserts j in sorted part
-            //compares the first character
             while(l > 0){
-               // std::cout << "TEST: " <<  database[insertion_option][l-1] << std::endl;
-               // std::cout << "TEST NUMBER 2: " <<  database[insertion_option][l] << std::endl;
-
+                //converts string of priority of year into an int to be compared
                 int a = std::stoi(database[insertion_option][l-1]);
                 int b = std::stoi(database[insertion_option][l]);
 

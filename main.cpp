@@ -107,9 +107,8 @@ int main(int argc, char*argv[]){
     // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
     bool keepGoing = true;
 
-
+    std::cout << "Hello!\n";
     while(keepGoing) { //5 is the quit option
-        std::cout << "Hello!\n";
         std::cout << "What would you like to do?" << std::endl;
         std::cout << "1. Insert a song of your choice into the database." << std::endl;
         std::cout << "2. Get a personalized series of song recommendations based on songs you like." << std::endl;
@@ -220,6 +219,7 @@ int main(int argc, char*argv[]){
                     used.push_back(song_select);
                     song_choice_vec[0].push_back(playlist.getTitle(song_select));
                     song_choice_vec[1].push_back(playlist.getYear(song_select));
+                    amt++;
                 }
             }
             if (playlist_select == "2") {
@@ -238,6 +238,7 @@ int main(int argc, char*argv[]){
                     used.push_back(song_select);
                     song_choice_vec[0].push_back(playlist.getTitle(song_select));
                     song_choice_vec[1].push_back(playlist.getYear(song_select));
+                    amt++;
                 }
             }
             if (playlist_select == "3") {
@@ -256,6 +257,7 @@ int main(int argc, char*argv[]){
                     used.push_back(song_select);
                     song_choice_vec[0].push_back(playlist.getTitle(song_select));
                     song_choice_vec[1].push_back(playlist.getYear(song_select));
+                    amt++;
                 }
             }
             if (playlist_select == "4") {
@@ -274,6 +276,7 @@ int main(int argc, char*argv[]){
                     used.push_back(song_select);
                     song_choice_vec[0].push_back(playlist.getTitle(song_select));
                     song_choice_vec[1].push_back(playlist.getYear(song_select));
+                    amt++;
                 }
             }
             
@@ -297,11 +300,24 @@ int main(int argc, char*argv[]){
                 }
             }
 
-            playlist.heapSort(5);
+            playlist.heapSort(std::stoi(playlist_select));
             std::vector<int> genreVec = playlist.getIndexs(playlistGenre, 2);
-            std::vector<std::vector<std::string>> recommendIndex = playlist.getRecommend(genreVec, song_choice_vec);
-            std::cout << "\n\n\nhi\n\n\n";
-            continue;
+            std::vector<std::vector<std::string>> recsonglist = playlist.getRecommend(genreVec, song_choice_vec);
+            
+            int checksize;
+            if(recsonglist.size() < 5){
+                checksize = 0;
+            } else {
+                checksize = recsonglist.size() - 5;
+            } 
+            std::cout << "\nHere is your list of personalized song recommendations:\n";
+            for(int j = checksize; j < recsonglist.size(); j++){
+                for(int i = 0; i < recsonglist[j].size(); i++){
+                    std::cout << recsonglist[j][i] << " ";
+                }
+                std::cout << "\n";
+            }
+            std::cout << "\n";
         }
         //TODO add another choice to shuffle just a genre
         if (initial_choice == "3") { //reshuffle playlist by criteria of users choosing
@@ -323,7 +339,6 @@ int main(int argc, char*argv[]){
            int x = std::stoi(shuffle_criteria);
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
             playlist.shuffle(x);
-            continue;
         }
 
         if (initial_choice == "4") {
@@ -389,23 +404,23 @@ int main(int argc, char*argv[]){
         //resetting necessary variables
         initial_choice = "0";
 
-        std::cout << "How do you want to sort the playlist?" << std::endl;
-        std::cout << "(enter an option 1-5)" << std::endl;
-        std::cout << "1. Shuffle based on song title" << std::endl;
-        std::cout << "2. Shuffle based on genre" << std::endl;
-        std::cout << "3. Shuffle based on artist" << std::endl;
-        std::cout << "4. Shuffle based on popularity" << std::endl;
-        std::cout << "5. Shuffle based on release year" << std::endl;
+        // std::cout << "How do you want to sort the playlist?" << std::endl;
+        // std::cout << "(enter an option 1-5)" << std::endl;
+        // std::cout << "1. Shuffle based on song title" << std::endl;
+        // std::cout << "2. Shuffle based on genre" << std::endl;
+        // std::cout << "3. Shuffle based on artist" << std::endl;
+        // std::cout << "4. Shuffle based on popularity" << std::endl;
+        // std::cout << "5. Shuffle based on release year" << std::endl;
 
-        std::cin >> shuffle_criteria;
-        //error checking for shuffling criteria
-        while (shuffle_criteria != "1" and shuffle_criteria != "2" and shuffle_criteria != "3" and shuffle_criteria != "4" and shuffle_criteria != "5") {
-            std::cout << "Invalid option, try again." << std::endl;
-            std::cin >> shuffle_criteria;
-        }
+        // std::cin >> shuffle_criteria;
+        // //error checking for shuffling criteria
+        // while (shuffle_criteria != "1" and shuffle_criteria != "2" and shuffle_criteria != "3" and shuffle_criteria != "4" and shuffle_criteria != "5") {
+        //     std::cout << "Invalid option, try again." << std::endl;
+        //     std::cin >> shuffle_criteria;
+        // }
 
-        playlist.heapSort(std::stoi(shuffle_criteria));
-        playlist.print_database();
+        // playlist.heapSort(std::stoi(shuffle_criteria));
+        // playlist.print_database();
     }
 
     //exit(0);

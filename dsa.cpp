@@ -467,17 +467,17 @@ void Sorting::heap_sort2(std::vector<std::string>& myVec, std::vector<std::vecto
     // Build the heap
     for (int i = n / 2 - 1; i >= 0; i--)
         heapify2(myVec, n, i, mVec);
- 
+    
     // Extract elements from the heap one by one
     for (int i = n - 1; i >= 0; i--) {
         swap(myVec[0], myVec[i]);
 
-        // swap(mVec[0][0], mVec[0][i]);
-        // swap(mVec[1][0], mVec[1][i]);
-        // swap(mVec[2][0], mVec[2][i]);
-        swap(mVec[3][0], mVec[3][i]);
-        // swap(mVec[4][0], mVec[4][i]);
-
+        swap(mVec[0][0], mVec[i][0]);
+        swap(mVec[0][1], mVec[i][1]);
+        swap(mVec[0][2], mVec[i][2]);
+        swap(mVec[0][3], mVec[i][3]);
+        swap(mVec[0][4], mVec[i][4]);
+        
         heapify2(myVec, i, 0, mVec);
     }
 }
@@ -496,11 +496,11 @@ void Sorting::heapify2(std::vector<std::string>& myVec, int n, int i, std::vecto
     if (largest != i) {
         swap(myVec[i], myVec[largest]);
 
-        // swap(mVec[0][i], mVec[0][largest]);
-        // swap(mVec[1][i], mVec[1][largest]);
-        // swap(mVec[2][i], mVec[2][largest]);
-        swap(mVec[3][i], mVec[3][largest]);
-        // swap(mVec[4][i], mVec[4][largest]);
+        swap(mVec[i][0], mVec[largest][0]);
+        swap(mVec[i][1], mVec[largest][1]);
+        swap(mVec[i][2], mVec[largest][2]);
+        swap(mVec[i][3], mVec[largest][3]);
+        swap(mVec[i][4], mVec[largest][4]);
 
         heapify2(myVec, n, largest, mVec);
     }
@@ -522,38 +522,11 @@ std::vector<std::vector<std::string>> Sorting::getRecommend(std::vector<int> gen
         
     }
 
-    // for(int j = 0; j < songsinrange.size(); j++){
-    //     for(int i = 0; i < songsinrange[j].size(); i++){
-    //         std::cout << songsinrange[j][i] << " ";
-    //     }
-    //     std::cout << "\n";
-    // }
-    //     std::cout << "\n\n\n\n\n\n";
-
     std::vector<std::string> temp;  
     for(int i = 0; i < songsinrange.size(); i++){
         temp.push_back(songsinrange[i][3]);
     }
-    std::cout << "\n";
-    for(int k = 0; k < temp.size(); k++){
-        std::cout << temp[k] << "\n";
-    }
-
+    
     heap_sort2(temp, songsinrange);
-    std::cout << "\nhi\n\n";
-    for(int k = 0; k < temp.size(); k++){
-        std::cout << temp[k] << "\n";
-    }
-
-    
-    for(int j = 0; j < songsinrange.size(); j++){
-        for(int i = 0; i < songsinrange[j].size(); i++){
-            std::cout << songsinrange[j][i] << " ";
-        }
-        std::cout << "\n";
-    }
-    
-    std::cout << "\nisrael\n";
-
     return songsinrange;
 }

@@ -157,7 +157,7 @@ int Sorting::partition(int lo, int hi, int criteria){
     }
     int i = lo;
     int j = hi + 1;
-    while (1) {
+    while (true) {
         // while A[i] < pivot, increase i
         while (vec[++i] < vec[lo])
             if (i == hi) break;
@@ -206,7 +206,7 @@ void Sorting::shuffle(int criteria){
 
   //print_database();
     r_quicksort(0, hi, criteria);
-    print_database();
+
 }
 
 //compares two strings based on ascii values

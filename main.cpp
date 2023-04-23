@@ -100,7 +100,8 @@ int main(int argc, char*argv[]){
 //    playlist.shuffle(5);
 //    std::cout << std::endl;
 
-    // auto start = std::chrono::high_resolution_clock::now();
+    // 4
+
     // //function call here
     // auto stop = std::chrono::high_resolution_clock::now();
     // auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
@@ -339,6 +340,7 @@ int main(int argc, char*argv[]){
            int x = std::stoi(shuffle_criteria);
             //once criteria is chosen, goes into quicksort method that shuffles based on the criteria
             playlist.shuffle(x);
+            playlist.print_database();
         }
 
         if (initial_choice == "4") {

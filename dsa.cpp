@@ -406,8 +406,7 @@ void Sorting::applySort(std::vector<Song> songs){
 }
 
 void Sorting::heapSort(int criteria){
-    std::vector<std::string> temp = database[criteria-1];
-    heap_sort(temp);
+    heap_sort(database[criteria-1]);
 }
 
 void Sorting::heap_sort(std::vector<std::string>& myVec){

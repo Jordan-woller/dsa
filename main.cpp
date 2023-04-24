@@ -239,7 +239,7 @@ int main(int argc, char*argv[]){
             }
             std::cout << "\n";
         }
-        //TODO add another choice to shuffle just a genre
+
         if (initial_choice == "3") { //reshuffle playlist by criteria of users choosing
             std::cout << "How do you want to shuffle the playlist?" << std::endl;
             std::cout << "(enter an option 1-5)" << std::endl;
@@ -345,7 +345,7 @@ int main(int argc, char*argv[]){
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
                 std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
             }
-            
+
             if(choice == "3"){
                 auto start = std::chrono::high_resolution_clock::now();
                 playlist.shuffle(1);
@@ -353,7 +353,7 @@ int main(int argc, char*argv[]){
                 auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
                 std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
             }
-            
+
             if(choice == "4"){
                 auto start = std::chrono::high_resolution_clock::now();
                 playlist.heapSort(1);

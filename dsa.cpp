@@ -137,15 +137,20 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
 
 int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
-    //song, genre, artist, popularity, and release year
+
+    //Criteria = Song
     if(criteria==1){
         vec = database[0];
+        //Criteria = genre
     } else if(criteria == 2){
         vec = database[1];
+        //Criteria = artist
     }else if(criteria == 3){
         vec = database[2];
+        //Criteria = popularity
     }else if(criteria == 4){
         vec = database[3];
+        //Criteria = release year
     }else if(criteria == 5){
         vec = database[4];
     }
@@ -166,6 +171,8 @@ int Sorting::partition(int lo, int hi, int criteria){
 
         // swap A[i] and A[j]
         std::swap(vec[i], vec[j]);
+
+        //Every swap in vec must be performed in each vector of the 2D vector
        std::swap(database[0][i], database[0][j]);
        std::swap(database[1][i], database[1][j]);
        std::swap(database[2][i], database[2][j]);
@@ -173,7 +180,9 @@ int Sorting::partition(int lo, int hi, int criteria){
        std::swap(database[4][i], database[4][j]);
     }
 
+    //swap pivot and right pointer
     std::swap(vec[lo], vec[j]);
+    //Every swap in vec must be performed in each vector of the 2D vector
     std::swap(database[0][lo], database[0][j]);
     std::swap(database[1][lo], database[1][j]);
     std::swap(database[2][lo], database[2][j]);
@@ -186,19 +195,25 @@ int Sorting::partition(int lo, int hi, int criteria){
 }
 
 void Sorting::r_quicksort(int lo, int hi, int criteria){
+    //base case
     if (hi <= lo) return;
 
+    //find pivot
     int p = partition(lo, hi, criteria);
 
+    //recursively call left sub array
     r_quicksort(lo, p - 1, criteria);
 
+    //recursively call right sub array
     r_quicksort(p + 1, hi, criteria);
 }
 
 void Sorting::shuffle(int criteria){
+
+    //high is length of each vector in 2D vector -1
     int hi = database[0].size()-1;
 
-  //print_database();
+
     r_quicksort(0, hi, criteria);
 
 }
@@ -366,6 +381,8 @@ bool Sorting::song_search(std::string song_lookup){
     return false;
 }
 
+
+///prints all songs above a certain popularity level
 void Sorting::popularity_print(int pop_lookup){
     int y = 1;
     for(int i=0; i<database[3].size(); i++ ){

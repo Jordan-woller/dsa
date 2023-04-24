@@ -18,7 +18,7 @@ If you are not able to compile and run the program with the above options,  down
 indie.txt, rock.txt, country.txt, pop.txt, and rap.txt.  Once in CLion, open the terminal and type in the 
 following command:
 ```
-  g++ -std=c+11 dsa.cpp dsa.h main.cpp-o prog && ./dsa
+g++ -std=c++11 dsa.cpp main.cpp -o <executable name> && ./<executable name> <text file(s) name(s)> 
 ``` 
 
 **Note about setting up the files**

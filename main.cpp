@@ -175,8 +175,8 @@ int main(int argc, char*argv[]){
                 std::cin >> insertion_option;
             }
             std::cout << std::endl << "Here is the new playlist with your song added: " << std::endl;
-            //calls shuffle which calls quicksort to sort by given criteria.
-            playlist.shuffle(insertion_option);
+            //calls merge_sort which sorts by given criteria
+            playlist.merge_sort(insertion_option);
             //calls insertion sort and takes in all options provided by the user
             playlist.insertion(insertion_option-1, song_choice, genre_choice, artist_choice, release_year, popularity);
             //prints the database with new song and criteria inserted

@@ -24,7 +24,7 @@ void Sorting::read_data(std::string file_name){
         int i = 0;
 
         std::string temp;
-        while(std::getline(ss, temp, ',')){
+        while(std::getline(ss, temp, '#')){
             temp_vec.push_back(temp);
 
         }

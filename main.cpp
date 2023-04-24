@@ -22,17 +22,9 @@ int main(int argc, char*argv[]){
 
     Sorting playlist;
 
-    //passing files into the read_data function to get columns
-    playlist.read_data(argv[1]);
-    // playlist.read_data(argv[2]);
-    // playlist.read_data(argv[3]);
-    // playlist.read_data(argv[4]);
-    // playlist.read_data(argv[5]);
-
-//    playlist.print_database();
-//    playlist.shuffle(5);
-//    std::cout << std::endl;
-
+    for(int i = 1; i < argc; i++){
+        playlist.read_data(argv[i]);
+    }
 
     bool keepGoing = true;
 

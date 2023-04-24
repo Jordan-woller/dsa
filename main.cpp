@@ -5,73 +5,6 @@
 #include <cctype>
 #include <algorithm>
 
-bool compare123(const Song& x, const Song& y) {
-    if (x.genre != y.genre) {
-        return x.genre < y.genre;
-    }
-    else if (x.release_year != y.release_year) {
-        return x.release_year < y.release_year;
-    }
-    else {
-        return x.popularity < y.popularity;
-    }
-}
-bool compare132(const Song& x, const Song& y) {
-    if (x.genre != y.genre) {
-        return x.genre < y.genre;
-    }
-    else if (x.popularity != y.popularity) {
-        return x.popularity < y.popularity;
-    }
-    else {
-        return x.release_year < y.release_year;
-    }
-}
-bool compare213(const Song& x, const Song& y) {
-    if (x.release_year != y.release_year) {
-        return x.release_year < y.release_year;
-    }
-    else if (x.genre != y.genre) {
-        return x.genre < y.genre;
-    }
-    else {
-        return x.popularity < y.popularity;
-    }
-}
-bool compare231(const Song& x, const Song& y) {
-    if (x.release_year != y.release_year) {
-        return x.release_year < y.release_year;
-    }
-    else if (x.popularity != y.popularity) {
-        return x.popularity < y.popularity;
-    }
-    else {
-        return x.genre < y.genre;
-    }
-}
-bool compare312(const Song& x, const Song& y) {
-    if (x.popularity != y.popularity) {
-        return x.popularity < y.popularity;
-    }
-    else if (x.genre != y.genre) {
-        return x.genre < y.genre;
-    }
-    else {
-        return x.release_year < y.release_year;
-    }
-}
-bool compare321(const Song& x, const Song& y) {
-    if (x.popularity != y.popularity) {
-        return x.popularity < y.popularity;
-    }
-    else if (x.release_year != y.release_year) {
-        return x.release_year < y.release_year;
-    }
-    else {
-        return x.genre < y.genre;
-    }
-}
-
 int main(int argc, char*argv[]){
     std::string initial_choice;
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
@@ -91,21 +24,16 @@ int main(int argc, char*argv[]){
 
     //passing files into the read_data function to get columns
     playlist.read_data(argv[1]);
-    playlist.read_data(argv[2]);
-    playlist.read_data(argv[3]);
-    playlist.read_data(argv[4]);
-    playlist.read_data(argv[5]);
+    // playlist.read_data(argv[2]);
+    // playlist.read_data(argv[3]);
+    // playlist.read_data(argv[4]);
+    // playlist.read_data(argv[5]);
 
 //    playlist.print_database();
 //    playlist.shuffle(5);
 //    std::cout << std::endl;
 
-    // 4
 
-    // //function call here
-    // auto stop = std::chrono::high_resolution_clock::now();
-    // auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    // std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
     bool keepGoing = true;
 
     std::cout << "Hello!\n";
@@ -115,9 +43,10 @@ int main(int argc, char*argv[]){
         std::cout << "2. Get a personalized series of song recommendations based on songs you like." << std::endl;
         std::cout << "3. Re-shuffle the playlist by criteria of your choosing." << std::endl;
         std::cout << "4. Printout songs of a certain criteria" << std::endl;
-        std::cout << "5. Quit" << std::endl;
+        std::cout << "5. Time each sorting function" << std::endl;
+        std::cout << "6. Quit" << std::endl;
         std::cin >> initial_choice;
-        if ( initial_choice != "1" and initial_choice != "2" and initial_choice != "3" and initial_choice != "4" and initial_choice != "5" ) {
+        if ( initial_choice != "1" and initial_choice != "2" and initial_choice != "3" and initial_choice != "4" and initial_choice != "5" and initial_choice != "6") {
             std::cout << "Invalid entry, please enter one of the listed options:" << std::endl;
             std::cin >> initial_choice;
         }
@@ -397,6 +326,53 @@ int main(int argc, char*argv[]){
         }
 
         if (initial_choice == "5") {
+            int choice;
+            std::cout << "Which sorting function would you like to time: (Enter the corresponding number)" << std::endl;
+            std::cout << "1. Insertion Sort" << std::endl;
+            std::cout << "2. Merge Sort" << std::endl;
+            std::cout << "3. Quick Sort" << std::endl;
+            std::cout << "4. Heap Sort" << std::endl;
+            std::cin >> choice;
+            while(choice != 1 and choice != 2 and choice != 3 and choice != 4){
+                std::cout << "Invalid, please enter an option 1-4";
+                std::cin >> choice;
+            }
+
+            if(choice == 1){
+                auto start = std::chrono::high_resolution_clock::now();
+                playlist.insertion(1, "test", "test", "test", "0", "2023");
+                auto stop = std::chrono::high_resolution_clock::now();
+                auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+                std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
+                }
+
+            if(choice == 2){
+                auto start = std::chrono::high_resolution_clock::now();
+                playlist.merge_sort(1);
+                auto stop = std::chrono::high_resolution_clock::now();
+                auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+                std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
+            }
+            
+            if(choice == 3){
+                auto start = std::chrono::high_resolution_clock::now();
+                playlist.shuffle(1);
+                auto stop = std::chrono::high_resolution_clock::now();
+                auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+                std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
+            }
+            
+            if(choice == 4){
+                auto start = std::chrono::high_resolution_clock::now();
+                playlist.heapSort(1);
+                auto stop = std::chrono::high_resolution_clock::now();
+                auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+                std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
+            }
+            std::cout << "\n\n";
+        }
+
+        if (initial_choice == "6") {
             keepGoing = false;
             continue;
         }

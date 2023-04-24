@@ -1,5 +1,7 @@
 # Sorting Algorithms - Playlist Recommender
 
+**Authors: Jordan Woller, Jake Dansereau, Cassidy Cooper, Addie Murphy**
+
 ## Compilation Instructions
 There are two options to run the program: 
 

@@ -500,8 +500,10 @@ void Sorting::heapify2(std::vector<std::string>& myVec, int n, int i, std::vecto
     }
 }
 
-std::vector<std::vector<std::string>> Sorting::getRecommend(std::vector<int> genreVec, std::vector<std::vector<std::string>> song_choice_vec){
-    int average = std::stoi(song_choice_vec[1][0]) + std::stoi(song_choice_vec[1][1]) + std::stoi(song_choice_vec[1][2]) + std::stoi(song_choice_vec[1][3]) + std::stoi(song_choice_vec[1][4]);
+std::vector<std::vector<std::string>> Sorting::getRecommend
+    (std::vector<int> genreVec, std::vector<std::vector<std::string>> song_choice_vec){
+    int average = std::stoi(song_choice_vec[1][0]) + std::stoi(song_choice_vec[1][1]) 
+        + std::stoi(song_choice_vec[1][2]) + std::stoi(song_choice_vec[1][3]) + std::stoi(song_choice_vec[1][4]);
     average /= 5;
     std::vector<int> indexsofgoodyears;
     for(int i = 0; i < genreVec.size(); i++){

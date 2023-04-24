@@ -13,17 +13,18 @@ If option 1 does not work, you can also download the zip by accessing the 'Code'
 'Download Zip'.  You can then open up these files on your computer with Clion and run the program with the program
 arguments stated above.  
 
-**If trouble running with Clion**
+**If trouble running with Clion:** 
+
 If you are not able to compile and run the program with the above options,  download dsa.cpp, dsa.h, main.cpp, 
 indie.txt, rock.txt, country.txt, pop.txt, and rap.txt.  Once in CLion, open the terminal and type in the 
 following command:
+
 ```
 g++ -std=c++11 dsa.cpp main.cpp -o <executable name> && ./<executable name> <text file(s) name(s)> 
 ``` 
 
-**Note about setting up the files**
+**Note about setting up the files:**
+
 When setting up the program on CLion, ensure all .txt files are inside of the cmake-build-debug folder. 
 When you pull from the Github pleasure ensure to refactor these .txt files into this folder if not 
-done so already.  
-
-**IMPORTANT: If these files are not in the cmake-build-debug folder, the program will NOT run**
+done so already. **If these files are not in the cmake-build-debug folder, the program will NOT run**

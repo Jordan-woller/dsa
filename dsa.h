@@ -40,7 +40,6 @@ private:
 public:
     Sorting();
     ~Sorting();
-    int getLength();
     void print_database();
     void read_data(std::string file_name);
     void merge_sort(int criteria);
@@ -51,16 +50,12 @@ public:
     void heap_sort2(std::vector<std::string>& myVec, std::vector<std::vector<std::string>>& mVec);
     void genre_print(int genre_lookup, int mode);
     bool checkSong(int index, std::string genre);
-    bool song_search(std::string song_lookup);
     void popularity_print(int pop_lookup);
-    void try_quicksort(int criteria);
-    void applySort(std::vector<Song> songs);
     std::vector<std::string> get(int row);
-//    void genre_print(int genre_lookup);
     std::string getTitle(int index);
     std::string getYear(int index);
     std::vector<int> getIndexs(std::string criteria, int category);
-    std::vector<std::vector<std::string>> getRecommend(std::vector<int> genreVec,  std::vector<std::vector<std::string>> song_choice_vec);
+    std::vector<std::vector<std::string>> getRecommend(std::vector<int> genreVec, std::vector<std::vector<std::string>> song_choice_vec);
     std::string multi_line();
 };
 

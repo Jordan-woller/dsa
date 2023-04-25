@@ -3,12 +3,13 @@
 #include <algorithm>
 #include "dsa.h"
 
+//what if we had another sorted vector to store into
 Sorting::Sorting(){
     this->database = std::vector<std::vector<std::string>> (5, std::vector<std::string>());
 }
+Sorting::~Sorting(){
 
-Sorting::~Sorting(){}
-
+}
 void Sorting::read_data(std::string file_name){
     std::ifstream file_stream;
     file_stream.open(file_name);
@@ -26,7 +27,6 @@ void Sorting::read_data(std::string file_name){
             temp_vec.push_back(temp);
         }
 
-        //push back temp vectors into database
         database[0].push_back(temp_vec[0]);
         database[1].push_back(temp_vec[1]);
         database[2].push_back(temp_vec[2]);
@@ -34,12 +34,13 @@ void Sorting::read_data(std::string file_name){
         database[4].push_back(temp_vec[4]);
 
         temp_vec.clear();
+
     }
     file_stream.close();
 }
 
 void Sorting::print_database() {
-    //prints out database of songs with all criteria
+
      for (int i = 0 ; i < database[0].size() ; i++){
          for (int j = 0 ; j < 5 ; j++){
              if(j == 4){
@@ -52,7 +53,7 @@ void Sorting::print_database() {
      }
    std::cout << std::endl;
 }
-
+//allows for a cin to take in multiple spaced characters so that songs/artists and genre can have more than one word
 std::string Sorting::multi_line(){
     std::string choice;
     while(std::getline(std::cin, choice)){
@@ -65,12 +66,15 @@ std::string Sorting::multi_line(){
 
 //if the first character in the string is an actual character and not a digit, it transforms it to an uppercase
 std::string Sorting::upper(std::string word){
+    //if word is not a number, it calls toupper to convert to upper case
     if(!std::isdigit(word[0])){
         word[0] = std::toupper(word[0]);
     }
+    //std::cout << "word: " <<  word << std::endl;
     return word;
 }
 
+//sorts database by insertion sort. Takes in song and all criteria for song along with the criteria the user chose to sort by
 void Sorting::insertion(int insertion_option, std::string song_choice, std::string genre_choice,
                         std::string artist_choice, std::string release_year, std::string popularity){
     //calls upper function for song, genre, and artist to ensure they are properly capitalized
@@ -90,10 +94,11 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
     //if the insertion option is a string, it does insertion sort by ascii character value
     if(insertion_option == 0 or insertion_option == 1 or insertion_option == 2){
         for(int i = size; i > 0; i--){ //goes through size of database
-            int j = i;
+            int j = i; //sets j to i
             while(j > 0){
-                //calles comparestr method to compare by ascii value
-                if(comparestr(database[insertion_option][j],database[insertion_option][j-1])){
+                //calls comparestr method to compare by ascii value
+                if(comparestr(database[insertion_option][j],
+                              database[insertion_option][j-1])){
                     //swaps every category with each other to be in proper place
                     std::swap(database[0][j-1], database[0][j]);
                     std::swap(database[1][j-1], database[1][j]);
@@ -101,7 +106,7 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
                     std::swap(database[3][j-1], database[3][j]);
                     std::swap(database[4][j-1], database[4][j]);
                 }
-                j--;
+                j--; //decrements j to iteratively compare elements to the left
             }
         }
     } else{ //if insertion option is 4 or 5, it compares by integer value
@@ -120,7 +125,7 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
                     std::swap(database[3][l-1], database[3][l]);
                     std::swap(database[4][l-1], database[4][l]);
                 }
-                l--;
+                l--; //decrements j to iteratively compare elements to the left
             }
         }
     }
@@ -128,20 +133,15 @@ void Sorting::insertion(int insertion_option, std::string song_choice, std::stri
 
 int Sorting::partition(int lo, int hi, int criteria){
     std::vector<std::string> vec;
-
-    //Criteria = Song
+    //song, genre, artist, popularity, and release year
     if(criteria==1){
         vec = database[0];
-        //Criteria = genre
     } else if(criteria == 2){
         vec = database[1];
-        //Criteria = artist
     }else if(criteria == 3){
         vec = database[2];
-        //Criteria = popularity
     }else if(criteria == 4){
         vec = database[3];
-        //Criteria = release year
     }else if(criteria == 5){
         vec = database[4];
     }
@@ -162,8 +162,6 @@ int Sorting::partition(int lo, int hi, int criteria){
 
         // swap A[i] and A[j]
         std::swap(vec[i], vec[j]);
-
-        //Every swap in vec must be performed in each vector of the 2D vector
        std::swap(database[0][i], database[0][j]);
        std::swap(database[1][i], database[1][j]);
        std::swap(database[2][i], database[2][j]);
@@ -171,9 +169,7 @@ int Sorting::partition(int lo, int hi, int criteria){
        std::swap(database[4][i], database[4][j]);
     }
 
-    //swap pivot and right pointer
     std::swap(vec[lo], vec[j]);
-    //Every swap in vec must be performed in each vector of the 2D vector
     std::swap(database[0][lo], database[0][j]);
     std::swap(database[1][lo], database[1][j]);
     std::swap(database[2][lo], database[2][j]);
@@ -185,31 +181,27 @@ int Sorting::partition(int lo, int hi, int criteria){
 }
 
 void Sorting::r_quicksort(int lo, int hi, int criteria){
-    //base case
     if (hi <= lo) return;
 
-    //find pivot
     int p = partition(lo, hi, criteria);
 
-    //recursively call left sub array
     r_quicksort(lo, p - 1, criteria);
 
-    //recursively call right sub array
     r_quicksort(p + 1, hi, criteria);
 }
 
 void Sorting::shuffle(int criteria){
-    //high is length of each vector in 2D vector -1
     int hi = database[0].size()-1;
+
+  //print_database();
     r_quicksort(0, hi, criteria);
+
 }
 
 //compares two strings based on ascii values
 bool Sorting::comparestr(std::string str1, std::string str2){
-    //get the length of the longer string
     unsigned int length = (str1.length() > str2.length()) ? str1.length() : str2.length();
 
-    //if the first ascii value is less or equal return true, otherwise return false
     for (int i = 0 ; i < length ; i++){
         if (str1[i] < str2[i]) {
             return true;
@@ -244,14 +236,13 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
 
 //private function to merge each vector together
 void Sorting::merge(int lo, int mid, int hi, int criteria) {
-    //current indexes of sub arrays
+    //current indexes of subarrays
     int i = lo, j = mid + 1, k = 0;
-    //creating a temp vector the same size as database
+    //creating temp vector of same size as database
     std::vector<std::vector<std::string>> temp (5, std::vector<std::string> (hi - lo + 1, " "));
 
-    //while we are not to the end of either sub vector, call the compare string function on
-    //vector of that criteria. if true, the first vector index at i is moved to temp
-    //otherwise the second vector index at j is moved to temp.
+    //while not to the end of either sub vector, call comparestr function on vector of that criteria
+    //if true, first vector index at i is moved to temp, otherwise second vector index at j is moved to temp
     while (i <= mid && j <= hi){
         if (comparestr(database[criteria-1][i], database[criteria-1][j])){
             temp[0][k] = database[0][i];
@@ -357,8 +348,6 @@ std::string Sorting::getYear(int index){
     return database[4][index-1];
 }
 
-
-//prints all songs above a certain popularity level
 void Sorting::popularity_print(int pop_lookup){
     int y = 1;
     for(int i=0; i<database[3].size(); i++ ){
@@ -510,7 +499,7 @@ std::vector<std::vector<std::string>> Sorting::getRecommend
     for(int i = 0; i < songsinrange.size(); i++){
         temp.push_back(songsinrange[i][3]);
     }
-
+    
     heap_sort2(temp, songsinrange);
     return songsinrange;
 }

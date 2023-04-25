@@ -10,12 +10,7 @@ int main(int argc, char*argv[]){
     std::string initial_choice;
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
     int criteria, single_criteria, insertion_option;
-    std::string song_select;
-    std::string shuffle_criteria;
-    std::string pop_lookup;
-    std::string genre_lookup;
-    std::string playlist_select;
-    std::string lookup;
+    std::string song_select, shuffle_criteria, pop_lookup, genre_lookup, playlist_select, lookup;
 
     std::vector<std::string>criteria_vec = {"Song", "Genre", "Artist", "Popularity", "Release Year"};
     std::vector<bool>criteria_truth; //parallel vector with criteria_vec with true and false
@@ -39,6 +34,7 @@ int main(int argc, char*argv[]){
         std::cout << "5. Time each sorting function" << std::endl;
         std::cout << "6. Quit" << std::endl;
         std::cin >> initial_choice;
+        //error checking for choices
         if ( initial_choice != "1" and initial_choice != "2" and initial_choice != "3" and initial_choice != "4" and initial_choice != "5" and initial_choice != "6") {
             std::cout << "Invalid entry, please enter one of the listed options:" << std::endl;
             std::cin >> initial_choice;
@@ -47,16 +43,15 @@ int main(int argc, char*argv[]){
         if (initial_choice == "1") {
             std::cout << "Enter the name of the song you want to add to the playlist:" << std::endl;
             song_choice = playlist.multi_line();
-            //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             genre_choice = playlist.multi_line();
-            //error checking for genre_choice loops through each character in the variable to ensure it is not a number
+            //error checking for genre_choice ensures first character is a digit
             bool genre_check = true;
             for(int i = 0; i < genre_choice.length()-1; i++) {
                 if(std::isdigit(genre_choice[i]) and genre_check) {
                     genre_check = false;
                 }
-                while(!genre_check){
+                while(!genre_check){ //prompts user to enter valid genre
                     std::cout << "Please enter a valid genre:" << std::endl;
                     std::cin >> genre_check;
                     genre_check = true;
@@ -67,14 +62,14 @@ int main(int argc, char*argv[]){
             artist_choice = playlist.multi_line();
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
-            //error checking for popularity
+            //error checking for popularity to ensure it is a digit
             while(!std::isdigit(popularity[0]) or std::stoi(popularity) < 0 or std::stoi(popularity) > 100){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
-            //error checking for release year
+            //error checking for release year to ensure it is a digit
             while(!std::isdigit(release_year[0]) or std::stoi(release_year) > 2023){
                 std::cout << "Invalid year, please enter a valid year:" << std::endl;
                 std::cin >> release_year;
@@ -108,7 +103,6 @@ int main(int argc, char*argv[]){
         if (initial_choice == "2") {
             //by choosing a playlist, it will display the songs in that playlist.
             //user has the option to either confirm that playlist selection or go back and choose another playlist
-        
             std::cout << "Choose 5 songs you like from one of the different genre playlists below." << std::endl;
             std::cout << "Chose an option 1-5 to display one of the playlists." << std::endl;
             std::cout << "1. Country" << std::endl;
@@ -149,7 +143,6 @@ int main(int argc, char*argv[]){
                 playlist.genre_print(4,2);
                 playlistGenre = "80s Rock";
             }
-            
             if (playlist_select == "5") {
                 std::cout << "Here is the Indie Rock playlist:" << std::endl;
                 //prints genre and indexs for user

@@ -124,106 +124,59 @@ int main(int argc, char*argv[]){
             }
             std::vector<int> used;
             std::string playlistGenre;
+            //checks user genre input
             if (playlist_select == "1") {
                 std::cout << "Here is the Country playlist:" << std::endl;
+                //prints genre and indexs for user
                 playlist.genre_print(1,2);
                 playlistGenre = "Country";
-                int amt = 0;
-                while (amt < 5) {
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    int temp = std::stoi(song_select);
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
-                    amt++;
-                }
             }
             if (playlist_select == "2") {
                 std::cout << "Here is the Pop playlist:" << std::endl;
+                //prints genre and indexs for user
                 playlist.genre_print(2,2);
                 playlistGenre = "Pop";
-                int amt = 0;
-                while (amt < 5) {
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    int temp = std::stoi(song_select);
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
-                    amt++;
-                }
             }
             if (playlist_select == "3") {
                 std::cout << "Here is the Rap playlist:" << std::endl;
+                //prints genre and indexs for user
                 playlist.genre_print(3,2);
                 playlistGenre = "Rap";
-                int amt = 0;
-                while (amt < 5) {
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    int temp = std::stoi(song_select);
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
-                    amt++;
-                }
             }
             if (playlist_select == "4") {
                 std::cout << "Here is the 80s Rock playlist:" << std::endl;
+                //prints genre and indexs for user
                 playlist.genre_print(4,2);
                 playlistGenre = "80s Rock";
-                int amt = 0;
-                while (amt < 5) {
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    int temp = std::stoi(song_select);
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
-                    amt++;
-                }
             }
             
             if (playlist_select == "5") {
                 std::cout << "Here is the Indie Rock playlist:" << std::endl;
+                //prints genre and indexs for user
                 playlist.genre_print(5,2);
                 playlistGenre = "Indie Rock";
-                int amt = 0;
-                while (amt < 5) {
-                    std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
-                    std::cin >> song_select;
-                    //error checking for song choice
-                    int temp = std::stoi(song_select);
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)){                        std::cout << "Invalid, please enter a valid song choice:";
-                        std::cin >> song_select;
-                    }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
-                    amt++;
-                }
             }
 
+            int amt = 0;
+            while (amt < 5) {
+                std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
+                std::cin >> song_select;
+                //error checking for song choice
+                int temp = std::stoi(song_select);
+                while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)){                        std::cout << "Invalid, please enter a valid song choice:";
+                    std::cin >> song_select;
+                }
+                used.push_back(std::stoi(song_select));
+                song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
+                song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
+                amt++;
+            }
+
+            //calls heapsort on the category that the user chose
             playlist.heapSort(std::stoi(playlist_select));
+            //gets the indexs of all songs in the specified genre
             std::vector<int> genreVec = playlist.getIndexs(playlistGenre, 2);
+            //calls the member function in order to recommend the user 5 songs
             std::vector<std::vector<std::string>> recsonglist = playlist.getRecommend(genreVec, song_choice_vec);
             
             int checksize;
@@ -232,6 +185,7 @@ int main(int argc, char*argv[]){
             } else {
                 checksize = recsonglist.size() - 5;
             } 
+            //prints out top 5 songs 
             std::cout << "\nHere is your list of personalized song recommendations:\n";
             for(int j = checksize; j < recsonglist.size(); j++){
                 for(int i = 0; i < recsonglist[j].size(); i++){

@@ -56,7 +56,6 @@ public:
     void try_quicksort(int criteria);
     void applySort(std::vector<Song> songs);
     std::vector<std::string> get(int row);
-//    void genre_print(int genre_lookup);
     std::string getTitle(int index);
     std::string getYear(int index);
     std::vector<int> getIndexs(std::string criteria, int category);

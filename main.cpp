@@ -9,7 +9,7 @@ int main(int argc, char*argv[]){
     std::string initial_choice;
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
     int criteria, single_criteria, insertion_option;
-    std::string song_select;
+    int song_select;
     std::string shuffle_criteria;
     std::string pop_lookup;
     std::string genre_lookup;
@@ -132,13 +132,13 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                     amt++;
                 }
             }
@@ -151,13 +151,13 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                     amt++;
                 }
             }
@@ -170,13 +170,13 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                     amt++;
                 }
             }
@@ -189,13 +189,13 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                     amt++;
                 }
             }
@@ -209,13 +209,13 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                    while (playlist.checkSong(song_select, playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
-                    used.push_back(std::stoi(song_select));
-                    song_choice_vec[0].push_back(playlist.getTitle(std::stoi(song_select)));
-                    song_choice_vec[1].push_back(playlist.getYear(std::stoi(song_select)));
+                    used.push_back(song_select);
+                    song_choice_vec[0].push_back(playlist.getTitle(song_select));
+                    song_choice_vec[1].push_back(playlist.getYear(song_select));
                     amt++;
                 }
             }
@@ -316,19 +316,19 @@ int main(int argc, char*argv[]){
         }
 
         if (initial_choice == "5") {
-            std::string choice;
+            int choice;
             std::cout << "Which sorting function would you like to time: (Enter the corresponding number)" << std::endl;
             std::cout << "1. Insertion Sort" << std::endl;
             std::cout << "2. Merge Sort" << std::endl;
             std::cout << "3. Quick Sort" << std::endl;
             std::cout << "4. Heap Sort" << std::endl;
             std::cin >> choice;
-            while(choice != "1" and choice != "2" and choice != "3" and choice != "4"){
-                std::cout << "Invalid, please enter an option 1-4\n";
+            while(choice != 1 and choice != 2 and choice != 3 and choice != 4){
+                std::cout << "Invalid, please enter an option 1-4";
                 std::cin >> choice;
             }
 
-            if(choice == "1"){
+            if(choice == 1){
                 auto start = std::chrono::high_resolution_clock::now();
                 playlist.insertion(1, "test", "test", "test", "0", "2023");
                 auto stop = std::chrono::high_resolution_clock::now();
@@ -336,7 +336,7 @@ int main(int argc, char*argv[]){
                 std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
                 }
 
-            if(choice == "2"){
+            if(choice == 2){
                 auto start = std::chrono::high_resolution_clock::now();
                 playlist.merge_sort(1);
                 auto stop = std::chrono::high_resolution_clock::now();
@@ -344,7 +344,7 @@ int main(int argc, char*argv[]){
                 std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
             }
 
-            if(choice == "3"){
+            if(choice == 3){
                 auto start = std::chrono::high_resolution_clock::now();
                 playlist.shuffle(1);
                 auto stop = std::chrono::high_resolution_clock::now();
@@ -352,7 +352,7 @@ int main(int argc, char*argv[]){
                 std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
             }
 
-            if(choice == "4"){
+            if(choice == 4){
                 auto start = std::chrono::high_resolution_clock::now();
                 playlist.heapSort(1);
                 auto stop = std::chrono::high_resolution_clock::now();

@@ -49,13 +49,13 @@ int main(int argc, char*argv[]){
             //no need to error check for song choice because songs can be numbers, characters, or strings
             std::cout << "Enter the genre for this song:" << std::endl;
             genre_choice = playlist.multi_line();
-            //error checking for genre_choice loops through each character in the variable to ensure it is not a number
+            //error checking for genre_choice ensures first character is a digit
             bool genre_check = true;
             for(int i = 0; i < genre_choice.length()-1; i++) {
                 if(std::isdigit(genre_choice[i]) and genre_check) {
                     genre_check = false;
                 }
-                while(!genre_check){
+                while(!genre_check){ //prompts user to enter valid genre
                     std::cout << "Please enter a valid genre:" << std::endl;
                     std::cin >> genre_check;
                     genre_check = true;
@@ -66,14 +66,14 @@ int main(int argc, char*argv[]){
             artist_choice = playlist.multi_line();
             std::cout << "Enter the popularity of this song (on a scale from 0-100)" << std::endl;
             std::cin >> popularity;
-            //error checking for popularity
+            //error checking for popularity to ensure it is a digit
             while(!std::isdigit(popularity[0]) or std::stoi(popularity) < 0 or std::stoi(popularity) > 100){
                 std::cout << "Invalid popularity, please enter a popularity value 0-100:" << std::endl;
                 std::cin >> popularity;
             }
             std::cout << "Enter the release year of this song:" << std::endl;
             std::cin >> release_year;
-            //error checking for release year
+            //error checking for release year to ensure it is a digit
             while(!std::isdigit(release_year[0]) or std::stoi(release_year) > 2023){
                 std::cout << "Invalid year, please enter a valid year:" << std::endl;
                 std::cin >> release_year;

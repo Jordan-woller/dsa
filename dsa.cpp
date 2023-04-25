@@ -22,11 +22,9 @@ void Sorting::read_data(std::string file_name){
         //getting each column and storing into vector
         //song, genre, artist, popularity, release year
         int i = 0;
-
         std::string temp;
         while(std::getline(ss, temp, '#')){
             temp_vec.push_back(temp);
-
         }
 
         database[0].push_back(temp_vec[0]);
@@ -74,10 +72,6 @@ std::string Sorting::upper(std::string word){
     }
     //std::cout << "word: " <<  word << std::endl;
     return word;
-}
-
-int Sorting::getLength(){
-    return database[0].size();
 }
 
 //sorts database by insertion sort. Takes in song and all criteria for song along with the criteria the user chose to sort by
@@ -182,7 +176,6 @@ int Sorting::partition(int lo, int hi, int criteria){
     std::swap(database[3][lo], database[3][j]);
     std::swap(database[4][lo], database[4][j]);
 
-
     //return pivot's position
     return j;
 }
@@ -227,7 +220,6 @@ void Sorting::merge_sort(int criteria){
 
 //private function to recursively separate vector
 void Sorting::r_merge(int lo, int hi, int criteria) {
-//    std::vector<std::vector<std::string>> temp = database;
     //basecase(single element or empty list)
     if (lo >= hi) {return;}
 
@@ -244,9 +236,13 @@ void Sorting::r_merge(int lo, int hi, int criteria) {
 
 //private function to merge each vector together
 void Sorting::merge(int lo, int mid, int hi, int criteria) {
+    //current indexes of subarrays
     int i = lo, j = mid + 1, k = 0;
+    //creating temp vector of same size as database
     std::vector<std::vector<std::string>> temp (5, std::vector<std::string> (hi - lo + 1, " "));
 
+    //while not to the end of either sub vector, call comparestr function on vector of that criteria
+    //if true, first vector index at i is moved to temp, otherwise second vector index at j is moved to temp
     while (i <= mid && j <= hi){
         if (comparestr(database[criteria-1][i], database[criteria-1][j])){
             temp[0][k] = database[0][i];
@@ -266,6 +262,7 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
         k++;
     }
 
+    //if we run out of elements in one of the vectors, use the other to fill temp
     while (i <= mid){
         temp[0][k] = database[0][i];
         temp[1][k] = database[1][i];
@@ -286,6 +283,7 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
         k++;
     }
 
+    //copy data from temp over into database
     for (int x = lo ; x <= hi ; x++){
         database[0][x] = temp[0][x-lo];
         database[1][x] = temp[1][x-lo];
@@ -295,12 +293,6 @@ void Sorting::merge(int lo, int mid, int hi, int criteria) {
     }
 }
 
-//song, genre, artist, popularity, release year
-//Country
-// Pop
-//Rap
-//80s Rock
-//Indie Rock
 void Sorting::genre_print(int genre_lookup, int mode){
     int x = 1;
     if(mode == 1){
@@ -338,7 +330,6 @@ void Sorting::genre_print(int genre_lookup, int mode){
             }
             x++;
         }
-
     }
 }
 
@@ -355,17 +346,6 @@ std::string Sorting::getTitle(int index){
 
 std::string Sorting::getYear(int index){
     return database[4][index-1];
-}
- 
-bool Sorting::song_search(std::string song_lookup){
-    for(int i=0; i<database[0].size(); i++ ){
-      if(database[0][i] ==song_lookup ){
-          std::cout<<"Found";
-          return true;
-      }
-    }
-    std::cout<<"Not Found";
-    return false;
 }
 
 void Sorting::popularity_print(int pop_lookup){
@@ -395,16 +375,6 @@ std::vector<int> Sorting::getIndexs(std::string criteria, int category){
         }
     }
     return returner;
-}
-
-void Sorting::applySort(std::vector<Song> songs){
-    for(int i = 0; i < songs.size(); i++){
-        database[0][i] = songs[i].song_name;
-        database[1][i] = songs[i].genre;
-        database[2][i] = songs[i].artist;
-        database[3][i] = songs[i].popularity;
-        database[4][i] = songs[i].release_year;
-    }
 }
 
 void Sorting::heapSort(int criteria){

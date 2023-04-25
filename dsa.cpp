@@ -370,6 +370,7 @@ void Sorting::popularity_print(int pop_lookup){
     }
 }
 
+//stores all of 1 songs data from the database in a vector
 std::vector<std::string> Sorting::get(int row){
     std::vector<std::string> temp;
     for(int i = 0; i < 5; i++){
@@ -378,6 +379,7 @@ std::vector<std::string> Sorting::get(int row){
     return temp;
 }
 
+//gets all indexs of songs with a certain category or criteria
 std::vector<int> Sorting::getIndexs(std::string criteria, int category){
     std::vector<int> returner;
     for(int i = 0; i < database[category].size(); i++){
@@ -388,11 +390,13 @@ std::vector<int> Sorting::getIndexs(std::string criteria, int category){
     return returner;
 }
 
+//public call for heap sort
 void Sorting::heapSort(int criteria){
     std::vector<std::string> temp = (database[criteria-1]);
     heap_sort(temp);
 }
 
+//private call for heap sort
 void Sorting::heap_sort(std::vector<std::string>& myVec){
     int n = myVec.size();
     
@@ -414,6 +418,7 @@ void Sorting::heap_sort(std::vector<std::string>& myVec){
     }
 }
 
+//private helper function for heapsort
 void Sorting::heapify(std::vector<std::string>& myVec, int n, int i){
     int largest = i;
     int left = 2 * i + 1;

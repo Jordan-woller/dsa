@@ -5,6 +5,7 @@
 #include <cctype>
 #include <algorithm>
 
+
 int main(int argc, char*argv[]){
     std::string initial_choice;
     std::string song_choice, genre_choice, artist_choice, use_criteria, song_lookup, release_year, popularity;
@@ -132,7 +133,8 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
+                    int temp = std::stoi(song_select);
+                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {
                         std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
@@ -151,8 +153,8 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
+int temp = std::stoi(song_select);
+                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                     used.push_back(std::stoi(song_select));
@@ -170,8 +172,8 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
+int temp = std::stoi(song_select);
+                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                     used.push_back(std::stoi(song_select));
@@ -189,8 +191,8 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
+int temp = std::stoi(song_select);
+                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                     used.push_back(std::stoi(song_select));
@@ -209,8 +211,8 @@ int main(int argc, char*argv[]){
                     std::cout << "Choose a song from the playlist: (enter a number that corresponds to the song)" << std::endl;
                     std::cin >> song_select;
                     //error checking for song choice
-                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(),song_select)) {
-                        std::cout << "Invalid, please enter a valid song choice:";
+int temp = std::stoi(song_select);
+                    while (playlist.checkSong(std::stoi(song_select), playlistGenre) or std::count(used.begin(),used.end(), temp)) {                        std::cout << "Invalid, please enter a valid song choice:";
                         std::cin >> song_select;
                     }
                     used.push_back(std::stoi(song_select));
